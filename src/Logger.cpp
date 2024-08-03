@@ -1,4 +1,4 @@
-#include "../include/logger.h"
+#include "../simulator/include/logger.h"
 
 /*
     Initialize the logger with a file sink (every print to logger will come to this file)

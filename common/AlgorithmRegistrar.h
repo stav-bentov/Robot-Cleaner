@@ -1,5 +1,5 @@
 #include "../enums/common_enums.h"
-#include "../include/abstract_algorithm.h"
+#include "../simulator/include/abstract_algorithm.h"
 
 //-------------------------------
 // common/AlgorithmRegistrar.h

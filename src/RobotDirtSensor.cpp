@@ -1,4 +1,4 @@
-#include "../include/robot_dirt_sensor.h"
+#include "../simulator/include/robot_dirt_sensor.h"
 
 RobotDirtSensor::RobotDirtSensor(){}
 

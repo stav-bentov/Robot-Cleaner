@@ -1,4 +1,4 @@
-#include "../include/common.h"
+#include "../simulator/include/common.h"
 
 
 void Common::checkForError(bool value, std::string errorDescription) {

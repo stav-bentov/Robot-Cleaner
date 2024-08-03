@@ -1,4 +1,4 @@
-#include "../include/my_algorithm.h"
+#include "../simulator/include/my_algorithm.h"
 
 void MyAlgorithm::setMaxSteps(std::size_t maxSteps) {
     totalSteps = maxSteps;

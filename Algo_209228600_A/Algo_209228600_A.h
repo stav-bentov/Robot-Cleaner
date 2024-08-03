@@ -6,7 +6,7 @@
 #include <memory>
 #include <stack>
 #include "../algorithm/AlgorithmRegistration.h"
-#include "../include/my_algorithm.h"
+#include "../simulator/include/my_algorithm.h"
 
 class Algo_209228600_A: public MyAlgorithm {
     public:

@@ -1,8 +1,8 @@
 #include <string>
-#include "../include/my_simulator.h"
-#include "../include/my_algorithm.h"
-#include "../include/logger.h"
-#include "../include/common.h"
+#include "../simulator/include/my_simulator.h"
+#include "../simulator/include/my_algorithm.h"
+#include "../simulator/include/logger.h"
+#include "../simulator/include/common.h"
 
 // getting command line arguments for the house file
 int main(int argc, char** argv) {

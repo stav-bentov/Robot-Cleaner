@@ -1,4 +1,4 @@
-#include "../include/visual_simulation.h"
+#include "../simulator/include/visual_simulation.h"
 
 void VisualSimulation::processFiles(std::string inputFileName, std::string outputFileName) {
     processInputFile(inputFileName);

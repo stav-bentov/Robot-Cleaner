@@ -1,4 +1,4 @@
-#include "../include/robot_walls_sensor.h"
+#include "../simulator/include/robot_walls_sensor.h"
 
 RobotWallsSensor::RobotWallsSensor(){}
 

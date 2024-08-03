@@ -1,4 +1,4 @@
-#include "../include/output_manager.h"
+#include "../simulator/include/output_manager.h"
 
 OutputManager::OutputManager(){}
 

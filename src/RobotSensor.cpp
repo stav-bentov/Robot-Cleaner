@@ -1,4 +1,4 @@
-#include "../include/robot_sensor.h"
+#include "../simulator/include/robot_sensor.h"
 
 std::shared_ptr<House> RobotSensor::house = nullptr;
 

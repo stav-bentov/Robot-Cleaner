@@ -1,4 +1,4 @@
-#include "../include/vertex.h"
+#include "../simulator/include/vertex.h"
 
 void Vertex::setDirt(int _dirt) {
     dirt = _dirt;

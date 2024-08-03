@@ -1,4 +1,4 @@
-#include "../include/house.h"
+#include "../simulator/include/house.h"
 
 const std::map<Direction, std::pair<int, int>> House::directionMap = {
         {Direction::East, {0, 1}},

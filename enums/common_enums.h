@@ -7,7 +7,7 @@
 #include <vector>
 #include <functional>
 #include <memory>
-#include "../include/enums.h"
+#include "../simulator/include/enums.h"
 //#include "logger.h"
 
 enum class Elements {

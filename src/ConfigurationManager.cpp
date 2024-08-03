@@ -1,4 +1,4 @@
-#include "../include/configuration_manager.h"
+#include "../simulator/include/configuration_manager.h"
 
 ConfigurationManager::ConfigurationManager() 
     : displaySimulation(false),

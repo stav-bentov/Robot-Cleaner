@@ -1,4 +1,4 @@
-#include "../include/house_mapping_graph.h"
+#include "../simulator/include/house_mapping_graph.h"
 
 HouseMappingGraph::HouseMappingGraph() : currentLocation({0, 0}), dockingStationLocation({0, 0}), startFinish(false) {
     addVertex(dockingStationLocation, Type::DockingStation);

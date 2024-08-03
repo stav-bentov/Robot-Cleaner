@@ -1,4 +1,4 @@
-#include "../include/robot_battery_meter.h"
+#include "../simulator/include/robot_battery_meter.h"
 
 std::size_t RobotBatteryMeter::getBatteryState() const {
     // Will round down
