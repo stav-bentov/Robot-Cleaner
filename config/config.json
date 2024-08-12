@@ -1,0 +1,14 @@
+{
+    "displaySimulation": true,
+    "representationInSim": {
+        "wall": "#",
+        "dockingStation": "D",
+        "robot": "R"
+    },
+    "colors": {
+        "wall": "Red",
+        "dockingStation": "Blue",
+        "robot": "Yellow",
+        "directionChange": "Green"
+    }
+}

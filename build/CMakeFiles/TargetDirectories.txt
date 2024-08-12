@@ -1,0 +1,9 @@
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles/edit_cache.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A/CMakeFiles/edit_cache.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A/CMakeFiles/rebuild_cache.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator/CMakeFiles/myrobot.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator/CMakeFiles/clean_sim.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator/CMakeFiles/edit_cache.dir
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator/CMakeFiles/rebuild_cache.dir

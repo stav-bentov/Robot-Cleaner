@@ -1,0 +1,3225 @@
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=10, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 10, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 1.
+
+Vertex::Vertex: 0in location:-1, 1
+
+HouseMappingGraph::addVertex in : 0, 2.
+
+Vertex::Vertex: 0in location:0, 2
+
+HouseMappingGraph::addVertex in : 1, 1.
+
+Vertex::Vertex: 0in location:1, 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 2
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=9, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 9, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 0, 2
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 2.
+
+Simulator got Step::East
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 4.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,4:0
+
+Vertex::setDirt: 0in location:0, 2
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 2.
+
+Vertex::Vertex: 0in location:-1, 2
+
+HouseMappingGraph::addVertex in : 0, 3.
+
+Vertex::Vertex: 0in location:0, 3
+
+HouseMappingGraph::addVertex in : 1, 2.
+
+Vertex::Vertex: 0in location:1, 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 2
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 8, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: -1, 2
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 2.
+
+HouseMappingGraph:: Update location from: -1, 2.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 1, 4.
+
+House:: Update location from: 0, 4.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,4:0
+
+Vertex::setDirt: 0in location:-1, 2
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 2.
+
+Vertex::Vertex: 0in location:-2, 2
+
+HouseMappingGraph::addVertex in : -1, 3.
+
+Vertex::Vertex: 0in location:-1, 3
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 3
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 7, batterySteps: 17, maxBatterySteps: 20, dirtOrUnknownDst: -1, 3
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 2.
+
+HouseMappingGraph:: Update location from: -1, 3.
+
+Simulator got Step::East
+Discharged, current battary:16.000000.
+
+House:: Update location from: 0, 4.
+
+House:: Update location from: 0, 5.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,5:0
+
+Vertex::setDirt: 0in location:-1, 3
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 3.
+
+Vertex::Vertex: 0in location:-2, 3
+
+HouseMappingGraph::addVertex in : -1, 4.
+
+Vertex::Vertex: 0in location:-1, 4
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 4
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 6, batterySteps: 16, maxBatterySteps: 20, dirtOrUnknownDst: -1, 4
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 3.
+
+HouseMappingGraph:: Update location from: -1, 4.
+
+Simulator got Step::East
+Discharged, current battary:15.000000.
+
+House:: Update location from: 0, 5.
+
+House:: Update location from: 0, 6.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,6:0
+
+Vertex::setDirt: 0in location:-1, 4
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 4.
+
+Vertex::Vertex: 0in location:-2, 4
+
+HouseMappingGraph::addVertex in : -1, 5.
+
+Vertex::Vertex: 0in location:-1, 5
+
+HouseMappingGraph::addVertex in : 0, 4.
+
+Vertex::Vertex: 0in location:0, 4
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 5
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 5, batterySteps: 15, maxBatterySteps: 20, dirtOrUnknownDst: -1, 5
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 4.
+
+HouseMappingGraph:: Update location from: -1, 5.
+
+Simulator got Step::East
+Discharged, current battary:14.000000.
+
+House:: Update location from: 0, 6.
+
+House:: Update location from: 0, 7.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,7:0
+
+Vertex::setDirt: 0in location:-1, 5
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 5.
+
+Vertex::Vertex: 0in location:-2, 5
+
+HouseMappingGraph::addVertex in : -1, 6.
+
+Vertex::Vertex: 0in location:-1, 6
+
+HouseMappingGraph::addVertex in : 0, 5.
+
+Vertex::Vertex: 0in location:0, 5
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 6
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 4, batterySteps: 14, maxBatterySteps: 20, dirtOrUnknownDst: -1, 6
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 5.
+
+HouseMappingGraph:: Update location from: -1, 6.
+
+Simulator got Step::East
+Discharged, current battary:13.000000.
+
+House:: Update location from: 0, 7.
+
+House:: Update location from: 0, 8.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,8:0
+
+Vertex::setDirt: 0in location:-1, 6
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 6.
+
+Vertex::Vertex: 0in location:-2, 6
+
+HouseMappingGraph::addVertex in : -1, 7.
+
+Vertex::Vertex: 0in location:-1, 7
+
+HouseMappingGraph::addVertex in : 0, 6.
+
+Vertex::Vertex: 0in location:0, 6
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: -1, 7
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 3, batterySteps: 13, maxBatterySteps: 20, dirtOrUnknownDst: -1, 7
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 6.
+
+HouseMappingGraph:: Update location from: -1, 7.
+
+Simulator got Step::East
+Discharged, current battary:12.000000.
+
+House:: Update location from: 0, 8.
+
+House:: Update location from: 0, 9.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 0,9:0
+
+Vertex::setDirt: 0in location:-1, 7
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -2, 7.
+
+Vertex::Vertex: 0in location:-2, 7
+
+HouseMappingGraph::addVertex in : -1, 8.
+
+Vertex::Vertex: 0in location:-1, 8
+
+HouseMappingGraph::addVertex in : 0, 7.
+
+Vertex::Vertex: 0in location:0, 7
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 7
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 2, batterySteps: 12, maxBatterySteps: 20, dirtOrUnknownDst: 0, 7
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: -1, 7.
+
+HouseMappingGraph:: Update location from: 0, 7.
+
+Simulator got Step::South
+Discharged, current battary:11.000000.
+
+House:: Update location from: 0, 9.
+
+House:: Update location from: 1, 9.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,9:0
+
+Vertex::setDirt: 0in location:0, 7
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : 0, 8.
+
+Vertex::Vertex: 0in location:0, 8
+
+HouseMappingGraph::addVertex in : 1, 7.
+
+Vertex::Vertex: 0in location:1, 7
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 7
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 1, batterySteps: 11, maxBatterySteps: 20, dirtOrUnknownDst: 1, 7
+
+HouseMappingGraph::getDistanceFromDocking Error-> Didnt reach docking station!: 
+
+stepsToCleanAndGetBack: 1
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 7.
+
+HouseMappingGraph:: Update location from: 1, 7.
+
+Simulator got Step::South
+Discharged, current battary:10.000000.
+
+House:: Update location from: 1, 9.
+
+House:: Update location from: 2, 9.
+
+Simulator got Step::Finish
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=10, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 10, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=9, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 9, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::West
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=8, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=7, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=6, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 6, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::South
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:1
+
+Vertex::setDirt: 1in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 1
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=5, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 0, maxSteps: 5, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 2
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Vertex::getDirt! 1
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::Stay
+Discharged, current battary:18.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:0
+
+Vertex::setDirt: 0in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=4, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 2
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 4, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=3, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=2, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=1, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Finish
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 100, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 99, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::West
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 96, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::South
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:1
+
+Vertex::setDirt: 1in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 1
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 0, maxSteps: 95, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 2
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Vertex::getDirt! 1
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::Stay
+Discharged, current battary:18.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:0
+
+Vertex::setDirt: 0in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 2
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 94, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=17, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 90, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+Simulator got Step::West
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 1.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,1:0
+
+Vertex::setDirt: 0in location:0, -1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 0, dirtDistance: 0, maxSteps: 89, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 0, 0
+
+All tiles are visited
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::East
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 1.
+
+House:: Update location from: 1, 2.
+
+Simulator got Step::Finish
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 100, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 99, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::West
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 96, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::South
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:1
+
+Vertex::setDirt: 1in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 1
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 0, maxSteps: 95, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 2
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Vertex::getDirt! 1
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::Stay
+Discharged, current battary:18.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:0
+
+Vertex::setDirt: 0in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 2
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 94, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=17, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 90, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+Simulator got Step::West
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 1.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,1:0
+
+Vertex::setDirt: 0in location:0, -1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 0, dirtDistance: 0, maxSteps: 89, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 0, 0
+
+All tiles are visited
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::East
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 1.
+
+House:: Update location from: 1, 2.
+
+Simulator got Step::Finish
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 100, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 99, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::West
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 96, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::South
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:1
+
+Vertex::setDirt: 1in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 1
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 0, maxSteps: 95, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 2
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Vertex::getDirt! 1
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::Stay
+Discharged, current battary:18.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:0
+
+Vertex::setDirt: 0in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 2
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 94, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=17, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 90, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+Simulator got Step::West
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 1.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,1:0
+
+Vertex::setDirt: 0in location:0, -1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 0, dirtDistance: 0, maxSteps: 89, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 0, 0
+
+All tiles are visited
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::East
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 1.
+
+House:: Update location from: 1, 2.
+
+Simulator got Step::Finish
+HouseMappingGraph::addVertex in : 0, 0.
+
+Vertex::Vertex: 0in location:0, 0
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+HouseMappingGraph::addVertex in : -1, 0.
+
+Vertex::Vertex: 0in location:-1, 0
+
+HouseMappingGraph::addVertex in : 0, 1.
+
+Vertex::Vertex: 0in location:0, 1
+
+HouseMappingGraph::addVertex in : 1, 0.
+
+Vertex::Vertex: 0in location:1, 0
+
+HouseMappingGraph::addVertex in : 0, -1.
+
+Vertex::Vertex: 0in location:0, -1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, 1
+
+depth: 1
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 100, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, 1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+Simulator got Step::East
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 3.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,3:0
+
+Vertex::setDirt: 0in location:0, 1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 2
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 99, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::West
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 3.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 1
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 96, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::South
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:1
+
+Vertex::setDirt: 1in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 1
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 1, 0
+
+depth: 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 0, maxSteps: 95, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 1, 0
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 2
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Vertex::getDirt! 1
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+Simulator got Step::Stay
+Discharged, current battary:18.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 2, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 2,2:0
+
+Vertex::setDirt: 0in location:1, 0
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 2
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 2, maxSteps: 94, batterySteps: 18, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 4
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 1, 0.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::North
+Discharged, current battary:17.000000.
+
+House:: Update location from: 2, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=17, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=18, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned step from isDockingStation(currentLocation) && batterySteps < maxBatterySteps.
+
+Simulator got Step::Stay
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 2.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,2:-2
+
+HouseMappingGraph:: dirt < 0 in : 0, 0.
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=20, distanceFromStation0.
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+choseDirtOrUnknownDst: 0, isDirtOrUnknown1
+
+HouseMappingGraph:: dirt dst: 0, -1
+
+depth: 1
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 1, dirtDistance: 1, maxSteps: 90, batterySteps: 20, maxBatterySteps: 20, dirtOrUnknownDst: 0, -1
+
+HouseMappingGraph::getDistanceFromDocking return : 1
+
+stepsToCleanAndGetBack: 3
+
+Go to clean a tile
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+Simulator got Step::West
+Discharged, current battary:19.000000.
+
+House:: Update location from: 1, 2.
+
+House:: Update location from: 1, 1.
+
+MyAlgorithm::updateMapping - Setting dirt at current location.
+
+House:: getDirtLevel in 1,1:0
+
+Vertex::setDirt: 0in location:0, -1
+
+MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 0.
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::needToReturn: maxSteps=19, distanceFromStation1.
+
+HouseMappingGraph::runBfs Done while loop for depth: 1.
+
+Vertex::getDirt! 0
+
+Vertex::getDirt! 0
+
+HouseMappingGraph::runBfs Done while loop for depth: 2.
+
+HouseMappingGraph::runBfs Returned Else- get in direction of next dst.
+
+choseDirtOrUnknownDst: 0, dirtDistance: 0, maxSteps: 89, batterySteps: 19, maxBatterySteps: 20, dirtOrUnknownDst: 0, 0
+
+All tiles are visited
+
+HouseMappingGraph:: Update location from: 0, -1.
+
+HouseMappingGraph:: Update location from: 0, 0.
+
+Simulator got Step::East
+Discharged, current battary:18.000000.
+
+House:: Update location from: 1, 1.
+
+House:: Update location from: 1, 2.
+
+Simulator got Step::Finish

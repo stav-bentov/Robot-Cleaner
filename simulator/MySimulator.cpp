@@ -1,27 +1,37 @@
-#include "../include/my_simulator.h"
+#include "include/my_simulator.h"
 
 MySimulator::MySimulator()
-    : myAlgo(nullptr) {}
+    : myAlgo(nullptr),
+      house(nullptr),
+	  om("", ""),
+	  status("WORKING"),
+	  numberOfStepsMade(0) {}
 
 /*
 	Building House object from house file.
 	Builds corresponding sensors.
+	Set outputManager (input and ouput file name and house name)
 */
-void MySimulator::readHouseFile(std::string& houseFileName) {
-	house = std::make_shared<House>(houseFileName);
+void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) {
+	setHouse(houseFilePath);
+	setSensors();
+	om = OutputManager(houseFilePath, algoName);
+}
+
+void MySimulator::setHouse(std::string houseFilePath) {
+	house = std::make_shared<House>(houseFilePath);
 	maxSteps = house->getMaxSteps();
 	dockingStationLocation = house->getDockingStationLocation();
 	currentLocation = dockingStationLocation;
+	Logger::getInstance().log("Done loading the house.\n", 3);
+}
 
-	Logger::getInstance().getLogger()->info("Done loading the house.");
-	
+void MySimulator::setSensors() {
 	// Create sensors
 	wallsSensor = RobotWallsSensor(house);
 	dirtSensor = RobotDirtSensor(house);
-	batteryMeter = RobotBatteryMeter();
-	Logger::getInstance().getLogger()->info("Done setting sensors.");
-
-	om.setInputName(houseFileName);
+	batteryMeter = RobotBatteryMeter(house);
+	Logger::getInstance().log("Done setting sensors.\n", 3);
 }
 
 /*
@@ -33,20 +43,18 @@ void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
 	algo.setDirtSensor(dirtSensor);
 	algo.setBatteryMeter(batteryMeter);
 	myAlgo = &algo;
-	Logger::getInstance().getLogger()->info("Done setting sensors and algorithms");
+	Logger::getInstance().log("Done setting algorithm and its sensors.\n", 3);
 }
 
 /*
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
-	std::vector<Step> steps;
-	std::string status = "WORKING";
-
-	while (true) {
+	
+	while (numberOfStepsMade <= house->getMaxSteps()) {
 		Step currentStep = myAlgo -> nextStep();
 		steps.push_back(currentStep);
-		logStep(currentStep);
+		Common::logStep(currentStep);
 
 		if (currentStep == Step::Finish) {
 			status = "FINISHED";
@@ -54,6 +62,7 @@ void MySimulator::run() {
 		}
 		
 		house->makeStep(currentStep);
+		numberOfStepsMade++;
 	}
 
 	if (((batteryMeter.getBatteryState() == 0 && !house->inDockingStation()))){
@@ -62,36 +71,15 @@ void MySimulator::run() {
 
 	if ((status == "FINISHED" && !house->inDockingStation()))
 	{
-		Logger::getInstance().getLogger()->info("Error: algorithm returned FINISHED and not in docking station");
+		//Logger::getInstance().getLogger()->info("Error: algorithm returned FINISHED and not in docking station");
 	}
-
-	Logger::getInstance().getLogger()->info("Done setting sensors.");
-	Logger::getInstance().getLogger()->info("The End: " + house->inDockingStation());
-	om.writeOutput(steps, house->getTotalAmountOfSteps(), house->getAmountOfDirt(), status);
-	om.displaySim();
-    std::cout.flush(); 
 }
 
-void MySimulator::logStep(Step s) {
-	switch (s)
-	{
-		case Step::Stay:
-			Logger::getInstance().getLogger()->info("Simulator got Step::Stay");
-			break;
-		case Step::East:
-			Logger::getInstance().getLogger()->info("Simulator got Step::East");
-			break;
-		case Step::West:
-			Logger::getInstance().getLogger()->info("Simulator got Step::West");
-			break;
-		case Step::South:
-			Logger::getInstance().getLogger()->info("Simulator got Step::South");
-			break;
-		case Step::North:
-			Logger::getInstance().getLogger()->info("Simulator got Step::North");
-			break;
-		case Step::Finish:
-			Logger::getInstance().getLogger()->info("Simulator got Step::Finish");
-			break;
-	}
+/*
+	Write output using outputManager
+*/
+void MySimulator::setOutput() {
+	om.writeOutput(steps, numberOfStepsMade, house->getAmountOfDirt(), status, house->inDockingStation(), house->getMaxSteps());
+	om.displaySim();
+    std::cout.flush(); 
 }

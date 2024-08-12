@@ -1,16 +1,19 @@
 #ifndef MY_SIMULATOR_H
 #define MY_SIMULATOR_H
 
-#include "my_algorithm.h"
-#include "house.h"
-#include "output_manager.h"
-#include "robot_battery_meter.h"
-#include "robot_dirt_sensor.h"
-#include "robot_walls_sensor.h"
+#include "../../common_algorithm/include/my_algorithm.h"
+#include "../../common_algorithm/include/house.h"
+#include "../../common_algorithm/include/output_manager.h"
+#include "../../common_algorithm/include/robot_battery_meter.h"
+#include "../../common_algorithm/include/robot_dirt_sensor.h"
+#include "../../common_algorithm/include/robot_walls_sensor.h"
 #include <string>
 
 class MySimulator {
     private:
+        // Used algorithm
+        AbstractAlgorithm* myAlgo;
+
         // Sensors
         RobotWallsSensor wallsSensor;
         RobotDirtSensor dirtSensor;
@@ -23,17 +26,21 @@ class MySimulator {
         std::pair<int, int> currentLocation;
         size_t maxSteps;
 
-        // Used algorithm
-        AbstractAlgorithm* myAlgo;
-
         // Handle end run
-        OutputManager om;
+        OutputManager om;  
+	    std::vector<Step> steps;
+	    std::string status;
+
+        // Cahnged throgh the running
+        size_t numberOfStepsMade;
         
-        void logStep(Step s);     
+        void setSensors();
+        void setHouse(std::string houseFileName);
     public:
         MySimulator();
-        void readHouseFile(std::string& houseFileName);
+        void prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) ;
         void setAlgorithm(AbstractAlgorithm& algo);
         void run();
+        void setOutput();
 };
 #endif  // MY_SIMULATOR_H
