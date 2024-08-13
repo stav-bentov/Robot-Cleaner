@@ -1,7 +1,5 @@
 #include "../include/logger.h"
 
-Logger::Logger() : logLevel(3) {}
-
 Logger::~Logger() {}
 
 Logger& Logger::getInstance() {
@@ -22,18 +20,22 @@ void Logger::logToFile(const std::string& message, const std::string& fileName) 
     }
 }
 
-void Logger::setLogLevel(int level) {
-    logLevel = level;
+void Logger::logToConsoleError(const std::string& message)  {
+    std::lock_guard<std::mutex> lock(mtx);
+    std::cerr << message << std::endl;
 }
 
-void Logger::log(const std::string& message, int level) {
+void Logger::log(const std::string& message, LogLevels level) {
     switch (level)
     {
-        case 2:
+        case LogLevels::CONSOLE:
             logToConsole(message);
             break;
-        case 3:
+        case LogLevels::FILE:
             logToFile(message, "log.txt");
+            break;
+        case LogLevels::ERROR:
+            logToConsoleError(message);
             break;
         
         default:

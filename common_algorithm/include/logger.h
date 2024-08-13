@@ -7,33 +7,26 @@
 #include <memory>
 #include <mutex>
 
+enum class LogLevels {
+    CONSOLE,
+    FILE,
+    ERROR
+};
+
 class Logger {
-public:
-    // Get the single instance of Logger
-    static Logger& getInstance();
-
-    // Log messages to the console
-    void logToConsole(const std::string& message);
-
-    // Log messages to a file
-    void logToFile(const std::string& message, const std::string& fileName);
-
-    // Set logging level
-    void setLogLevel(int level);
-
-    // Log messages depending on log level
-    void log(const std::string& message, int level);
-
-private:
-    Logger(); 
-    ~Logger();
-
-    // Disable copy and assignment
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
-
-    int logLevel;
-    std::mutex mtx; 
+    public:
+        static Logger& getInstance();
+        void logToConsole(const std::string& message);
+        void logToFile(const std::string& message, const std::string& fileName);
+        void Logger::logToConsoleError(const std::string& message);
+        void log(const std::string& message, LogLevels level);
+        
+    private:
+        Logger(); 
+        ~Logger();
+        Logger(const Logger&) = delete;
+        Logger& operator=(const Logger&) = delete;
+        std::mutex mtx; 
 };
 
 #endif // LOGGER_H

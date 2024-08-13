@@ -226,6 +226,30 @@ __/common_algorithm/src/HouseMappingGraph.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
 .PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.s
 
+__/common_algorithm/src/InputManager.o: __/common_algorithm/src/InputManager.cpp.o
+.PHONY : __/common_algorithm/src/InputManager.o
+
+# target to build an object file
+__/common_algorithm/src/InputManager.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/InputManager.cpp.o
+.PHONY : __/common_algorithm/src/InputManager.cpp.o
+
+__/common_algorithm/src/InputManager.i: __/common_algorithm/src/InputManager.cpp.i
+.PHONY : __/common_algorithm/src/InputManager.i
+
+# target to preprocess a source file
+__/common_algorithm/src/InputManager.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/InputManager.cpp.i
+.PHONY : __/common_algorithm/src/InputManager.cpp.i
+
+__/common_algorithm/src/InputManager.s: __/common_algorithm/src/InputManager.cpp.s
+.PHONY : __/common_algorithm/src/InputManager.s
+
+# target to generate assembly for a file
+__/common_algorithm/src/InputManager.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/InputManager.cpp.s
+.PHONY : __/common_algorithm/src/InputManager.cpp.s
+
 __/common_algorithm/src/Logger.o: __/common_algorithm/src/Logger.cpp.o
 .PHONY : __/common_algorithm/src/Logger.o
 
@@ -487,6 +511,9 @@ help:
 	@echo "... __/common_algorithm/src/HouseMappingGraph.o"
 	@echo "... __/common_algorithm/src/HouseMappingGraph.i"
 	@echo "... __/common_algorithm/src/HouseMappingGraph.s"
+	@echo "... __/common_algorithm/src/InputManager.o"
+	@echo "... __/common_algorithm/src/InputManager.i"
+	@echo "... __/common_algorithm/src/InputManager.s"
 	@echo "... __/common_algorithm/src/Logger.o"
 	@echo "... __/common_algorithm/src/Logger.i"
 	@echo "... __/common_algorithm/src/Logger.s"

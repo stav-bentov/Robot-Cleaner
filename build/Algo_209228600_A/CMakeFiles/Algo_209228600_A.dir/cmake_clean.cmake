@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/House.cpp.o.d"
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d"
+  "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/InputManager.cpp.o"
+  "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/InputManager.cpp.o.d"
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/Logger.cpp.o"
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/Logger.cpp.o.d"
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"

@@ -205,6 +205,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: \
  /usr/include/c++/9/bits/parse_numbers.h \
  /usr/include/c++/9/bits/std_mutex.h \
  /usr/include/c++/9/bits/unique_lock.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/input_manager.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/house_mapping_graph.h \
  /usr/include/c++/9/set /usr/include/c++/9/bits/stl_set.h \
  /usr/include/c++/9/bits/stl_multiset.h \

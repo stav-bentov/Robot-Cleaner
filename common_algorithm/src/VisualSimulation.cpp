@@ -27,47 +27,47 @@ void VisualSimulation::processOutputFile(std::string& fileName) {
     std::istringstream iss;  // Single instance of std::istringstream
 
     // Reading Num Steps
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Num Steps"); 
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Num Steps"); 
     iss.clear();  // Clear any error flags
     iss.str(line);  // Set new string buffer
     std::getline(iss, str, '=');
     iss >> numSteps;
 
     // Reading Dirt Left
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Dirt Left"); 
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Dirt Left"); 
     iss.clear();
     iss.str(line);
     std::getline(iss, str, '=');
     iss >> dirtLeft;
 
     // Reading Status
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Status"); 
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Status"); 
     iss.clear();
     iss.str(line);
     std::getline(iss, str, '=');
     iss >> status;
 
     // Reading InDock
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read InDock"); 
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read InDock"); 
     iss.clear();
     iss.str(line);
     std::getline(iss, str, '=');
     iss >> status;
     
     // Reading Score
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Score"); 
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Score"); 
     iss.clear();
     iss.str(line);
     std::getline(iss, str, '=');
     iss >> status;
 
     // Reading the Steps line
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Steps");
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Steps");
     if (numSteps == 0) {
         return;
     }
 
-    Common::checkForError(!(std::getline(file, line)), "Error: failed to read Steps");
+    ErrorManager::checkForError(!(std::getline(file, line)), "Error: failed to read Steps");
 
     for (char c : line) {
         try {
@@ -166,7 +166,7 @@ void VisualSimulation::printHouse(bool printDir) {
 } 
 
 void VisualSimulation::updateMap() {
-    std::pair<int, int> dirElements = stepMap.at(currentStep);
+    std::pair<int, int> dirElements = Common::stepMap.at(currentStep);
     robotLocation.first += dirElements.first;
     robotLocation.second += dirElements.second;
     

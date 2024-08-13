@@ -13,9 +13,14 @@ MySimulator::MySimulator()
 	Set outputManager (input and ouput file name and house name)
 */
 void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) {
-	setHouse(houseFilePath);
-	setSensors();
-	om = OutputManager(houseFilePath, algoName);
+	try {
+		setHouse(houseFilePath);
+		setSensors();
+		om = OutputManager(houseFilePath, algoName);
+    }
+    catch (const std::exception& e) {
+        ErrorManager::checkForError(true, "Error: in house constructor");
+    }
 }
 
 void MySimulator::setHouse(std::string houseFilePath) {
@@ -23,7 +28,7 @@ void MySimulator::setHouse(std::string houseFilePath) {
 	maxSteps = house->getMaxSteps();
 	dockingStationLocation = house->getDockingStationLocation();
 	currentLocation = dockingStationLocation;
-	Logger::getInstance().log("Done loading the house.\n", 3);
+	Logger::getInstance().log("Done loading the house.\n", LogLevels::FILE);
 }
 
 void MySimulator::setSensors() {
@@ -31,7 +36,7 @@ void MySimulator::setSensors() {
 	wallsSensor = RobotWallsSensor(house);
 	dirtSensor = RobotDirtSensor(house);
 	batteryMeter = RobotBatteryMeter(house);
-	Logger::getInstance().log("Done setting sensors.\n", 3);
+	Logger::getInstance().log("Done setting sensors.\n", LogLevels::FILE);
 }
 
 /*
@@ -43,14 +48,13 @@ void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
 	algo.setDirtSensor(dirtSensor);
 	algo.setBatteryMeter(batteryMeter);
 	myAlgo = &algo;
-	Logger::getInstance().log("Done setting algorithm and its sensors.\n", 3);
+	Logger::getInstance().log("Done setting algorithm and its sensors.\n", LogLevels::FILE);
 }
 
 /*
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
-	
 	while (numberOfStepsMade <= house->getMaxSteps()) {
 		Step currentStep = myAlgo -> nextStep();
 		steps.push_back(currentStep);

@@ -209,6 +209,7 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: \
  /usr/include/c++/9/algorithm \
  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/common_enums.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/input_manager.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/house_mapping_graph.h \
  /usr/include/c++/9/set /usr/include/c++/9/bits/stl_set.h \
  /usr/include/c++/9/bits/stl_multiset.h \

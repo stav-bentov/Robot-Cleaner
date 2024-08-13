@@ -2,7 +2,6 @@
 
 REGISTER_ALGORITHM(Algo_209228600_A);
 Algo_209228600_A::Algo_209228600_A() {
-    std::cout <<"My algorithm constructor" << std::endl;
 }
 /*
     The Flow:
@@ -14,7 +13,6 @@ Algo_209228600_A::Algo_209228600_A() {
                 - Else- go back to docking station
 */
 Step Algo_209228600_A::nextStep() {
-    std::cout <<" Algo_209228600_A::nextStep()" << std::endl;
     // Edge case (maximum steps for battery is 1 so there is no place to go)
     if (maxBatterySteps == 1) {
         return Step::Finish;

@@ -1,27 +1,20 @@
 #include "../include/my_algorithm.h"
 
 void MyAlgorithm::setMaxSteps(std::size_t maxSteps) {
-	std::cout << "in setMaxSteps" << std::endl;
     totalSteps = maxSteps;
 } 
 
 void MyAlgorithm::setWallsSensor(const WallsSensor& sensor) {
-	std::cout << "in setWallsSensor" << std::endl;
     wallsSensor = &sensor;
 }
 
 void MyAlgorithm::setDirtSensor(const DirtSensor& sensor) {
-	std::cout << "in setDirtSensor" << std::endl;
     dirtSensor = &sensor; 
 }
 
 void MyAlgorithm::setBatteryMeter(const BatteryMeter& meter) {
-	std::cout << "in setBatteryMeter" << std::endl;
     batteryMeter = &meter;
-	std::cout << "batteryMeter = &meter" << std::endl;
     maxBatterySteps = batteryMeter->getBatteryState();
-	std::cout << "maxBatterySteps = batteryMeter->getBatteryState()" << std::endl;
-	std::cout << "end setBatteryMeter" << std::endl;
 }
 
 /*
@@ -30,11 +23,8 @@ void MyAlgorithm::setBatteryMeter(const BatteryMeter& meter) {
         - walls/ not walls in the nearest neigbors
 */
 void MyAlgorithm::updateMapping() {
-    Logger::getInstance().log("MyAlgorithm::updateMapping - Setting dirt at current location.\n", 3);
-
     // Update current place amount of dirt
     houseMapping.setDirt(dirtSensor->dirtLevel());
-    Logger::getInstance().log("MyAlgorithm::updateMapping - Dirt set at current location. Adding neighbors.\n", 3);
 
     // Add current location close vertices
     for (const auto& entry : Common::directionMap) {  

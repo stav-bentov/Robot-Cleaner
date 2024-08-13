@@ -115,12 +115,12 @@ simulator/clean: simulator/CMakeFiles/clean_sim.dir/clean
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all:
 	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/depend
 	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target Algo_209228600_A"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target Algo_209228600_A"
 .PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all
 
 # Build rule for subdir invocation for target.
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 0
 .PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
@@ -141,12 +141,12 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean:
 simulator/CMakeFiles/myrobot.dir/all:
 	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/depend
 	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 "Built target myrobot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target myrobot"
 .PHONY : simulator/CMakeFiles/myrobot.dir/all
 
 # Build rule for subdir invocation for target.
 simulator/CMakeFiles/myrobot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/CMakeFiles/myrobot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 0
 .PHONY : simulator/CMakeFiles/myrobot.dir/rule

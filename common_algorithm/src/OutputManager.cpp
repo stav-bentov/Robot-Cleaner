@@ -20,27 +20,31 @@ void OutputManager::createOuputName() {
 
 void OutputManager::writeOutput(std::vector<Step> steps, std::size_t numSteps, int amountOfDirtLeft, std::string status, bool inDocking, std::size_t maxSteps) {
     std::ofstream file(outputName);
-    Common::checkForError(!file.is_open(), "Cannot open output file: "+ outputName + "." );
+    ErrorManager::checkForError(!file.is_open(), "Cannot open output file: "+ outputName + "." );
 
     file << "NumSteps = " << numSteps << std::endl;
     file << "DirtLeft = " << amountOfDirtLeft << std::endl;
     file << "Status = " << status << std::endl;
-    file << "InDock = " << inDocking << std::endl;
+    file << "InDock = " << (inDocking ? "TRUE" : "FALSE") << std::endl;
     file << "Score = " << getScore(numSteps, status, amountOfDirtLeft,inDocking, maxSteps) << std::endl;
     file << "Steps: " << std::endl;
     for (Step s : steps) {
         file << getChar(s);
     }
     file.close();
-    //Logger::getInstance().getLogger()->info("Done: Output is written to: {}.", outputName);
     std::cout << "Done: Output is written to: " << outputName << std::endl;
 }
 
 int OutputManager::getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps) {
     if (status == "DEAD")
+    {
         return maxSteps + amountOfDirtLeft * 300 + 2000;
+    }
     else if (status == "FINISHED" && !inDocking)
+    {
+        Logger::getInstance().log("ERROR, status == FINISHED && !inDocking.\n", LogLevels::FILE);
         return maxSteps + amountOfDirtLeft * 300 + 3000;
+    }
     // else
     return numSteps + amountOfDirtLeft * 300 + (inDocking ? 0 : 1000);
 }

@@ -263,4 +263,5 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o: \
  /usr/include/c++/9/bits/hashtable_policy.h \
  /usr/include/c++/9/bits/unordered_map.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/input_manager.h

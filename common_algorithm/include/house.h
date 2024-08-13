@@ -8,6 +8,9 @@
 #include <type_traits>
 #include "../../common/WallSensor.h"
 #include "common_enums.h"
+#include "input_manager.h"
+#include <filesystem>
+#include <fstream>
 
 class House {
     private:
@@ -18,25 +21,20 @@ class House {
         int rows;
         int cols;
         std::pair<int, int> dockingStationLocation; 
+        std::string errorFileName;
 
         // Changed throgh the running
         double currentBatterySteps;
         std::pair<int, int> currentLocation; 
         std::vector<std::vector<int>> houseSurface;
         
-        void processParametersFromFile(std::ifstream& file);
-        void processHouseMappingFromFile(std::ifstream& file);
-        void logHouseSurface();
         void charge();
         void discharge();
         void clean();
         bool isWall(std::pair<int, int> location) const;
-        
-        template<typename T>
-        void processVariable(std::ifstream& file, T& var, const std::string& errorMessage);
+        void getParameters(std::string& filePath);
+        void createErrorName(std::string& houseFilePath);
     public:
-        static const std::map<Step, std::pair<int, int>> stepMap;
-
         House();
         House(std::string& filePath);
         std::size_t getMaxSteps() const;

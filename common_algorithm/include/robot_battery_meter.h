@@ -8,8 +8,7 @@ class RobotBatteryMeter : public BatteryMeter ,public RobotSensor{
     public:
         RobotBatteryMeter(){};
         RobotBatteryMeter(std::shared_ptr<House> _house) 
-        : RobotSensor(_house){
-            std::cout << "RobotBatteryMeter" <<std::endl;}
+        : RobotSensor(_house){}
 
         RobotBatteryMeter(const RobotBatteryMeter& other) = default;
         RobotBatteryMeter& operator=(const RobotBatteryMeter& other) = default;

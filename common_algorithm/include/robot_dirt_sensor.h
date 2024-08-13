@@ -11,8 +11,7 @@ class RobotDirtSensor : public DirtSensor, public RobotSensor {
     public:
         RobotDirtSensor();
         RobotDirtSensor(std::shared_ptr<House> _house) 
-        : RobotSensor(_house) {
-            std::cout << "RobotDirtSensor" <<std::endl;}
+        : RobotSensor(_house) {}
 
         RobotDirtSensor(const RobotDirtSensor& other) = default;
         RobotDirtSensor& operator=(const RobotDirtSensor& other) = default;

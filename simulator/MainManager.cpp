@@ -2,8 +2,6 @@
 
 void MainManager::run(int argc, char* argv[]){
     // Default search will be in current directory
-
-
     std::vector<std::string> houses;
     std::vector<std::string> algorithms;
 
@@ -33,7 +31,7 @@ void MainManager::readParameters(int argc, char* argv[], std::string& housePath,
             algoPath = arg.substr(11);
         } else if (arg.rfind("-num_threads=", 0) == 0) {
             // TODO: Add error handle
-            numThread = std::to_integer(arg.substr(11));
+            numThread = std::stoi(arg.substr(11));
         } else if (arg.rfind("-summary_only", 0) == 0) {
             summaryOnly = true;    
         }
@@ -68,52 +66,44 @@ void MainManager::loadAlgorithmFiles(std::string& algoPath, std::vector<std::str
 /*
     For each .so algorithm (gets its path and name)- opens it using dlopen
 */
-void MainManager::openAlgorithms(std::vector<std::string>& algorithms, std::vector<void*> algorithmsHandle) {
+void MainManager::openAlgorithms(std::vector<std::string>& algorithms, std::vector<void*>& algorithmsHandle) {
     for (std::string algo : algorithms) {
-        void* handle;
-        std::cout << "Trying to open: " << algo.c_str() << std::endl;
-        handle = dlopen(algo.c_str(), RTLD_LAZY);
-        if (!handle) {
-            std::cerr << "Error: " << dlerror() << std::endl;
-            std::cerr << "System error: " << strerror(errno) << std::endl;
-        }
-        // TODO: Write ERROR to the cureent working directory!!
-        Common::checkForError(!handle, "ERROR: Unable to open error file: " + algo);
-        algorithmsHandle.push_back(handle);
+        void* handle = dlopen(algo.c_str(), RTLD_LAZY);
+        if (!handle)
+            ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algo.stem().string() + ".error");
+        else
+            algorithmsHandle.push_back(handle);
     }
 }
 
 void MainManager::runSimulations(std::vector<std::string>& houses) {
-    std::cout << "in run simulation" << std::endl;
     for(const auto& algo: AlgorithmRegistrar::getAlgorithmRegistrar()) {
-        std::cout << "algo.name(): " << algo.name() << std::endl;
-        std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
-        if (algorithm) {
-            std::cout << algo.name() << ": " << static_cast<int>(algorithm->nextStep()) << std::endl;
-            for (auto& house : houses) {
-                std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
-
-                MySimulator simulator;
-                simulator.prepareSimulationEnvironment(house, algo.name());
-                simulator.setAlgorithm(*algorithm);
-                simulator.run();
-                simulator.setOutput();
+        for (auto& house : houses) {
+            std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
+            if (algorithm) {
+                std::cout << algo.name() << ": " << static_cast<int>(algorithm->nextStep()) << std::endl;
+                    std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
+                    try {
+                        MySimulator simulator;
+                        simulator.prepareSimulationEnvironment(house, algo.name());
+                        simulator.setAlgorithm(*algorithm);
+                        simulator.run();
+                        simulator.setOutput();
+                    }
+                    catch (const std::exception& e) {
+                        std::cout << "Error: " << e << std::endl;
+                    }
+                }
+            else {
+                ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
             }
-        } 
-        else {
-            // TODO: handle error in algorithm
         }
     }
-    std::cout << "done run simulation" << std::endl;
-
     AlgorithmRegistrar::getAlgorithmRegistrar().clear();
-    std::cout << "AlgorithmRegistrar::getAlgorithmRegistrar().clear()" << std::endl;
 }
 
 void MainManager::closeAlgorithms(std::vector<void*> algorithmsHandle) {
-    std::cout << "in run closeAlgorithms" << std::endl;
     for (void* handle : algorithmsHandle) {
         dlclose(handle);
     }
-    std::cout << "done run closeAlgorithms" << std::endl;
 }

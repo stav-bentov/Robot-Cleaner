@@ -13,9 +13,7 @@ class RobotWallsSensor : public WallsSensor, public RobotSensor {
     public:
         RobotWallsSensor();
         RobotWallsSensor(std::shared_ptr<House> _house) 
-        : RobotSensor(_house) {
-            std::cout << "RobotWallsSensor" <<std::endl;
-        }
+        : RobotSensor(_house) {}
 
         RobotWallsSensor(const RobotWallsSensor& other) = default;
         RobotWallsSensor& operator=(const RobotWallsSensor& other) = default;
