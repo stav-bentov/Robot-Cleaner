@@ -80,10 +80,26 @@ void MySimulator::run() {
 }
 
 /*
-	Write output using outputManager
+	Write output using outputManager, return score calculated there
 */
 void MySimulator::setOutput() {
-	om.writeOutput(steps, numberOfStepsMade, house->getAmountOfDirt(), status, house->inDockingStation(), house->getMaxSteps());
+	int score = getScore(numberOfStepsMade, status, house->getAmountOfDirt(), house->inDockingStation(), maxSteps);
+	om.writeOutput(steps, numberOfStepsMade, house->getAmountOfDirt(), status, house->inDockingStation(), score);
 	om.displaySim();
     std::cout.flush(); 
+}
+
+
+int MySimulator::getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps) {
+    if (status == "DEAD")
+    {
+        return maxSteps + amountOfDirtLeft * 300 + 2000;
+    }
+    else if (status == "FINISHED" && !inDocking)
+    {
+        Logger::getInstance().log("ERROR, status == FINISHED && !inDocking.\n", LogLevels::FILE);
+        return maxSteps + amountOfDirtLeft * 300 + 3000;
+    }
+    // else
+    return numSteps + amountOfDirtLeft * 300 + (inDocking ? 0 : 1000);
 }

@@ -36,6 +36,7 @@ class MySimulator {
         
         void setSensors();
         void setHouse(std::string houseFileName);
+        int getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps);
     public:
         MySimulator();
         void prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) ;

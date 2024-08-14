@@ -178,6 +178,30 @@ __/common_algorithm/src/ConfigurationManager.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/ConfigurationManager.cpp.s
 .PHONY : __/common_algorithm/src/ConfigurationManager.cpp.s
 
+__/common_algorithm/src/ErrorManager.o: __/common_algorithm/src/ErrorManager.cpp.o
+.PHONY : __/common_algorithm/src/ErrorManager.o
+
+# target to build an object file
+__/common_algorithm/src/ErrorManager.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/ErrorManager.cpp.o
+.PHONY : __/common_algorithm/src/ErrorManager.cpp.o
+
+__/common_algorithm/src/ErrorManager.i: __/common_algorithm/src/ErrorManager.cpp.i
+.PHONY : __/common_algorithm/src/ErrorManager.i
+
+# target to preprocess a source file
+__/common_algorithm/src/ErrorManager.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/ErrorManager.cpp.i
+.PHONY : __/common_algorithm/src/ErrorManager.cpp.i
+
+__/common_algorithm/src/ErrorManager.s: __/common_algorithm/src/ErrorManager.cpp.s
+.PHONY : __/common_algorithm/src/ErrorManager.s
+
+# target to generate assembly for a file
+__/common_algorithm/src/ErrorManager.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/ErrorManager.cpp.s
+.PHONY : __/common_algorithm/src/ErrorManager.cpp.s
+
 __/common_algorithm/src/House.o: __/common_algorithm/src/House.cpp.o
 .PHONY : __/common_algorithm/src/House.o
 
@@ -505,6 +529,9 @@ help:
 	@echo "... __/common_algorithm/src/ConfigurationManager.o"
 	@echo "... __/common_algorithm/src/ConfigurationManager.i"
 	@echo "... __/common_algorithm/src/ConfigurationManager.s"
+	@echo "... __/common_algorithm/src/ErrorManager.o"
+	@echo "... __/common_algorithm/src/ErrorManager.i"
+	@echo "... __/common_algorithm/src/ErrorManager.s"
 	@echo "... __/common_algorithm/src/House.o"
 	@echo "... __/common_algorithm/src/House.i"
 	@echo "... __/common_algorithm/src/House.s"

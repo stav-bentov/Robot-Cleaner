@@ -70,34 +70,62 @@ void MainManager::openAlgorithms(std::vector<std::string>& algorithms, std::vect
     for (std::string algo : algorithms) {
         void* handle = dlopen(algo.c_str(), RTLD_LAZY);
         if (!handle)
-            ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algo.stem().string() + ".error");
+        {
+            std::filesystem::path algoPath(algo);
+            ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algoPath.stem().string() + ".error");
+        }
         else
+        {
             algorithmsHandle.push_back(handle);
+        }
     }
 }
 
 void MainManager::runSimulations(std::vector<std::string>& houses) {
+    /*CsvManager csvManager;
+    int row = 0;
+    int col = 0;
+    int score = -1;*/
+
     for(const auto& algo: AlgorithmRegistrar::getAlgorithmRegistrar()) {
+        //first = true;
         for (auto& house : houses) {
+            //csvManager.addHouseName(house);
             std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
             if (algorithm) {
+
+                /*if (first) {
+                    first = false;
+                    csvManager.addAlgorithmName(algo.name());
+                }*/
+
                 std::cout << algo.name() << ": " << static_cast<int>(algorithm->nextStep()) << std::endl;
                     std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
                     try {
+                        std::cout << "MySimulator simulator" << std::endl;
                         MySimulator simulator;
+                        std::cout << "simulator.prepareSimulationEnvironment(house, algo.name())" << std::endl;
                         simulator.prepareSimulationEnvironment(house, algo.name());
+                        std::cout << "simulator.setAlgorithm(*algorithm)" << std::endl;
                         simulator.setAlgorithm(*algorithm);
+                        std::cout << "simulator.run()" << std::endl;
                         simulator.run();
+                        std::cout << "simulator.setOutput();" << std::endl;
                         simulator.setOutput();
                     }
                     catch (const std::exception& e) {
-                        std::cout << "Error: " << e << std::endl;
+                        std::cout << "Error: " << e.what() << std::endl;
                     }
+                    
+                    // Update csv
+                    //csvManager.addScore(score, row, col);
                 }
             else {
                 ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
             }
+            //col+++;
         }
+        //row++;
     }
     AlgorithmRegistrar::getAlgorithmRegistrar().clear();
 }

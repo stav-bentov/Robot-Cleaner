@@ -6,11 +6,11 @@
 #include <algorithm>  
 #include <stdexcept>
 #include <type_traits>
+#include <filesystem>
+#include <fstream>
 #include "../../common/WallSensor.h"
 #include "common_enums.h"
 #include "input_manager.h"
-#include <filesystem>
-#include <fstream>
 
 class House {
     private:

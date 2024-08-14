@@ -47,7 +47,7 @@ void Common::logStep(Step s) {
 }
 
 
-Direction stepToDirection(Step s) {
+Direction Common::stepToDirection(Step s) {
     Direction d;
     switch (s)
     {
@@ -63,6 +63,15 @@ Direction stepToDirection(Step s) {
         case Step::West:
             d = Direction::West;
             break;
+        case Step::Stay:
+        case Step::Finish:
+		{
+			// Assumption: stepToDirection is called only by direction<->step
+			ErrorManager::checkForError(true, "Error: Got invalid step in stepToDirection");
+			break;
+		}
+        default:
+            throw std::runtime_error("Unknown step direction");
     }
     return d;
 }

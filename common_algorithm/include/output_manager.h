@@ -21,10 +21,9 @@ class OutputManager {
 
         void createOuputName();   
         std::string getChar(Step s);
-        int getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps);
     public:
         OutputManager(std::string housePath, std::string algoName);
-        void writeOutput(std::vector<Step> steps, std::size_t numSteps, int amountOfDirtLeft, std::string status, bool inDocking, std::size_t maxSteps);
+        void writeOutput(std::vector<Step> steps, std::size_t numSteps, int amountOfDirtLeft, std::string status, bool inDocking, int score);
         void displaySim();
 };
 #endif  // OUTPUT_MANAGER_H_

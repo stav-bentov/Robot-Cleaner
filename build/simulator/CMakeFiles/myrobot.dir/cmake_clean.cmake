@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o.d"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o.d"
+  "CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o"
+  "CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o.d"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o.d"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"

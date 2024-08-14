@@ -16,8 +16,7 @@
 class HouseMappingGraph {
     private:
         // Mapping of corrdinate and vetices 
-        std::map<std::pair<int, int>, int> verticesMapping;
-        std::vector<Vertex> vertices;
+        std::map<std::pair<int, int>, std::unique_ptr<Vertex>> verticesMapping;
         // mapping of corrdinate to neigbors vertices
         std::map<std::pair<int, int>, std::set<std::pair<int, int>>> adjacencyList;
         const std::pair<int, int> dockingStationLocation;

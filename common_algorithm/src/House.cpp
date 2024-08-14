@@ -5,7 +5,7 @@ House::House(std::string& filePath) {
         getParameters(filePath);
     }
     catch (const std::exception& e) {
-        ErrorManager::checkForError(true, e, houseName);
+        ErrorManager::checkForError(true, e.what(), errorFileName);
         ErrorManager::checkForError(true, "Error: in house constructor");
     }
 }
@@ -14,8 +14,8 @@ House::House(std::string& filePath) {
     Get all house parameters using Input manager
 */
 void House::getParameters(std::string& filePath) {
-    InputManager im(filePath);
-    im.getParameters(houseName, maxSteps, maxBattery, amountOfDirt, rows, cols, dockingStationLocation, houseSurface);
+    InputManager inputManager(filePath);
+    inputManager.getParameters(houseName, maxSteps, maxBattery, amountOfDirt, rows, cols, dockingStationLocation, houseSurface);
     createErrorName(filePath);
     currentBatterySteps = maxBattery;
     currentLocation = dockingStationLocation;
@@ -23,10 +23,8 @@ void House::getParameters(std::string& filePath) {
 
 void House::createErrorName(std::string& houseFilePath) {
     std::filesystem::path housePath(houseFilePath);
-
     // Get the names
     std::string houseName = housePath.stem().string(); 
-
     errorFileName = houseName + ".error";
 }
 
@@ -108,6 +106,7 @@ bool House::inDockingStation() const {
 	Make step- clean/ charge/ move and update robot location.
 */
 void House::makeStep(Step step) {
+    Direction d;
     switch (step)
 	{
 		case Step::Stay:
@@ -130,7 +129,7 @@ void House::makeStep(Step step) {
 		case Step::North:
 		case Step::South:
             // Check valid step
-            Direction d = Common::stepToDirection(step);
+            d = Common::stepToDirection(step);
             ErrorManager::checkForError(isWall(d), "Error: step is thoward the wall!");
             
 			discharge();

@@ -26,6 +26,7 @@ set(COMMON_ALGORITHM_SOURCES
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/Vertex.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/VisualSimulation.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/InputManager.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/ErrorManager.cpp
 )
 
 set(CURRENT_ALGORITHM_SOURCES

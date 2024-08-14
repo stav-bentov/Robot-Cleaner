@@ -1,5 +1,5 @@
-#ifndef INPUT_MANAGER_H_
-#define INPUT_MANAGER_H_
+#ifndef ERROR_MANAGER_H_
+#define ERROR_MANAGER_H_
 
 #include <memory>
 #include <cstddef>
@@ -13,4 +13,4 @@ class ErrorManager {
         static void checkForError(bool declareError, std::string errorDescription, std::string errorFile);
         static void checkForError(bool declareError, std::string errorDescription);
 };
-#endif  // INPUT_MANAGER_H_
+#endif  // ERROR_MANAGER_H_

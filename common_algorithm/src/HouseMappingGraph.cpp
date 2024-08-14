@@ -10,8 +10,8 @@ void HouseMappingGraph::addVertex(std::pair<int, int> location, Type t) {
     // If vertex doesnt exist (accordint to its coordinate)- add it
     if (verticesMapping.find(location) == verticesMapping.end()) {  
         // Create vertex and add it to the mapping
-        vertices.emplace_back(location, t);
-        verticesMapping[location] = vertices.size() - 1;
+        auto newVertex = std::make_unique<Vertex>(location, t);
+        verticesMapping[location] = std::move(newVertex);
     }
 }
 
@@ -38,7 +38,7 @@ void HouseMappingGraph::setDirt(std::pair<int, int> location, int dirt) {
     }
 
     // Update dirt (assumption location IS exist)
-    Vertex* v = &vertices[verticesMapping[location]];
+    std::unique_ptr<Vertex>& v = verticesMapping.at(location);
     v->setDirt(dirt);
     v->updateType(Type::Floor);
     // if I set the dirt then I visited in it!
@@ -73,7 +73,7 @@ Step HouseMappingGraph::getFirstStep(const std::pair<int, int>& target, const st
 
 void HouseMappingGraph::updateCurrentLocation(Step s) {
     // Assumption- vertex currentLocation exist
-    Vertex* vertex = &vertices[verticesMapping[currentLocation]];
+    std::unique_ptr<Vertex>& vertex = verticesMapping.at(currentLocation);
     
     if (s == Step::Stay) {
         if (vertex->getDirt() > 0) { 
@@ -116,7 +116,7 @@ Step HouseMappingGraph::runBfs(int batterySteps, int maxBatterySteps, int maxSte
             std::pair<int, int> location = q.front();
             q.pop();
             
-            Vertex* vertex = &vertices[verticesMapping[location]];
+            std::unique_ptr<Vertex>& vertex = verticesMapping.at(location);
             bool isDirtOrUnknown = (vertex->getDirt() > 0 || !vertex->getIsDirtKnown());
             
             if (checkLocation(location, depth, batterySteps, maxSteps, parent, choseDirtOrUnknownDst,
@@ -168,7 +168,7 @@ void HouseMappingGraph::updateQ(std::pair<int, int>& location, std::set<std::pai
 
         // If neiLocation exist
         if (verticesMapping.find(neiLocation) != verticesMapping.end()) { 
-            Vertex* neiVertex = &vertices[verticesMapping[neiLocation]];
+            std::unique_ptr<Vertex>& neiVertex = verticesMapping.at(neiLocation);
             // Wall- no way to continue
             if (neiVertex->isWall()) {
                 continue;
@@ -296,7 +296,6 @@ Step HouseMappingGraph::getNextStep(bool choseDirtOrUnknownDst, int dirtDistance
     }
     return s;
 }
-
 
 Step HouseMappingGraph::getStepByDiff(int diffrenceRow, int diffrenceCol) {
     if (diffrenceRow == -1 && diffrenceCol == 0) {

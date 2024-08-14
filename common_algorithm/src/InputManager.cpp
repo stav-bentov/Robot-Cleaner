@@ -141,5 +141,4 @@ void InputManager::processHouseMappingFromFile(std::ifstream& file) {
         }
         houseSurface.push_back(row);
     }
-    logHouseSurface();
 }

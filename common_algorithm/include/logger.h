@@ -18,7 +18,7 @@ class Logger {
         static Logger& getInstance();
         void logToConsole(const std::string& message);
         void logToFile(const std::string& message, const std::string& fileName);
-        void Logger::logToConsoleError(const std::string& message);
+        void logToConsoleError(const std::string& message);
         void log(const std::string& message, LogLevels level);
         
     private:
