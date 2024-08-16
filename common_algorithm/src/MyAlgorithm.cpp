@@ -1,18 +1,23 @@
 #include "../include/my_algorithm.h"
 
 void MyAlgorithm::setMaxSteps(std::size_t maxSteps) {
+    std::cout << "MyAlgorithm::setMaxSteps" << std::endl;
+
     totalSteps = maxSteps;
 } 
 
 void MyAlgorithm::setWallsSensor(const WallsSensor& sensor) {
+    std::cout << "MyAlgorithm::setWallsSensor" << std::endl;
     wallsSensor = &sensor;
 }
 
 void MyAlgorithm::setDirtSensor(const DirtSensor& sensor) {
+    std::cout << "MyAlgorithm::setDirtSensor" << std::endl;
     dirtSensor = &sensor; 
 }
 
 void MyAlgorithm::setBatteryMeter(const BatteryMeter& meter) {
+    std::cout << "MyAlgorithm::setBatteryMeter" << std::endl;
     batteryMeter = &meter;
     maxBatterySteps = batteryMeter->getBatteryState();
 }

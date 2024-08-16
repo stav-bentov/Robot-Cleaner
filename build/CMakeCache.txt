@@ -15,13 +15,13 @@
 ########################
 
 //Value Computed by CMake
-Algo_209228600_A_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A
+Algo_209228600_B_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B
 
 //Value Computed by CMake
-Algo_209228600_A_IS_TOP_LEVEL:STATIC=OFF
+Algo_209228600_B_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Algo_209228600_A_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A
+Algo_209228600_B_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line

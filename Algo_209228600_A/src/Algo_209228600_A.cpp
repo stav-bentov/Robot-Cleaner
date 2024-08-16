@@ -1,6 +1,9 @@
 #include "../include/Algo_209228600_A.h"
 
+extern "C" 
+{
 REGISTER_ALGORITHM(Algo_209228600_A);
+}
 Algo_209228600_A::Algo_209228600_A() {
 }
 /*
@@ -32,7 +35,9 @@ Step Algo_209228600_A::nextStep() {
     }
 
     // Make the step in algorithm
+    //std::cout << "updateMapping()" << std::endl;
     updateMapping();
+    //std::cout << "Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);" << std::endl;
     Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
     totalSteps--;
     return step;

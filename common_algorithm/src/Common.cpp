@@ -21,26 +21,32 @@ void Common::logStep(Step s) {
 	{
 		case Step::Stay:
 			Logger::getInstance().log("Simulator got Step::Stay", LogLevels::FILE);
+			std::cout <<"Simulator got Step::Stay" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::Stay");
 			break;
 		case Step::East:
 			Logger::getInstance().log("Simulator got Step::East", LogLevels::FILE);
+			std::cout <<"Simulator got Step::East" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::East");
 			break;
 		case Step::West:
 			Logger::getInstance().log("Simulator got Step::West", LogLevels::FILE);
+			std::cout <<"Simulator got Step::West" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::West");
 			break;
 		case Step::South:
 			Logger::getInstance().log("Simulator got Step::South", LogLevels::FILE);
+			std::cout <<"Simulator got Step::South" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::South");
 			break;
 		case Step::North:
 			Logger::getInstance().log("Simulator got Step::North", LogLevels::FILE);
+			std::cout <<"Simulator got Step::North" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::North");
 			break;
 		case Step::Finish:
 			Logger::getInstance().log("Simulator got Step::Finish", LogLevels::FILE);
+			std::cout <<"Simulator got Step::Finish" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::Finish");
 			break;
 	}

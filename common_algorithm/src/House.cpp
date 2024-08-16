@@ -50,6 +50,8 @@ std::vector<std::vector<int>> House::getHouseSurface() const {
 }
 
 int House::getDirtLevel() const{
+    std::cout << "Dirt Level in location: " << currentLocation.first << ", " << currentLocation.second << " is : " << houseSurface[currentLocation.first][currentLocation.second]<<std::endl;
+
     Logger::getInstance().log("House:: getDirtLevel in " + std::to_string(currentLocation.first) + ","+ std::to_string(currentLocation.second) + ":" + std::to_string(houseSurface[currentLocation.first][currentLocation.second]) + "\n", LogLevels::FILE);
 
     return houseSurface[currentLocation.first][currentLocation.second];
@@ -69,9 +71,11 @@ float House::getCurentBatterySteps() const {
 }
 
 void House::charge() {
+    std::cout << "Charging: " << currentBatterySteps << "..." << std::endl;
     double charge_increment = (maxBattery)/20.0;
     // Make sure the battery is not overloaded
     currentBatterySteps = std::min(currentBatterySteps + charge_increment, static_cast<double>(maxBattery));
+    std::cout << "Updated battery: " << currentBatterySteps << "." << std::endl;
 }
 
 void House::discharge() {
@@ -80,9 +84,12 @@ void House::discharge() {
 }
 
 void House::clean() {
+    std::cout << "Cleaning: " << currentLocation.first << ", " << currentLocation.second << std::endl;
     Logger::getInstance().log("Cleaned in location: " + std::to_string(currentLocation.first) + ", " +std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
     amountOfDirt--;
     houseSurface[currentLocation.first][currentLocation.second]--;
+    std::cout << "amountOfDirt in location: " << houseSurface[currentLocation.first][currentLocation.second] << std::endl;
+    std::cout << "amountOfDirt: " << amountOfDirt << std::endl;
 }
 
 /*
@@ -96,6 +103,7 @@ void House::updateLocation(Step step) {
     currentLocation.second += stepElements.second;
 
     Logger::getInstance().log("House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
+    std::cout << "new location: " << currentLocation.first <<" ," << currentLocation.second <<std::endl<<std::endl;
 }
 
 bool House::inDockingStation() const {
@@ -147,6 +155,7 @@ bool House::isWall(Direction d) const {
     std::pair<int, int> dirElements = Common::directionMap.at(d);
     int row = currentLocation.first + dirElements.first;
     int col = currentLocation.second + dirElements.second;
+    std::cout << "House::isWall for location: " << row <<" ," << col <<std::endl;
     return isWall({row, col});
 }
 

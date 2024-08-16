@@ -31,7 +31,7 @@ void MainManager::readParameters(int argc, char* argv[], std::string& housePath,
             algoPath = arg.substr(11);
         } else if (arg.rfind("-num_threads=", 0) == 0) {
             // TODO: Add error handle
-            numThread = std::stoi(arg.substr(11));
+            numThread = std::stoi(arg.substr(13));
         } else if (arg.rfind("-summary_only", 0) == 0) {
             summaryOnly = true;    
         }
@@ -99,27 +99,26 @@ void MainManager::runSimulations(std::vector<std::string>& houses) {
                     csvManager.addAlgorithmName(algo.name());
                 }*/
 
-                std::cout << algo.name() << ": " << static_cast<int>(algorithm->nextStep()) << std::endl;
-                    std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
-                    try {
-                        std::cout << "MySimulator simulator" << std::endl;
-                        MySimulator simulator;
-                        std::cout << "simulator.prepareSimulationEnvironment(house, algo.name())" << std::endl;
-                        simulator.prepareSimulationEnvironment(house, algo.name());
-                        std::cout << "simulator.setAlgorithm(*algorithm)" << std::endl;
-                        simulator.setAlgorithm(*algorithm);
-                        std::cout << "simulator.run()" << std::endl;
-                        simulator.run();
-                        std::cout << "simulator.setOutput();" << std::endl;
-                        simulator.setOutput();
-                    }
-                    catch (const std::exception& e) {
-                        std::cout << "Error: " << e.what() << std::endl;
-                    }
-                    
-                    // Update csv
-                    //csvManager.addScore(score, row, col);
+                std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
+                try {
+                    std::cout << "MySimulator simulator" << std::endl;
+                    MySimulator simulator;
+                    std::cout << "simulator.prepareSimulationEnvironment(house, algo.name())" << std::endl;
+                    simulator.prepareSimulationEnvironment(house, algo.name());
+                    std::cout << "simulator.setAlgorithm(*algorithm)" << std::endl;
+                    simulator.setAlgorithm(*algorithm);
+                    std::cout << "simulator.run()" << std::endl;
+                    simulator.run();
+                    std::cout << "simulator.setOutput();" << std::endl;
+                    simulator.setOutput();
                 }
+                catch (const std::exception& e) {
+                    std::cout << "Error: " << e.what() << std::endl;
+                }
+                    
+                // Update csv
+                //csvManager.addScore(score, row, col);
+            }
             else {
                 ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
             }

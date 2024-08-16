@@ -4,9 +4,13 @@ project(RobotCleaner)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
-add_subdirectory(Algo_209228600_A)
+#add_subdirectory(Algo_209228600_A)
+add_subdirectory(Algo_209228600_B)
+#add_subdirectory(Algo_209228600_C)
 add_subdirectory(simulator)
 
 set(common_libs 
-  Algorithm_209229600_A
+  #Algorithm_209229600_A
+  Algorithm_209229600_B
+  #Algorithm_209229600_C
   )

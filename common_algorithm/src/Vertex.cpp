@@ -1,6 +1,6 @@
 #include "../include/vertex.h"
 
-Vertex::Vertex(std::pair<int, int> location, Type t) : row(location.first), col(location.second), type(t), distanceFromDockingStation(-1), dirt(0), isDirtKnown(false), visited(false){
+Vertex::Vertex(std::pair<int, int> location, Type t) : row(location.first), col(location.second), type(t), distanceFromDockingStation(-1), dirt(-1), isDirtKnown(false), visited(false){
     Logger::getInstance().log("Vertex::Vertex: " + std::to_string(dirt) +"in location:" + std::to_string(row) + ", " + std::to_string(col) + "\n", LogLevels::FILE);
 }
 

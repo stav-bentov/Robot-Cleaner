@@ -13,6 +13,8 @@ MySimulator::MySimulator()
 	Set outputManager (input and ouput file name and house name)
 */
 void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) {
+	
+    std::cout << "MySimulator::prepareSimulationEnvironment" << std::endl;
 	try {
 		setHouse(houseFilePath);
 		setSensors();
@@ -24,6 +26,7 @@ void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::s
 }
 
 void MySimulator::setHouse(std::string houseFilePath) {
+    std::cout << "MySimulator::setHouse" << std::endl;
 	house = std::make_shared<House>(houseFilePath);
 	maxSteps = house->getMaxSteps();
 	dockingStationLocation = house->getDockingStationLocation();
@@ -32,6 +35,7 @@ void MySimulator::setHouse(std::string houseFilePath) {
 }
 
 void MySimulator::setSensors() {
+    std::cout << "MySimulator::setSensors" << std::endl;
 	// Create sensors
 	wallsSensor = RobotWallsSensor(house);
 	dirtSensor = RobotDirtSensor(house);
@@ -43,6 +47,7 @@ void MySimulator::setSensors() {
 	Sets sensors to algorithm.
 */
 void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
+    std::cout << "MySimulator::setAlgorithm" << std::endl;
 	algo.setMaxSteps(maxSteps);
 	algo.setWallsSensor(wallsSensor);
 	algo.setDirtSensor(dirtSensor);
@@ -56,7 +61,9 @@ void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
 */
 void MySimulator::run() {
 	while (numberOfStepsMade <= house->getMaxSteps()) {
+		//std::cout << "Step currentStep = myAlgo -> nextStep()" << std::endl;
 		Step currentStep = myAlgo -> nextStep();
+		//std::cout << "steps.push_back(currentStep);" << std::endl;
 		steps.push_back(currentStep);
 		Common::logStep(currentStep);
 
@@ -65,6 +72,7 @@ void MySimulator::run() {
 			break;
 		}
 		
+		//std::cout << "house->makeStep(currentStep);" << std::endl;
 		house->makeStep(currentStep);
 		numberOfStepsMade++;
 	}

@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Algo_209228600_A
+# Target rules for targets named Algo_209228600_B
 
 # Build rule for target.
-Algo_209228600_A: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A
-.PHONY : Algo_209228600_A
+Algo_209228600_B: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_B
+.PHONY : Algo_209228600_B
 
 # fast build rule for target.
-Algo_209228600_A/fast:
-	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build
-.PHONY : Algo_209228600_A/fast
+Algo_209228600_B/fast:
+	$(MAKE) $(MAKESILENT) -f Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build
+.PHONY : Algo_209228600_B/fast
 
 #=============================================================================
 # Target rules for targets named myrobot
@@ -164,7 +164,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... clean_sim"
-	@echo "... Algo_209228600_A"
+	@echo "... Algo_209228600_B"
 	@echo "... myrobot"
 .PHONY : help
 

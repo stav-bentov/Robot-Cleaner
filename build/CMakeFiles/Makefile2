@@ -63,34 +63,34 @@ CMAKE_BINARY_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-pro
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: Algo_209228600_A/all
+all: Algo_209228600_B/all
 all: simulator/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: Algo_209228600_A/preinstall
+preinstall: Algo_209228600_B/preinstall
 preinstall: simulator/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: Algo_209228600_A/clean
+clean: Algo_209228600_B/clean
 clean: simulator/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Algo_209228600_A
+# Directory level rules for directory Algo_209228600_B
 
 # Recursive "all" directory target.
-Algo_209228600_A/all: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all
-.PHONY : Algo_209228600_A/all
+Algo_209228600_B/all: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/all
+.PHONY : Algo_209228600_B/all
 
 # Recursive "preinstall" directory target.
-Algo_209228600_A/preinstall:
-.PHONY : Algo_209228600_A/preinstall
+Algo_209228600_B/preinstall:
+.PHONY : Algo_209228600_B/preinstall
 
 # Recursive "clean" directory target.
-Algo_209228600_A/clean: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean
-.PHONY : Algo_209228600_A/clean
+Algo_209228600_B/clean: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean
+.PHONY : Algo_209228600_B/clean
 
 #=============================================================================
 # Directory level rules for directory simulator
@@ -109,30 +109,30 @@ simulator/clean: simulator/CMakeFiles/clean_sim.dir/clean
 .PHONY : simulator/clean
 
 #=============================================================================
-# Target rules for target Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir
+# Target rules for target Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir
 
 # All Build rule for target.
-Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all:
-	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/depend
-	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target Algo_209228600_A"
-.PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/all:
+	$(MAKE) $(MAKESILENT) -f Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/depend
+	$(MAKE) $(MAKESILENT) -f Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target Algo_209228600_B"
+.PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/all
 
 # Build rule for subdir invocation for target.
-Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 17
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/all
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 15
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 0
-.PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
+.PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/rule
 
 # Convenience name for target.
-Algo_209228600_A: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
-.PHONY : Algo_209228600_A
+Algo_209228600_B: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/rule
+.PHONY : Algo_209228600_B
 
 # clean rule for target.
-Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean
-.PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean
+.PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean
 
 #=============================================================================
 # Target rules for target simulator/CMakeFiles/myrobot.dir
@@ -141,7 +141,7 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/clean:
 simulator/CMakeFiles/myrobot.dir/all:
 	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/depend
 	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37 "Built target myrobot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target myrobot"
 .PHONY : simulator/CMakeFiles/myrobot.dir/all
 
 # Build rule for subdir invocation for target.
