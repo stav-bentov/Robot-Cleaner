@@ -1,25 +1,20 @@
 #include "include/MainManager.h"
 
 void MainManager::run(int argc, char* argv[]){
-    // Default search will be in current directory
-    std::vector<std::string> houses;
-    std::vector<std::string> algorithms;
-
-    std::vector<void*> algorithmsHandle;
-
-    readParameters(argc, argv, housePath, algoPath);
-    loadHouseFiles(housePath, houses);
-    loadAlgorithmFiles(algoPath, algorithms);
-    openAlgorithms(algorithms, algorithmsHandle);
-    runSimulations(houses);
-    closeAlgorithms(algorithmsHandle);
+    readParameters(argc, argv);
+    loadHouseFiles();
+    loadAlgorithmFiles();
+    openAlgorithms();
+    createSimulations();
+    runSimulations();
+    closeAlgorithms();
 }
 
 
 /*
     Reads parameters given in command line
 */
-void MainManager::readParameters(int argc, char* argv[], std::string& housePath, std::string& algoPath) {
+void MainManager::readParameters(int argc, char* argv[]) {
     for (int i = 1; i < argc; i++) {
         std::string arg(argv[i]);
         // Check if argument starts with this sign
@@ -30,8 +25,15 @@ void MainManager::readParameters(int argc, char* argv[], std::string& housePath,
             // "you are not required to have support for spaces around the equal sign"
             algoPath = arg.substr(11);
         } else if (arg.rfind("-num_threads=", 0) == 0) {
-            // TODO: Add error handle
-            numThread = std::stoi(arg.substr(13));
+            try {
+                numThread = std::stoi(arg.substr(13));
+                if (numThread <= 0) {
+                    throw std::runtime_error("Invalid number of threads provided. Using default: 10.");
+                }
+            } catch (const std::exception& e) {
+                std::cerr << "Invalid number of threads provided. Using default: 10." << std::endl;
+                numThread = 10;
+            }
         } else if (arg.rfind("-summary_only", 0) == 0) {
             summaryOnly = true;    
         }
@@ -52,21 +54,21 @@ void MainManager::loadFiles(std::string& path, std::vector<std::string>& contain
 /*
     Load houses (.house) files from housePath
 */
-void MainManager::loadHouseFiles(std::string& housePath, std::vector<std::string>& houses){
-    loadFiles(housePath, houses, ".house");
+void MainManager::loadHouseFiles(){
+    loadFiles(housePath, housespath, ".house");
 }
 
 /*
     Load algorithms (.so) files from housePath
 */
-void MainManager::loadAlgorithmFiles(std::string& algoPath, std::vector<std::string>& algorithms){
+void MainManager::loadAlgorithmFiles(){
     loadFiles(algoPath, algorithms, ".so");
 }
 
 /*
     For each .so algorithm (gets its path and name)- opens it using dlopen
 */
-void MainManager::openAlgorithms(std::vector<std::string>& algorithms, std::vector<void*>& algorithmsHandle) {
+void MainManager::openAlgorithms() {
     for (std::string algo : algorithms) {
         void* handle = dlopen(algo.c_str(), RTLD_LAZY);
         if (!handle)
@@ -81,55 +83,53 @@ void MainManager::openAlgorithms(std::vector<std::string>& algorithms, std::vect
     }
 }
 
-void MainManager::runSimulations(std::vector<std::string>& houses) {
-    /*CsvManager csvManager;
-    int row = 0;
-    int col = 0;
-    int score = -1;*/
-
+void MainManager::createSimulations() {
     for(const auto& algo: AlgorithmRegistrar::getAlgorithmRegistrar()) {
-        //first = true;
-        for (auto& house : houses) {
-            //csvManager.addHouseName(house);
+        for (auto& housePath : housespath) {
+            std::cout << "Adding simulation for House: " << housePath << " with Algorithm: " << algo.name() << std::endl;
             std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
             if (algorithm) {
-
-                /*if (first) {
-                    first = false;
-                    csvManager.addAlgorithmName(algo.name());
-                }*/
-
-                std::cout << "Running simulation for House: " << house << " with Algorithm: " << algo.name() << std::endl;
                 try {
-                    std::cout << "MySimulator simulator" << std::endl;
-                    MySimulator simulator;
-                    std::cout << "simulator.prepareSimulationEnvironment(house, algo.name())" << std::endl;
-                    simulator.prepareSimulationEnvironment(house, algo.name());
-                    std::cout << "simulator.setAlgorithm(*algorithm)" << std::endl;
-                    simulator.setAlgorithm(*algorithm);
-                    std::cout << "simulator.run()" << std::endl;
-                    simulator.run();
-                    std::cout << "simulator.setOutput();" << std::endl;
-                    simulator.setOutput();
+                    auto simulator = std::make_unique<MySimulator>();
+                    simulator->prepareSimulationEnvironment(housePath, algo.name());
+                    simulator->setAlgorithm(*algorithm);
+                    simulations.push_back(std::move(simulator));
                 }
                 catch (const std::exception& e) {
                     std::cout << "Error: " << e.what() << std::endl;
+                    simulations.push_back(nullptr);
                 }
-                    
-                // Update csv
-                //csvManager.addScore(score, row, col);
             }
-            else {
+            else
+            {
                 ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
             }
-            //col+++;
         }
-        //row++;
     }
-    AlgorithmRegistrar::getAlgorithmRegistrar().clear();
 }
 
-void MainManager::closeAlgorithms(std::vector<void*> algorithmsHandle) {
+void MainManager::runSimulations() {
+    for(const auto& simulationPtr: simulations) {
+        if (simulationPtr != nullptr) {
+            threadSim(*simulationPtr);
+        }
+    }
+}
+
+void MainManager::threadSim(MySimulator& simulator) {
+    try {
+        std::cout << "simulator.run();" << std::endl;
+        simulator.run();
+        std::cout << "simulator.setOutput();" << std::endl;
+        simulator.setOutput();
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
+}
+
+void MainManager::closeAlgorithms() {
+    AlgorithmRegistrar::getAlgorithmRegistrar().clear();
     for (void* handle : algorithmsHandle) {
         dlclose(handle);
     }

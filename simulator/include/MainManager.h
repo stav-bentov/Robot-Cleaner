@@ -7,6 +7,11 @@
 //#include "csv_manager.h"
 #include <filesystem>
 #include <dlfcn.h>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
+#include <atomic>
+#include <chrono>
 
 class MainManager {
     public:
@@ -17,14 +22,20 @@ class MainManager {
         std::string algoPath;
         int numThread;
         bool summaryOnly;
+        std::vector<std::string> housespath;
+        std::vector<std::string> algorithms;
+        std::vector<void*> algorithmsHandle;
+        std::vector<std::unique_ptr<MySimulator>> simulations;
 
         void loadFiles(std::string& path, std::vector<std::string>& container, std::string extension);
-        void loadHouseFiles(std::string& housePath, std::vector<std::string>& houses);
-        void loadAlgorithmFiles(std::string& algoPath, std::vector<std::string>& algorithms);
-        void openAlgorithms(std::vector<std::string>& algorithms, std::vector<void*>& algorithmsHandle);
-        void readParameters(int argc, char* argv[], std::string& housePath, std::string& algoPath);
-        void runSimulations(std::vector<std::string>& houses);
-        void closeAlgorithms(std::vector<void*> algorithmsHandle);
+        void loadHouseFiles();
+        void loadAlgorithmFiles();
+        void openAlgorithms();
+        void readParameters(int argc, char* argv[]);
+        void createSimulations();
+        void runSimulations();
+        void closeAlgorithms();
+        void threadSim(MySimulator& simulator);
 };
 
 #endif  // MAIN_MANAGER_H
