@@ -15,13 +15,13 @@
 ########################
 
 //Value Computed by CMake
-Algo_209228600_B_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B
+Algorithm_D_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D
 
 //Value Computed by CMake
-Algo_209228600_B_IS_TOP_LEVEL:STATIC=OFF
+Algorithm_D_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Algo_209228600_B_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B
+Algorithm_D_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -231,13 +231,13 @@ RobotCleaner_IS_TOP_LEVEL:STATIC=ON
 RobotCleaner_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
 
 //Value Computed by CMake
-Simulation_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator
+simulator_BINARY_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator
 
 //Value Computed by CMake
-Simulation_IS_TOP_LEVEL:STATIC=OFF
+simulator_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Simulation_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator
+simulator_SOURCE_DIR:STATIC=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator
 
 
 ########################

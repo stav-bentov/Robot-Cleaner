@@ -1,4 +1,5 @@
 #include "include/MainManager.h"
+#include <chrono>
 
 void MainManager::run(int argc, char* argv[]){
     readParameters(argc, argv);
@@ -6,10 +7,8 @@ void MainManager::run(int argc, char* argv[]){
     loadAlgorithmFiles();
     openAlgorithms();
     createSimulations();
-    runSimulations();
     closeAlgorithms();
 }
-
 
 /*
     Reads parameters given in command line
@@ -26,13 +25,13 @@ void MainManager::readParameters(int argc, char* argv[]) {
             algoPath = arg.substr(11);
         } else if (arg.rfind("-num_threads=", 0) == 0) {
             try {
-                numThread = std::stoi(arg.substr(13));
-                if (numThread <= 0) {
+                numThreads = std::stoi(arg.substr(13));
+                if (numThreads <= 0) {
                     throw std::runtime_error("Invalid number of threads provided. Using default: 10.");
                 }
             } catch (const std::exception& e) {
                 std::cerr << "Invalid number of threads provided. Using default: 10." << std::endl;
-                numThread = 10;
+                numThreads = 10;
             }
         } else if (arg.rfind("-summary_only", 0) == 0) {
             summaryOnly = true;    
@@ -70,67 +69,83 @@ void MainManager::loadAlgorithmFiles(){
 */
 void MainManager::openAlgorithms() {
     for (std::string algo : algorithms) {
+        const auto& prevSize = AlgorithmRegistrar::getAlgorithmRegistrar().end();
         void* handle = dlopen(algo.c_str(), RTLD_LAZY);
-        if (!handle)
-        {
+        if (!handle) {
             std::filesystem::path algoPath(algo);
             ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algoPath.stem().string() + ".error");
-        }
-        else
-        {
+        } else if (AlgorithmRegistrar::getAlgorithmRegistrar().end() == prevSize) {
+            std::cout << "Error loading algorithm library: No Algorithm Registered!" << std::endl;
+        } else {
             algorithmsHandle.push_back(handle);
         }
     }
 }
 
 void MainManager::createSimulations() {
+    std::mutex cerr_mut;
+    //results.resize(housespath.size(), std::vector<int>(algorithms.size(), -1));
     for(const auto& algo: AlgorithmRegistrar::getAlgorithmRegistrar()) {
         for (auto& housePath : housespath) {
             std::cout << "Adding simulation for House: " << housePath << " with Algorithm: " << algo.name() << std::endl;
-            std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
-            if (algorithm) {
-                try {
-                    auto simulator = std::make_unique<MySimulator>();
-                    simulator->prepareSimulationEnvironment(housePath, algo.name());
-                    simulator->setAlgorithm(*algorithm);
-                    simulations.push_back(std::move(simulator));
-                }
-                catch (const std::exception& e) {
-                    std::cout << "Error: " << e.what() << std::endl;
-                    simulations.push_back(nullptr);
-                }
+            try {
+                    std::unique_lock<std::mutex> lock(runningThreadsMutex);
+                    Logger::getInstance().log("runningThreads = " + std::to_string(runningThreads) + " .\n", LogLevels::FILE);
+                    Logger::getInstance().log("numThreads = " + std::to_string(numThreads) + " .\n", LogLevels::FILE);
+                    simulatiosCv.wait(lock, [this]{return runningThreads < numThreads;});
+                    runningThreads++;
+                    threads.emplace_back([this, &cerr_mut, &housePath, &algo] {
+                        std::unique_ptr<AbstractAlgorithm> algorithm = algo.create();
+                        if (algorithm) {
+
+                            {
+                                std::lock_guard<std::mutex> lock(cerr_mut);
+                                std::cerr << "Thread [" << std::this_thread::get_id() << "] running simulation" << std::endl;
+                            }
+                            
+                            MySimulator simulator;
+                            simulator.prepareSimulationEnvironment(housePath, algo.name());
+                            simulator.setAlgorithm(*algorithm);
+                            std::cout << "simulator.run();" << std::endl;
+                            simulator.run();
+                            std::cout << "simulator.setOutput();" << std::endl;
+                            if (summaryOnly) {
+                                simulator.setOutput();
+                            }
+                            {
+                                std::lock_guard<std::mutex> lock(runningThreadsMutex);
+                                runningThreads--;
+                            }
+                            simulatiosCv.notify_one();
+                        } else {
+                            ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
+                        } 
+                    });
+
             }
-            else
+            catch (const std::exception& e) {
+                std::cout << "Error: " << e.what() << std::endl;
+            }
+        }
+    }
+    // Join all threads to ensure they complete before exiting the function
+    for (auto& thread : threads) {
+        if (thread.joinable()) {
             {
-                ErrorManager::checkForError(true, "Error: Failed to create algorithm.", algo.name() + ".error");
+                std::lock_guard<std::mutex> lock(cerr_mut);
+                std::cerr << "join Thread [" << std::this_thread::get_id() << "]" << std::endl;
             }
+            thread.join();
         }
-    }
-}
-
-void MainManager::runSimulations() {
-    for(const auto& simulationPtr: simulations) {
-        if (simulationPtr != nullptr) {
-            threadSim(*simulationPtr);
-        }
-    }
-}
-
-void MainManager::threadSim(MySimulator& simulator) {
-    try {
-        std::cout << "simulator.run();" << std::endl;
-        simulator.run();
-        std::cout << "simulator.setOutput();" << std::endl;
-        simulator.setOutput();
-    }
-    catch (const std::exception& e) {
-        std::cout << "Error: " << e.what() << std::endl;
     }
 }
 
 void MainManager::closeAlgorithms() {
     AlgorithmRegistrar::getAlgorithmRegistrar().clear();
     for (void* handle : algorithmsHandle) {
-        dlclose(handle);
-    }
+        if (handle) {
+            dlclose(handle);
+        }
+    }    
+    algorithmsHandle.clear();
 }

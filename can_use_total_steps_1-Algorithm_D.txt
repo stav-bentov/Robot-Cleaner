@@ -1,0 +1,4 @@
+NumSteps = 0
+DirtLeft = 4
+Status = FINISHED
+InDock = TRUE

@@ -1,11 +1,29 @@
-#include "../include/Algo_209228600_A.h"
 
-extern "C" 
-{
+#include "../include/Algo_209228600_A.h"
 REGISTER_ALGORITHM(Algo_209228600_A);
+
+void Algo_209228600_A::setMaxSteps(std::size_t maxSteps) {
+    std::cout << "MyAlgorithm::setMaxSteps" << std::endl;
+
+    totalSteps = maxSteps;
+} 
+
+void Algo_209228600_A::setWallsSensor(const WallsSensor& sensor) {
+    std::cout << "MyAlgorithm::setWallsSensor" << std::endl;
+    wallsSensor = &sensor;
 }
-Algo_209228600_A::Algo_209228600_A() {
+
+void Algo_209228600_A::setDirtSensor(const DirtSensor& sensor) {
+    std::cout << "MyAlgorithm::setDirtSensor" << std::endl;
+    dirtSensor = &sensor; 
 }
+
+void Algo_209228600_A::setBatteryMeter(const BatteryMeter& meter) {
+    std::cout << "MyAlgorithm::setBatteryMeter" << std::endl;
+    batteryMeter = &meter;
+    maxBatterySteps = batteryMeter->getBatteryState();
+}
+
 /*
     The Flow:
         - Update BFS with current vertex and it's sorrundings
@@ -16,29 +34,5 @@ Algo_209228600_A::Algo_209228600_A() {
                 - Else- go back to docking station
 */
 Step Algo_209228600_A::nextStep() {
-    // Edge case (maximum steps for battery is 1 so there is no place to go)
-    if (maxBatterySteps == 1) {
-        return Step::Finish;
-    }
-
-    // No more steps left to do
-    if (totalSteps == 0) {
-        // Should be in docking station!
-        return Step::Finish;
-    }
-
-    // The algorithm should strive to return “Finished” when on dock and the remaining amount of steps (remaining from the given MaxSteps), 
-    // would not allow cleaning any additional dirt and getting back to the docking on time.
-    if (houseMapping.shouldFinish()) {
-        //Logger::getInstance().getLogger()->info("Should finish");
-        return Step::Finish;
-    }
-
-    // Make the step in algorithm
-    //std::cout << "updateMapping()" << std::endl;
-    updateMapping();
-    //std::cout << "Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);" << std::endl;
-    Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
-    totalSteps--;
-    return step;
+    return Step::Finish;
 }

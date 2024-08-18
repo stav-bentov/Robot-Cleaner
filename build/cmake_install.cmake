@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B/cmake_install.cmake")
+  include("/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

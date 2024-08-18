@@ -130,20 +130,6 @@ myrobot/fast:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
 .PHONY : myrobot/fast
 
-# Convenience name for target.
-simulator/CMakeFiles/clean_sim.dir/rule:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/CMakeFiles/clean_sim.dir/rule
-.PHONY : simulator/CMakeFiles/clean_sim.dir/rule
-
-# Convenience name for target.
-clean_sim: simulator/CMakeFiles/clean_sim.dir/rule
-.PHONY : clean_sim
-
-# fast build rule for target.
-clean_sim/fast:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/clean_sim.dir/build.make simulator/CMakeFiles/clean_sim.dir/build
-.PHONY : clean_sim/fast
-
 AlgorithmRegistrar.o: AlgorithmRegistrar.cpp.o
 .PHONY : AlgorithmRegistrar.o
 
@@ -312,30 +298,6 @@ __/common_algorithm/src/House.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s
 .PHONY : __/common_algorithm/src/House.cpp.s
 
-__/common_algorithm/src/HouseMappingGraph.o: __/common_algorithm/src/HouseMappingGraph.cpp.o
-.PHONY : __/common_algorithm/src/HouseMappingGraph.o
-
-# target to build an object file
-__/common_algorithm/src/HouseMappingGraph.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
-.PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.o
-
-__/common_algorithm/src/HouseMappingGraph.i: __/common_algorithm/src/HouseMappingGraph.cpp.i
-.PHONY : __/common_algorithm/src/HouseMappingGraph.i
-
-# target to preprocess a source file
-__/common_algorithm/src/HouseMappingGraph.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
-.PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.i
-
-__/common_algorithm/src/HouseMappingGraph.s: __/common_algorithm/src/HouseMappingGraph.cpp.s
-.PHONY : __/common_algorithm/src/HouseMappingGraph.s
-
-# target to generate assembly for a file
-__/common_algorithm/src/HouseMappingGraph.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
-.PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.s
-
 __/common_algorithm/src/InputManager.o: __/common_algorithm/src/InputManager.cpp.o
 .PHONY : __/common_algorithm/src/InputManager.o
 
@@ -383,30 +345,6 @@ __/common_algorithm/src/Logger.s: __/common_algorithm/src/Logger.cpp.s
 __/common_algorithm/src/Logger.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s
 .PHONY : __/common_algorithm/src/Logger.cpp.s
-
-__/common_algorithm/src/MyAlgorithm.o: __/common_algorithm/src/MyAlgorithm.cpp.o
-.PHONY : __/common_algorithm/src/MyAlgorithm.o
-
-# target to build an object file
-__/common_algorithm/src/MyAlgorithm.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
-.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.o
-
-__/common_algorithm/src/MyAlgorithm.i: __/common_algorithm/src/MyAlgorithm.cpp.i
-.PHONY : __/common_algorithm/src/MyAlgorithm.i
-
-# target to preprocess a source file
-__/common_algorithm/src/MyAlgorithm.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
-.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.i
-
-__/common_algorithm/src/MyAlgorithm.s: __/common_algorithm/src/MyAlgorithm.cpp.s
-.PHONY : __/common_algorithm/src/MyAlgorithm.s
-
-# target to generate assembly for a file
-__/common_algorithm/src/MyAlgorithm.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
-.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.s
 
 __/common_algorithm/src/OutputManager.o: __/common_algorithm/src/OutputManager.cpp.o
 .PHONY : __/common_algorithm/src/OutputManager.o
@@ -528,30 +466,6 @@ __/common_algorithm/src/RobotWallsSensor.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s
 .PHONY : __/common_algorithm/src/RobotWallsSensor.cpp.s
 
-__/common_algorithm/src/Vertex.o: __/common_algorithm/src/Vertex.cpp.o
-.PHONY : __/common_algorithm/src/Vertex.o
-
-# target to build an object file
-__/common_algorithm/src/Vertex.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o
-.PHONY : __/common_algorithm/src/Vertex.cpp.o
-
-__/common_algorithm/src/Vertex.i: __/common_algorithm/src/Vertex.cpp.i
-.PHONY : __/common_algorithm/src/Vertex.i
-
-# target to preprocess a source file
-__/common_algorithm/src/Vertex.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.i
-.PHONY : __/common_algorithm/src/Vertex.cpp.i
-
-__/common_algorithm/src/Vertex.s: __/common_algorithm/src/Vertex.cpp.s
-.PHONY : __/common_algorithm/src/Vertex.s
-
-# target to generate assembly for a file
-__/common_algorithm/src/Vertex.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.s
-.PHONY : __/common_algorithm/src/Vertex.cpp.s
-
 __/common_algorithm/src/VisualSimulation.o: __/common_algorithm/src/VisualSimulation.cpp.o
 .PHONY : __/common_algorithm/src/VisualSimulation.o
 
@@ -608,7 +522,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... clean_sim"
 	@echo "... myrobot"
 	@echo "... AlgorithmRegistrar.o"
 	@echo "... AlgorithmRegistrar.i"
@@ -631,18 +544,12 @@ help:
 	@echo "... __/common_algorithm/src/House.o"
 	@echo "... __/common_algorithm/src/House.i"
 	@echo "... __/common_algorithm/src/House.s"
-	@echo "... __/common_algorithm/src/HouseMappingGraph.o"
-	@echo "... __/common_algorithm/src/HouseMappingGraph.i"
-	@echo "... __/common_algorithm/src/HouseMappingGraph.s"
 	@echo "... __/common_algorithm/src/InputManager.o"
 	@echo "... __/common_algorithm/src/InputManager.i"
 	@echo "... __/common_algorithm/src/InputManager.s"
 	@echo "... __/common_algorithm/src/Logger.o"
 	@echo "... __/common_algorithm/src/Logger.i"
 	@echo "... __/common_algorithm/src/Logger.s"
-	@echo "... __/common_algorithm/src/MyAlgorithm.o"
-	@echo "... __/common_algorithm/src/MyAlgorithm.i"
-	@echo "... __/common_algorithm/src/MyAlgorithm.s"
 	@echo "... __/common_algorithm/src/OutputManager.o"
 	@echo "... __/common_algorithm/src/OutputManager.i"
 	@echo "... __/common_algorithm/src/OutputManager.s"
@@ -658,9 +565,6 @@ help:
 	@echo "... __/common_algorithm/src/RobotWallsSensor.o"
 	@echo "... __/common_algorithm/src/RobotWallsSensor.i"
 	@echo "... __/common_algorithm/src/RobotWallsSensor.s"
-	@echo "... __/common_algorithm/src/Vertex.o"
-	@echo "... __/common_algorithm/src/Vertex.i"
-	@echo "... __/common_algorithm/src/Vertex.s"
 	@echo "... __/common_algorithm/src/VisualSimulation.o"
 	@echo "... __/common_algorithm/src/VisualSimulation.i"
 	@echo "... __/common_algorithm/src/VisualSimulation.s"

@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Algo_209228600_B
+# Target rules for targets named Algorithm_D
 
 # Build rule for target.
-Algo_209228600_B: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_B
-.PHONY : Algo_209228600_B
+Algorithm_D: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algorithm_D
+.PHONY : Algorithm_D
 
 # fast build rule for target.
-Algo_209228600_B/fast:
-	$(MAKE) $(MAKESILENT) -f Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build
-.PHONY : Algo_209228600_B/fast
+Algorithm_D/fast:
+	$(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/build
+.PHONY : Algorithm_D/fast
 
 #=============================================================================
 # Target rules for targets named myrobot
@@ -142,19 +142,6 @@ myrobot/fast:
 	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
 .PHONY : myrobot/fast
 
-#=============================================================================
-# Target rules for targets named clean_sim
-
-# Build rule for target.
-clean_sim: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean_sim
-.PHONY : clean_sim
-
-# fast build rule for target.
-clean_sim/fast:
-	$(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/clean_sim.dir/build.make simulator/CMakeFiles/clean_sim.dir/build
-.PHONY : clean_sim/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,8 +150,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... clean_sim"
-	@echo "... Algo_209228600_B"
+	@echo "... Algorithm_D"
 	@echo "... myrobot"
 .PHONY : help
 

@@ -47,12 +47,24 @@ void MySimulator::setSensors() {
 	Sets sensors to algorithm.
 */
 void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
-    std::cout << "MySimulator::setAlgorithm" << std::endl;
-	algo.setMaxSteps(maxSteps);
-	algo.setWallsSensor(wallsSensor);
-	algo.setDirtSensor(dirtSensor);
-	algo.setBatteryMeter(batteryMeter);
 	myAlgo = &algo;
+	if (myAlgo) {
+    	std::cout << "myAlgo not empty" << std::endl;
+	}
+	else
+	{
+    	std::cout << "myAlgo empty" << std::endl;
+	}
+    std::cout << "MySimulator::setAlgorithm" << std::endl;
+	std::cout << "algo.setMaxSteps(maxSteps);" << std::endl;
+	myAlgo->setMaxSteps(maxSteps);
+	std::cout << "algo.setWallsSensor(wallsSensor);" << std::endl;
+	myAlgo->setWallsSensor(wallsSensor);
+	std::cout << "algo.setDirtSensor(dirtSensor);" << std::endl;
+	algo.setDirtSensor(dirtSensor);
+	std::cout << "algo.setBatteryMeter(batteryMeter);" << std::endl;
+	myAlgo->setBatteryMeter(batteryMeter);
+	std::cout << "myAlgo = &algo;;" << std::endl;
 	Logger::getInstance().log("Done setting algorithm and its sensors.\n", LogLevels::FILE);
 }
 
@@ -60,10 +72,32 @@ void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
+	if (house) {
+		std::cout << "house not empty" << std::endl;
+	}
+	else
+	{
+		std::cout << "house is empty" << std::endl;
+	}
+	if (myAlgo) {
+		std::cout << "myAlgo not empty" << std::endl;
+	}
+	else
+	{
+		std::cout << "myAlgo is empty" << std::endl;
+	}
 	while (numberOfStepsMade <= house->getMaxSteps()) {
-		//std::cout << "Step currentStep = myAlgo -> nextStep()" << std::endl;
+		std::cout << "Step currentStep = myAlgo -> nextStep()" << std::endl;
+		
+		if (myAlgo) {
+			std::cout << "myAlgo not empty" << std::endl;
+		}
+		else
+		{
+			std::cout << "myAlgo is empty" << std::endl;
+		}
 		Step currentStep = myAlgo -> nextStep();
-		//std::cout << "steps.push_back(currentStep);" << std::endl;
+		std::cout << "steps.push_back(currentStep);" << std::endl;
 		steps.push_back(currentStep);
 		Common::logStep(currentStep);
 
@@ -75,6 +109,7 @@ void MySimulator::run() {
 		//std::cout << "house->makeStep(currentStep);" << std::endl;
 		house->makeStep(currentStep);
 		numberOfStepsMade++;
+		
 	}
 
 	if (((batteryMeter.getBatteryState() == 0 && !house->inDockingStation()))){

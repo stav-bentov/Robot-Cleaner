@@ -1,0 +1,7 @@
+NumSteps = 0
+DirtLeft = 36
+Status = FINISHED
+InDock = TRUE
+Score = 10800
+Steps: 
+F

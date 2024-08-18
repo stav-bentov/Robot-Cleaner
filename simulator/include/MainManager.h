@@ -15,17 +15,22 @@
 
 class MainManager {
     public:
-        MainManager() : housePath("."), algoPath("."), numThread(10), summaryOnly(false) {};
+        MainManager() : housePath("."), algoPath("."), numThreads(10), summaryOnly(false), runningThreads(0) {};
         void run(int argc, char* argv[]);
     private:
         std::string housePath;
         std::string algoPath;
-        int numThread;
+        int numThreads;
         bool summaryOnly;
         std::vector<std::string> housespath;
         std::vector<std::string> algorithms;
         std::vector<void*> algorithmsHandle;
-        std::vector<std::unique_ptr<MySimulator>> simulations;
+        std::vector<std::vector<int>> results;
+
+        std::mutex runningThreadsMutex;
+        std::condition_variable simulatiosCv;
+        int runningThreads;
+        std::vector<std::thread> threads;
 
         void loadFiles(std::string& path, std::vector<std::string>& container, std::string extension);
         void loadHouseFiles();
@@ -33,9 +38,7 @@ class MainManager {
         void openAlgorithms();
         void readParameters(int argc, char* argv[]);
         void createSimulations();
-        void runSimulations();
         void closeAlgorithms();
-        void threadSim(MySimulator& simulator);
 };
 
 #endif  // MAIN_MANAGER_H

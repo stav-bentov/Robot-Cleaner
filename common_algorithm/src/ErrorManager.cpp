@@ -6,6 +6,7 @@ void ErrorManager::checkForError(bool declareError, std::string errorDescription
         if (logFile.is_open()) {
             logFile << errorDescription << std::endl;
         }
+        logFile.close();
     }
 }
 

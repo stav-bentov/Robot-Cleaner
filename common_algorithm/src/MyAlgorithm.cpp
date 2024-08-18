@@ -52,5 +52,33 @@ void MyAlgorithm::updateMapping() {
                 - Else- go back to docking station
 */
 Step MyAlgorithm::nextStep() {
-    return Step::Finish;
+    
+    std::cout <<" Algo_209228600_A::nextStep()" << std::endl;
+    // Edge case (maximum steps for battery is 1 so there is no place to go)
+    if (maxBatterySteps == 1) {
+        return Step::Finish;
+    }
+
+    // No more steps left to do
+    if (totalSteps == 0) {
+        // Should be in docking station!
+        return Step::Finish;
+    }
+
+    // The algorithm should strive to return “Finished” when on dock and the remaining amount of steps (remaining from the given MaxSteps), 
+    // would not allow cleaning any additional dirt and getting back to the docking on time.
+    if (houseMapping.shouldFinish()) {
+        //Logger::getInstance().getLogger()->info("Should finish");
+        return Step::Finish;
+    }
+
+    // Make the step in algorithm
+    //std::cout << "updateMapping()" << std::endl;
+    std::cout <<" updateMapping();" << std::endl;
+    updateMapping();
+    std::cout <<" Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);" << std::endl;
+    //std::cout << "Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);" << std::endl;
+    Step step = houseMapping.runBfs(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
+    totalSteps--;
+    return step;
 }

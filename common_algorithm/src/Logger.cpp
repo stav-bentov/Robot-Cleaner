@@ -19,6 +19,7 @@ void Logger::logToFile(const std::string& message, const std::string& fileName) 
     if (logFile.is_open()) {
         logFile << message << std::endl;
     }
+    logFile.close();
 }
 
 void Logger::logToConsoleError(const std::string& message)  {

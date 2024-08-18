@@ -13,17 +13,13 @@ include_directories(${CMAKE_SOURCE_DIR})
 # List of source files
 set(COMMON_ALGORITHM_SOURCES
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/Common.cpp
-    ${CMAKE_SOURCE_DIR}/common_algorithm/src/ConfigurationManager.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/House.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/Logger.cpp
-    ${CMAKE_SOURCE_DIR}/common_algorithm/src/OutputManager.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/RobotBatteryMeter.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/RobotDirtSensor.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/RobotSensor.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/MyAlgorithm.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/RobotWallsSensor.cpp
-    ${CMAKE_SOURCE_DIR}/common_algorithm/src/VisualSimulation.cpp
-    ${CMAKE_SOURCE_DIR}/common_algorithm/src/InputManager.cpp
-    ${CMAKE_SOURCE_DIR}/common_algorithm/src/ErrorManager.cpp
 )
 
 set(CURRENT_ALGORITHM_SOURCES
@@ -39,7 +35,7 @@ add_library(${PROJECT_NAME} SHARED
 
 # Set the output directory for the shared library
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/algorithms_so
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/algorithms_so_outputs
 )
 
 # Set compiler options

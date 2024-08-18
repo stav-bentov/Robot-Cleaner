@@ -97,38 +97,10 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ConfigurationManager.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.s
 
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp > CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp > CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
-
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Logger.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Logger.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.i: cmake_force
@@ -139,24 +111,10 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Logger.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s
 
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp > CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
-
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/OutputManager.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/OutputManager.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.i: cmake_force
@@ -170,7 +128,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.s: cm
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotBatteryMeter.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotBatteryMeter.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.i: cmake_force
@@ -184,7 +142,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.s
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotDirtSensor.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotDirtSensor.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.i: cmake_force
@@ -198,7 +156,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.s: 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotSensor.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotSensor.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.i: cmake_force
@@ -212,7 +170,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.s: cmak
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotWallsSensor.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotWallsSensor.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.i: cmake_force
@@ -223,24 +181,10 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotWallsSensor.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s
 
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Vertex.cpp
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Vertex.cpp
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Vertex.cpp > CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.i
-
-simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Vertex.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.s
-
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/VisualSimulation.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/VisualSimulation.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.i: cmake_force
@@ -254,7 +198,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.s:
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/InputManager.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/InputManager.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.i: cmake_force
@@ -268,7 +212,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.s: cma
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ErrorManager.cpp
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ErrorManager.cpp
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.i: cmake_force
@@ -279,10 +223,24 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.s: cma
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ErrorManager.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.s
 
+simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
+simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp
+simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o -MF CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o.d -o CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp
+
+simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp > CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i
+
+simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/House.cpp -o CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s
+
 simulator/CMakeFiles/myrobot.dir/main.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/main.cpp
 simulator/CMakeFiles/myrobot.dir/main.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object simulator/CMakeFiles/myrobot.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object simulator/CMakeFiles/myrobot.dir/main.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/main.cpp.o -MF CMakeFiles/myrobot.dir/main.cpp.o.d -o CMakeFiles/myrobot.dir/main.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/main.cpp
 
 simulator/CMakeFiles/myrobot.dir/main.cpp.i: cmake_force
@@ -296,7 +254,7 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.s: cmake_force
 simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/AlgorithmRegistrar.cpp
 simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o -MF CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o.d -o CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/AlgorithmRegistrar.cpp
 
 simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.i: cmake_force
@@ -310,7 +268,7 @@ simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.s: cmake_force
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MySimulator.cpp
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o -MF CMakeFiles/myrobot.dir/MySimulator.cpp.o.d -o CMakeFiles/myrobot.dir/MySimulator.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MySimulator.cpp
 
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.i: cmake_force
@@ -324,7 +282,7 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.s: cmake_force
 simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: simulator/CMakeFiles/myrobot.dir/flags.make
 simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MainManager.cpp
 simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: simulator/CMakeFiles/myrobot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o -MF CMakeFiles/myrobot.dir/MainManager.cpp.o.d -o CMakeFiles/myrobot.dir/MainManager.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MainManager.cpp
 
 simulator/CMakeFiles/myrobot.dir/MainManager.cpp.i: cmake_force
@@ -339,19 +297,16 @@ simulator/CMakeFiles/myrobot.dir/MainManager.cpp.s: cmake_force
 myrobot_OBJECTS = \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o" \
-"CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o" \
-"CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o" \
-"CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o" \
-"CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o" \
 "CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o" \
+"CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o" \
 "CMakeFiles/myrobot.dir/main.cpp.o" \
 "CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o" \
 "CMakeFiles/myrobot.dir/MySimulator.cpp.o" \
@@ -362,26 +317,23 @@ myrobot_EXTERNAL_OBJECTS =
 
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Vertex.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/main.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/build.make
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot: simulator/CMakeFiles/myrobot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myrobot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
