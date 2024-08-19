@@ -1,11 +1,12 @@
 #include "include/my_simulator.h"
 
-MySimulator::MySimulator()
+MySimulator::MySimulator(std::atomic<bool>& stopFlag_)
     : myAlgo(nullptr),
       house(nullptr),
 	  om("", ""),
 	  status("WORKING"),
-	  numberOfStepsMade(0) {}
+	  numberOfStepsMade(0),
+	  stopFlag(stopFlag_) {}
 
 /*
 	Building House object from house file.
@@ -72,32 +73,12 @@ void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
-	if (house) {
-		std::cout << "house not empty" << std::endl;
-	}
-	else
-	{
-		std::cout << "house is empty" << std::endl;
-	}
-	if (myAlgo) {
-		std::cout << "myAlgo not empty" << std::endl;
-	}
-	else
-	{
-		std::cout << "myAlgo is empty" << std::endl;
-	}
 	while (numberOfStepsMade <= house->getMaxSteps()) {
-		std::cout << "Step currentStep = myAlgo -> nextStep()" << std::endl;
-		
-		if (myAlgo) {
-			std::cout << "myAlgo not empty" << std::endl;
-		}
-		else
-		{
-			std::cout << "myAlgo is empty" << std::endl;
+		if (stopFlag.load()) {
+			std::cout << "GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
+			break;
 		}
 		Step currentStep = myAlgo -> nextStep();
-		std::cout << "steps.push_back(currentStep);" << std::endl;
 		steps.push_back(currentStep);
 		Common::logStep(currentStep);
 
@@ -111,6 +92,7 @@ void MySimulator::run() {
 		numberOfStepsMade++;
 		
 	}
+	score = calculateScore(numberOfStepsMade, status, house->getAmountOfDirt(), house->inDockingStation(), maxSteps);
 
 	if (((batteryMeter.getBatteryState() == 0 && !house->inDockingStation()))){
 		status = "DEAD";
@@ -126,14 +108,16 @@ void MySimulator::run() {
 	Write output using outputManager, return score calculated there
 */
 void MySimulator::setOutput() {
-	int score = getScore(numberOfStepsMade, status, house->getAmountOfDirt(), house->inDockingStation(), maxSteps);
 	om.writeOutput(steps, numberOfStepsMade, house->getAmountOfDirt(), status, house->inDockingStation(), score);
 	om.displaySim();
     std::cout.flush(); 
 }
 
+int MySimulator::getScore() const{
+	return score;
+}
 
-int MySimulator::getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps) {
+int MySimulator::calculateScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps) {
     if (status == "DEAD")
     {
         return maxSteps + amountOfDirtLeft * 300 + 2000;

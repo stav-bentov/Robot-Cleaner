@@ -194,34 +194,35 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o:
  /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/bit \
  /usr/include/c++/9/pstl/glue_memory_defs.h \
  /usr/include/c++/9/pstl/execution_defs.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/configuration_manager.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/visualisation_configuration_manager.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/configuration_manager.h \
  /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
  /usr/include/c++/9/bits/fstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/document.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/reader.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/allocators.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/rapidjson.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/document.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/reader.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/allocators.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/rapidjson.h \
  /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/inttypes.h /usr/include/c++/9/cassert /usr/include/assert.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/meta.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/stream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/encodings.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/encodedstream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/memorystream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/stack.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/../allocators.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/swap.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/meta.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/stream.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/encodings.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/encodedstream.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/memorystream.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/stack.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/swap.h \
  /usr/include/c++/9/cstddef \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/strtod.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/ieee754.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/biginteger.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/diyfp.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/pow10.h \
  /usr/include/c++/9/climits \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -231,26 +232,27 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o:
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/error/error.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/error/../rapidjson.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/strfunc.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/../stream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/error/error.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
  /usr/include/c++/9/iterator /usr/include/c++/9/bits/stream_iterator.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../libs/rapidjson/include/rapidjson/filereadstream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../libs/rapidjson/include/rapidjson/filereadstream.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/common_enums.h \
  /usr/include/c++/9/unordered_map /usr/include/c++/9/bits/hashtable.h \
  /usr/include/c++/9/bits/hashtable_policy.h \
  /usr/include/c++/9/bits/unordered_map.h /usr/include/c++/9/sstream \
  /usr/include/c++/9/bits/sstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/logger.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/logger.h \
  /usr/include/c++/9/mutex /usr/include/c++/9/bits/std_mutex.h \
  /usr/include/c++/9/bits/unique_lock.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/error_manager.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/../../common/enums.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../include/error_manager.h \
  /usr/include/c++/9/algorithm \
  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
  /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
+ /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/house.h \
  /usr/include/c++/9/filesystem /usr/include/c++/9/bits/fs_fwd.h \
  /usr/include/c++/9/bits/fs_path.h /usr/include/c++/9/locale \

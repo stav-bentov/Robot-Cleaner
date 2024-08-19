@@ -19,9 +19,9 @@ private:
 
 public:
     Algorithm_D(): wallsSensor(nullptr),
-                       dirtSensor(nullptr),
-                       batteryMeter(nullptr),
-                       totalSteps(0){};
+                    dirtSensor(nullptr),
+                    batteryMeter(nullptr),
+                    totalSteps(0){};
   void setMaxSteps(std::size_t maxSteps) override;
   void setWallsSensor(const WallsSensor &walls_sensor) override;
   void setDirtSensor(const DirtSensor &dirt_sensor) override;

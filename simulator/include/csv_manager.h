@@ -7,13 +7,11 @@ class CsvManager {
     private:
         std::vector<std::string> algorithmNames;
         std::vector<std::string> housesNames;
-        // rows are the algorithm, cols are the houses
-        std::vector<std::vector<int>> scores;
+        std::vector<std::vector<int>>& scores;
     public:
-        void addAlgorithmName(std::string algoName);
-        void addHouseName(std::string houseName);
-        void addScore(int score, int algoIdx, int houseIdx);
-        void printToCsv();
+        CsvManager(std::vector<std::string>& algorithmNames, std::vector<std::string>& housesNames, std::vector<std::vector<int>>& scores) 
+                                                            : algorithmNames(algorithmNames), housesNames(housesNames), scores(scores){};
+        void writeResultsToCsv();
 };
 
 #endif  // CSV_MANAGER_H

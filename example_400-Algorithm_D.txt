@@ -1,7 +1,6 @@
 NumSteps = 0
 DirtLeft = 36
-Status = FINISHED
+Status = WORKING
 InDock = TRUE
 Score = 10800
 Steps: 
-F

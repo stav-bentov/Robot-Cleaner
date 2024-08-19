@@ -8,6 +8,7 @@
 #include "../../common_algorithm/include/robot_dirt_sensor.h"
 #include "../../common_algorithm/include/robot_walls_sensor.h"
 #include <string>
+#include <atomic>
 
 class MySimulator {
     private:
@@ -33,15 +34,19 @@ class MySimulator {
 
         // Cahnged throgh the running
         size_t numberOfStepsMade;
-        
+        int score;
+        std::atomic<bool>& stopFlag; // Reference to the stop flag
         void setSensors();
         void setHouse(std::string houseFileName);
-        int getScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps);
+        int calculateScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps);
+
     public:
-        MySimulator();
+        MySimulator(std::atomic<bool>& stopFlag_);
         void prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) ;
         void setAlgorithm(AbstractAlgorithm& algo);
         void run();
         void setOutput();
+        int getScore() const;
+
 };
 #endif  // MY_SIMULATOR_H

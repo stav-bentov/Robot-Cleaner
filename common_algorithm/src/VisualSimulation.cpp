@@ -238,7 +238,7 @@ void VisualSimulation::clearMapArea(int height) {
     }
 }
 
-void VisualSimulation::changeInfoRepMapping(ConfigurationManager configM) {
+void VisualSimulation::changeInfoRepMapping(VisualConfigurationManager configM) {
     infoRepMapping = {
         {Elements::Wall, configM.getWallRep()},
         {Elements::DockingStation, configM.getStationRep()},
@@ -254,7 +254,7 @@ std::string VisualSimulation::getColorCode(std::string colorStr){
     return stringToCodeColor["White"];
 }
 
-void VisualSimulation::changeColorMapping(ConfigurationManager configM) {
+void VisualSimulation::changeColorMapping(VisualConfigurationManager configM) {
     std::map<Elements, std::string> string_to_string = configM.getColorMapping();
     elementToCodeColor = {
             {Elements::Robot, getColorCode(string_to_string[Elements::Robot])},

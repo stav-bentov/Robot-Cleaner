@@ -27,6 +27,7 @@ set(COMMON_SOURCES
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/InputManager.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/ErrorManager.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/House.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/VisualConfigManager.cpp
 )
 
 # Add the executable target
@@ -36,6 +37,8 @@ add_executable(myrobot
     ${PROJECT_SOURCE_DIR}/AlgorithmRegistrar.cpp 
     ${PROJECT_SOURCE_DIR}/MySimulator.cpp
     ${PROJECT_SOURCE_DIR}/MainManager.cpp
+    ${PROJECT_SOURCE_DIR}/CsvManager.cpp
+    ${PROJECT_SOURCE_DIR}/SimConfigManager.cpp
 )
 
 # Link the dl library

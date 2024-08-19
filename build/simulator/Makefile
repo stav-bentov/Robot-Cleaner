@@ -154,6 +154,30 @@ AlgorithmRegistrar.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.s
 .PHONY : AlgorithmRegistrar.cpp.s
 
+CsvManager.o: CsvManager.cpp.o
+.PHONY : CsvManager.o
+
+# target to build an object file
+CsvManager.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.o
+.PHONY : CsvManager.cpp.o
+
+CsvManager.i: CsvManager.cpp.i
+.PHONY : CsvManager.i
+
+# target to preprocess a source file
+CsvManager.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.i
+.PHONY : CsvManager.cpp.i
+
+CsvManager.s: CsvManager.cpp.s
+.PHONY : CsvManager.s
+
+# target to generate assembly for a file
+CsvManager.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.s
+.PHONY : CsvManager.cpp.s
+
 MainManager.o: MainManager.cpp.o
 .PHONY : MainManager.o
 
@@ -201,6 +225,30 @@ MySimulator.s: MySimulator.cpp.s
 MySimulator.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.s
 .PHONY : MySimulator.cpp.s
+
+SimConfigManager.o: SimConfigManager.cpp.o
+.PHONY : SimConfigManager.o
+
+# target to build an object file
+SimConfigManager.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.o
+.PHONY : SimConfigManager.cpp.o
+
+SimConfigManager.i: SimConfigManager.cpp.i
+.PHONY : SimConfigManager.i
+
+# target to preprocess a source file
+SimConfigManager.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.i
+.PHONY : SimConfigManager.cpp.i
+
+SimConfigManager.s: SimConfigManager.cpp.s
+.PHONY : SimConfigManager.s
+
+# target to generate assembly for a file
+SimConfigManager.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.s
+.PHONY : SimConfigManager.cpp.s
 
 __/common_algorithm/src/Common.o: __/common_algorithm/src/Common.cpp.o
 .PHONY : __/common_algorithm/src/Common.o
@@ -466,6 +514,30 @@ __/common_algorithm/src/RobotWallsSensor.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s
 .PHONY : __/common_algorithm/src/RobotWallsSensor.cpp.s
 
+__/common_algorithm/src/VisualConfigManager.o: __/common_algorithm/src/VisualConfigManager.cpp.o
+.PHONY : __/common_algorithm/src/VisualConfigManager.o
+
+# target to build an object file
+__/common_algorithm/src/VisualConfigManager.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.o
+.PHONY : __/common_algorithm/src/VisualConfigManager.cpp.o
+
+__/common_algorithm/src/VisualConfigManager.i: __/common_algorithm/src/VisualConfigManager.cpp.i
+.PHONY : __/common_algorithm/src/VisualConfigManager.i
+
+# target to preprocess a source file
+__/common_algorithm/src/VisualConfigManager.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.i
+.PHONY : __/common_algorithm/src/VisualConfigManager.cpp.i
+
+__/common_algorithm/src/VisualConfigManager.s: __/common_algorithm/src/VisualConfigManager.cpp.s
+.PHONY : __/common_algorithm/src/VisualConfigManager.s
+
+# target to generate assembly for a file
+__/common_algorithm/src/VisualConfigManager.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.s
+.PHONY : __/common_algorithm/src/VisualConfigManager.cpp.s
+
 __/common_algorithm/src/VisualSimulation.o: __/common_algorithm/src/VisualSimulation.cpp.o
 .PHONY : __/common_algorithm/src/VisualSimulation.o
 
@@ -526,12 +598,18 @@ help:
 	@echo "... AlgorithmRegistrar.o"
 	@echo "... AlgorithmRegistrar.i"
 	@echo "... AlgorithmRegistrar.s"
+	@echo "... CsvManager.o"
+	@echo "... CsvManager.i"
+	@echo "... CsvManager.s"
 	@echo "... MainManager.o"
 	@echo "... MainManager.i"
 	@echo "... MainManager.s"
 	@echo "... MySimulator.o"
 	@echo "... MySimulator.i"
 	@echo "... MySimulator.s"
+	@echo "... SimConfigManager.o"
+	@echo "... SimConfigManager.i"
+	@echo "... SimConfigManager.s"
 	@echo "... __/common_algorithm/src/Common.o"
 	@echo "... __/common_algorithm/src/Common.i"
 	@echo "... __/common_algorithm/src/Common.s"
@@ -565,6 +643,9 @@ help:
 	@echo "... __/common_algorithm/src/RobotWallsSensor.o"
 	@echo "... __/common_algorithm/src/RobotWallsSensor.i"
 	@echo "... __/common_algorithm/src/RobotWallsSensor.s"
+	@echo "... __/common_algorithm/src/VisualConfigManager.o"
+	@echo "... __/common_algorithm/src/VisualConfigManager.i"
+	@echo "... __/common_algorithm/src/VisualConfigManager.s"
 	@echo "... __/common_algorithm/src/VisualSimulation.o"
 	@echo "... __/common_algorithm/src/VisualSimulation.i"
 	@echo "... __/common_algorithm/src/VisualSimulation.s"

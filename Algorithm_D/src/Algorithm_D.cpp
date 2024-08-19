@@ -24,6 +24,9 @@ void Algorithm_D::setBatteryMeter(const BatteryMeter& meter) {
 
 
 Step Algorithm_D::nextStep() {
+    std::cout << " " << std::endl;
+    std::cout << "Algorithm_D::nextStep()" << std::endl;
+    std::cout << " " << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(10));
     return Step::Finish;
 }

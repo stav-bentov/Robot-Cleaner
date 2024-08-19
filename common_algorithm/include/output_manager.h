@@ -7,10 +7,11 @@
 #include <fstream>
 #include "common_enums.h"
 #include "visual_simulation.h"
+#include "visualisation_configuration_manager.h"
 
 class OutputManager {
     private:
-        ConfigurationManager configM;
+        VisualConfigurationManager configM;
         std::string houseFilePath;
         std::string algorithmName;
         std::string outputName;

@@ -58,3 +58,287 @@ Done setting sensors.
 Done setting algorithm and its sensors.
 
 Simulator got Step::Finish
+runningThreads = 0 .
+
+numThreads = 2 .
+
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+numThreads = 2 .
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 3, number of cols = 6.
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 4, number of cols = 12.
+Done loading the house.
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+runningThreads = 2 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+numThreads = 2 .
+
+Proccessed parameters: maximum steps = 400, battery steps = 20, number of rows = 4, number of cols = 10.
+Done loading the house.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+runningThreads = 0 .
+
+numThreads = 2 .
+
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+numThreads = 2 .
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 4, number of cols = 12.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 400, battery steps = 20, number of rows = 4, number of cols = 10.
+numThreads = 2 .
+
+Done loading the house.
+
+Done setting sensors.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Done setting algorithm and its sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+runningThreads = 0 .
+
+numThreads = 2 .
+
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 3, number of cols = 6.
+numThreads = 2 .
+
+Done loading the house.
+
+Done setting sensors.
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 4, number of cols = 12.
+Done loading the house.
+
+Done setting algorithm and its sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+runningThreads = 2 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 400, battery steps = 20, number of rows = 4, number of cols = 10.
+numThreads = 2 .
+
+Done loading the house.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting algorithm and its sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+runningThreads = 0 .
+
+numThreads = 2 .
+
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 3, number of cols = 6.
+numThreads = 2 .
+
+Done loading the house.
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 4, number of cols = 12.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+runningThreads = 2 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 400, battery steps = 20, number of rows = 4, number of cols = 10.
+numThreads = 2 .
+
+Done loading the house.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting algorithm and its sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+Simulator got Step::Finish
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Simulator got Step::Finish
+runningThreads = 0 .
+
+numThreads = 2 .
+
+runningThreads = 1 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 3, number of cols = 6.
+numThreads = 2 .
+
+Done loading the house.
+
+Proccessed parameters: maximum steps = 100, battery steps = 20, number of rows = 4, number of cols = 12.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting algorithm and its sensors.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+runningThreads = 2 .
+
+numThreads = 2 .
+
+runningThreads = 2 .
+
+Proccessed parameters: maximum steps = 400, battery steps = 20, number of rows = 4, number of cols = 10.
+numThreads = 2 .
+
+Done loading the house.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done setting sensors.
+
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+
+Done setting algorithm and its sensors.
+
+Proccessed parameters: maximum steps = 81, battery steps = 8, number of rows = 3, number of cols = 6.
+Done loading the house.
+
+Done setting sensors.
+
+Done setting algorithm and its sensors.
+

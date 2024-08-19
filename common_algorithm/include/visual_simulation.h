@@ -9,7 +9,7 @@
 #include <cmath>
 #include <thread>  // for std::this_thread::sleep_for
 #include <chrono>  // for std::chrono::milliseconds
-#include "configuration_manager.h"
+#include "visualisation_configuration_manager.h"
 #include "common_enums.h"
 #include "house.h"
 
@@ -105,8 +105,8 @@ class VisualSimulation {
     public:
         void startSimulation();
         void processFiles(std::string inputFileName, std::string outputFileName);
-        void changeInfoRepMapping(ConfigurationManager configM);
-        void changeColorMapping(ConfigurationManager configM);
+        void changeInfoRepMapping(VisualConfigurationManager configM);
+        void changeColorMapping(VisualConfigurationManager configM);
 
 };
 #endif  // VISUAL_SIMULATION_H_
