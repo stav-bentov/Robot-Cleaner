@@ -2,30 +2,23 @@
 #define MY_ALGORITHM_D_H
 #include "../../Common/AbstractAlgorithm.h"
 #include "../../algorithm/AlgorithmRegistration.h"
+#include "../../common_algorithm/include/my_algorithm.h"
+#include "house_mapping_graph.h"
 #include <thread>
 #include <chrono>
 #include <cstddef>
 #include <map>
 #include <memory>
+#include <unordered_set>
 #include <stack>
 #include <iostream>
 
-class Algorithm_D : public AbstractAlgorithm {
-private:
-    const WallsSensor* wallsSensor;
-    const DirtSensor* dirtSensor;
-    const BatteryMeter* batteryMeter;
-    std::size_t totalSteps;
-
-public:
-    Algorithm_D(): wallsSensor(nullptr),
-                    dirtSensor(nullptr),
-                    batteryMeter(nullptr),
-                    totalSteps(0){};
-  void setMaxSteps(std::size_t maxSteps) override;
-  void setWallsSensor(const WallsSensor &walls_sensor) override;
-  void setDirtSensor(const DirtSensor &dirt_sensor) override;
-  void setBatteryMeter(const BatteryMeter &battery_meter) override;
-  Step nextStep() override;
+class Algorithm_D : public MyAlgorithm {
+    public:
+        Step nextStep() override;
+        
+    private:
+        void updateMapping() override;
+        HouseMappingGraph houseMapping;
 };
 #endif

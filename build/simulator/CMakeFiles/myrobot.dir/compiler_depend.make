@@ -733,13 +733,7 @@ simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: /mnt/c/Stav/Projects/Advance
   /usr/include/c++/9/bits/fs_dir.h \
   /usr/include/c++/9/bits/fs_ops.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
-  /usr/include/c++/9/set \
-  /usr/include/c++/9/bits/stl_set.h \
-  /usr/include/c++/9/bits/stl_multiset.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
+  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/output_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visual_simulation.h \
@@ -767,7 +761,6 @@ simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: /mnt/c/Stav/Projects/Advance
   /usr/include/c++/9/tr1/poly_hermite.tcc \
   /usr/include/c++/9/tr1/poly_laguerre.tcc \
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
-  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visualisation_configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/document.h \
@@ -816,13 +809,22 @@ simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: /mnt/c/Stav/Projects/Advance
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/filereadstream.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/common_enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_battery_meter.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_dirt_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
+  /usr/include/c++/9/set \
+  /usr/include/c++/9/bits/stl_set.h \
+  /usr/include/c++/9/bits/stl_multiset.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /usr/include/c++/9/atomic \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/csv_manager.h \
   /usr/include/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/atomic \
   /usr/include/boost/asio.hpp \
   /usr/include/boost/asio/associated_allocator.hpp \
   /usr/include/boost/asio/detail/config.hpp \
@@ -1681,9 +1683,7 @@ simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o: /mnt/c/Stav/Projects/Advance
   /usr/include/boost/bind/bind_cc.hpp \
   /usr/include/boost/bind/bind_mf_cc.hpp \
   /usr/include/boost/bind/bind_mf2_cc.hpp \
-  /usr/include/boost/bind/placeholders.hpp \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h
+  /usr/include/boost/bind/placeholders.hpp
 
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MySimulator.cpp \
   /usr/include/stdc-predef.h \
@@ -1964,13 +1964,7 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: /mnt/c/Stav/Projects/Advance
   /usr/include/c++/9/bits/unique_lock.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
-  /usr/include/c++/9/set \
-  /usr/include/c++/9/bits/stl_set.h \
-  /usr/include/c++/9/bits/stl_multiset.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
+  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/output_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visual_simulation.h \
@@ -1998,7 +1992,6 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: /mnt/c/Stav/Projects/Advance
   /usr/include/c++/9/tr1/poly_hermite.tcc \
   /usr/include/c++/9/tr1/poly_laguerre.tcc \
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
-  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visualisation_configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/document.h \
@@ -2047,9 +2040,17 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: /mnt/c/Stav/Projects/Advance
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/filereadstream.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/common_enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_battery_meter.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_dirt_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
+  /usr/include/c++/9/set \
+  /usr/include/c++/9/bits/stl_set.h \
+  /usr/include/c++/9/bits/stl_multiset.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /usr/include/c++/9/atomic
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h
 
 simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/SimConfigManager.cpp \
   /usr/include/stdc-predef.h \
@@ -2584,7 +2585,8 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o: /mnt/c/St
   /usr/include/c++/9/pstl/glue_algorithm_defs.h \
   /usr/include/c++/9/functional \
   /usr/include/c++/9/bits/std_function.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/common_enums.h
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/common_enums.h \
+  /usr/include/c++/9/thread
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ConfigurationManager.cpp \
   /usr/include/stdc-predef.h \
@@ -3381,7 +3383,8 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o: /mnt/c/Sta
   /usr/include/c++/9/bits/unique_lock.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
+  /usr/include/c++/9/thread
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/InputManager.cpp \
   /usr/include/stdc-predef.h \
@@ -4447,6 +4450,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
+  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/BatteryMeter.h
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotDirtSensor.cpp \
@@ -4724,6 +4728,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o: 
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
+  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
   /usr/include/c++/9/unordered_set \
   /usr/include/c++/9/bits/unordered_set.h \
@@ -4992,7 +4997,8 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o: /mnt
   /usr/include/c++/9/bits/unique_lock.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
+  /usr/include/c++/9/thread
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotWallsSensor.cpp \
   /usr/include/stdc-predef.h \
@@ -5257,7 +5263,8 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o:
   /usr/include/c++/9/bits/unique_lock.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common/enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/error_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
+  /usr/include/c++/9/thread
 
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/VisualConfigManager.cpp \
   /usr/include/stdc-predef.h \
@@ -6168,13 +6175,7 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
   /usr/include/c++/9/bits/fs_dir.h \
   /usr/include/c++/9/bits/fs_ops.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/input_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
-  /usr/include/c++/9/set \
-  /usr/include/c++/9/bits/stl_set.h \
-  /usr/include/c++/9/bits/stl_multiset.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
+  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/output_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visual_simulation.h \
@@ -6202,7 +6203,6 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
   /usr/include/c++/9/tr1/poly_hermite.tcc \
   /usr/include/c++/9/tr1/poly_laguerre.tcc \
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
-  /usr/include/c++/9/thread \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/visualisation_configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/document.h \
@@ -6251,13 +6251,22 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/libs/rapidjson/include/rapidjson/filereadstream.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/common_enums.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_battery_meter.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_sensor.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_dirt_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/house_mapping_graph.h \
+  /usr/include/c++/9/set \
+  /usr/include/c++/9/bits/stl_set.h \
+  /usr/include/c++/9/bits/stl_multiset.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
-  /usr/include/c++/9/atomic \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/robot_walls_sensor.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h \
+  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h \
   /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/csv_manager.h \
   /usr/include/dlfcn.h \
   /usr/include/x86_64-linux-gnu/bits/dlfcn.h \
   /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/atomic \
   /usr/include/boost/asio.hpp \
   /usr/include/boost/asio/associated_allocator.hpp \
   /usr/include/boost/asio/detail/config.hpp \
@@ -7116,9 +7125,7 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
   /usr/include/boost/bind/bind_cc.hpp \
   /usr/include/boost/bind/bind_mf_cc.hpp \
   /usr/include/boost/bind/bind_mf2_cc.hpp \
-  /usr/include/boost/bind/placeholders.hpp \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h \
-  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/configuration_manager.h
+  /usr/include/boost/bind/placeholders.hpp
 
 
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/VisualSimulation.cpp:
@@ -7144,8 +7151,6 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/SimConfigManager.cpp:
 
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MySimulator.cpp:
-
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h:
 
 /usr/include/boost/bind/placeholders.hpp:
 
@@ -7284,6 +7289,8 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /usr/include/boost/predef/library/c/zos.h:
 
 /usr/include/boost/predef/library/c/vms.h:
+
+/usr/include/boost/predef/library/c/uc.h:
 
 /usr/include/boost/predef/os.h:
 
@@ -7545,9 +7552,33 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 
 /usr/include/boost/config/detail/select_compiler_config.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/timerfd.h:
-
 /usr/include/boost/asio/detail/posix_mutex.hpp:
+
+/usr/include/c++/9/atomic:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/boost/date_time/gregorian/greg_duration_types.hpp:
+
+/usr/include/boost/asio/posix/descriptor.hpp:
+
+/usr/include/boost/predef/compiler/edg.h:
+
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h:
+
+/usr/include/boost/bind/mem_fn_cc.hpp:
+
+/usr/include/c++/9/pstl/execution_defs.h:
+
+/usr/include/c++/9/bits/concept_check.h:
+
+/usr/include/boost/asio/impl/connect.hpp:
+
+/usr/include/c++/9/bits/stl_multiset.h:
+
+/usr/include/c++/9/set:
+
+/usr/include/boost/mpl/aux_/config/nttp.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/poll.h:
 
@@ -7570,6 +7601,10 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/wchar.h:
+
+/usr/include/boost/is_placeholder.hpp:
 
 /usr/include/linux/limits.h:
 
@@ -7653,6 +7688,18 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 
 /usr/include/c++/9/bits/deque.tcc:
 
+/usr/include/boost/asio/detail/reactor.hpp:
+
+/usr/include/c++/9/bits/vector.tcc:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
+
+/usr/include/c++/9/bits/stl_set.h:
+
+/usr/include/c++/9/bits/stl_construct.h:
+
 /usr/include/c++/9/clocale:
 
 /usr/include/boost/mpl/if.hpp:
@@ -7684,48 +7731,6 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/output_manager.h:
 
 /usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/c++/9/atomic:
-
-/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
-
-/usr/include/boost/is_placeholder.hpp:
-
-/usr/include/wchar.h:
-
-/usr/include/boost/date_time/gregorian/greg_duration_types.hpp:
-
-/usr/include/boost/asio/posix/descriptor.hpp:
-
-/usr/include/boost/predef/compiler/edg.h:
-
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/include/vertex.h:
-
-/usr/include/boost/bind/mem_fn_cc.hpp:
-
-/usr/include/c++/9/pstl/execution_defs.h:
-
-/usr/include/c++/9/bits/concept_check.h:
-
-/usr/include/boost/asio/impl/connect.hpp:
-
-/usr/include/c++/9/bits/stl_multiset.h:
-
-/usr/include/boost/asio/detail/reactor.hpp:
-
-/usr/include/c++/9/bits/vector.tcc:
-
-/usr/include/boost/config/platform/linux.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
-
-/usr/include/c++/9/bits/stl_construct.h:
-
-/usr/include/c++/9/bits/stl_set.h:
-
-/usr/include/c++/9/set:
-
-/usr/include/boost/mpl/aux_/config/nttp.hpp:
 
 /usr/include/asm-generic/socket.h:
 
@@ -7888,6 +7893,8 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /usr/include/c++/9/stdexcept:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/sim_config_manager.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -8584,6 +8591,8 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /usr/include/boost/date_time/locale_config.hpp:
 
 /usr/include/c++/9/bits/stl_deque.h:
+
+/usr/include/x86_64-linux-gnu/bits/timerfd.h:
 
 /usr/include/boost/asio/detail/impl/epoll_reactor.ipp:
 
@@ -9590,5 +9599,3 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: /mnt/c/Stav/Projects/Advanced-topic
 /usr/include/boost/predef/os/hpux.h:
 
 /usr/include/boost/predef/library/c/cloudabi.h:
-
-/usr/include/boost/predef/library/c/uc.h:

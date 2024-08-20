@@ -1,12 +1,27 @@
 #include "include/my_simulator.h"
 
-MySimulator::MySimulator(std::atomic<bool>& stopFlag_)
+MySimulator::MySimulator()
     : myAlgo(nullptr),
       house(nullptr),
 	  om("", ""),
 	  status("WORKING"),
-	  numberOfStepsMade(0),
-	  stopFlag(stopFlag_) {}
+	  numberOfStepsMade(0) {}
+
+void MySimulator::getTimeout() {
+	std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+	// TODO: maybe add handle error?
+    SimConfigurationManager simConfigManager;
+    int timePerStep = simConfigManager.getTimePerStep();
+	std::cout << thread<<" maxSteps " << maxSteps<<std::endl;
+	std::cout << thread <<" timePerStep " << timePerStep<<std::endl;
+	timeoutDuration = std::chrono::milliseconds(timePerStep * maxSteps);
+	auto durationInMilliseconds = timeoutDuration.count(); // Get the number of milliseconds
+
+    // Print the duration
+    std::cout << thread <<" timeoutDuration: " << durationInMilliseconds << " milliseconds" << std::endl;
+
+}
 
 /*
 	Building House object from house file.
@@ -14,8 +29,6 @@ MySimulator::MySimulator(std::atomic<bool>& stopFlag_)
 	Set outputManager (input and ouput file name and house name)
 */
 void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) {
-	
-    std::cout << "MySimulator::prepareSimulationEnvironment" << std::endl;
 	try {
 		setHouse(houseFilePath);
 		setSensors();
@@ -27,7 +40,6 @@ void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::s
 }
 
 void MySimulator::setHouse(std::string houseFilePath) {
-    std::cout << "MySimulator::setHouse" << std::endl;
 	house = std::make_shared<House>(houseFilePath);
 	maxSteps = house->getMaxSteps();
 	dockingStationLocation = house->getDockingStationLocation();
@@ -36,7 +48,6 @@ void MySimulator::setHouse(std::string houseFilePath) {
 }
 
 void MySimulator::setSensors() {
-    std::cout << "MySimulator::setSensors" << std::endl;
 	// Create sensors
 	wallsSensor = RobotWallsSensor(house);
 	dirtSensor = RobotDirtSensor(house);
@@ -47,37 +58,41 @@ void MySimulator::setSensors() {
 /*
 	Sets sensors to algorithm.
 */
-void MySimulator::setAlgorithm(AbstractAlgorithm& algo) {
-	myAlgo = &algo;
-	if (myAlgo) {
-    	std::cout << "myAlgo not empty" << std::endl;
-	}
-	else
-	{
-    	std::cout << "myAlgo empty" << std::endl;
-	}
-    std::cout << "MySimulator::setAlgorithm" << std::endl;
-	std::cout << "algo.setMaxSteps(maxSteps);" << std::endl;
+void MySimulator::setAlgorithm(std::unique_ptr<AbstractAlgorithm> algo) {
+	myAlgo = std::move(algo);
 	myAlgo->setMaxSteps(maxSteps);
-	std::cout << "algo.setWallsSensor(wallsSensor);" << std::endl;
 	myAlgo->setWallsSensor(wallsSensor);
-	std::cout << "algo.setDirtSensor(dirtSensor);" << std::endl;
-	algo.setDirtSensor(dirtSensor);
-	std::cout << "algo.setBatteryMeter(batteryMeter);" << std::endl;
+	myAlgo->setDirtSensor(dirtSensor);
 	myAlgo->setBatteryMeter(batteryMeter);
-	std::cout << "myAlgo = &algo;;" << std::endl;
 	Logger::getInstance().log("Done setting algorithm and its sensors.\n", LogLevels::FILE);
+	getTimeout();
 }
 
 /*
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
+	bool stopFlag = false;
+	std::cout << "in run " << std::endl;
+    auto startTime = std::chrono::steady_clock::now();
 	while (numberOfStepsMade <= house->getMaxSteps()) {
-		if (stopFlag.load()) {
-			std::cout << "GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
+		auto currentTime = std::chrono::steady_clock::now();
+        auto elapsedTime = currentTime - startTime;
+
+        if (elapsedTime > timeoutDuration) {
+			stopFlag = true;
 			break;
+        }
+
+		std::cout <<"myAlgo -> nextStep() " << std::endl;
+		if (myAlgo) {
+			std::cout <<"myAlgo" << std::endl;
 		}
+		else {
+			std::cout <<"!myAlgo" << std::endl;
+		}
+		//std::cout << "myAlgo address: " << myAlgo << std::endl;
+
 		Step currentStep = myAlgo -> nextStep();
 		steps.push_back(currentStep);
 		Common::logStep(currentStep);
@@ -101,6 +116,14 @@ void MySimulator::run() {
 	if ((status == "FINISHED" && !house->inDockingStation()))
 	{
 		//Logger::getInstance().getLogger()->info("Error: algorithm returned FINISHED and not in docking station");
+	}
+	std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+	if (stopFlag) {
+		std::cout <<thread<< "GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
+	}
+	else
+	{
+		std::cout <<thread<< "NOT GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
 	}
 }
 

@@ -11,7 +11,6 @@
 #include "../../common/DirtSensor.h"
 #include "../../common/BatteryMeter.h"
 #include "house.h"
-#include "house_mapping_graph.h"
 
 class MyAlgorithm : public AbstractAlgorithm {
     protected:
@@ -19,30 +18,27 @@ class MyAlgorithm : public AbstractAlgorithm {
         const WallsSensor* wallsSensor;
         const DirtSensor* dirtSensor;
         const BatteryMeter* batteryMeter;
-
-        // Not actual current location, but relative to docking station
-        std::pair<int, int> relativeCurrentLocation;
-        HouseMappingGraph houseMapping;
         
         // Steps information
         std::size_t totalSteps;
         int maxBatterySteps;
         bool firstStep;
-
-        void updateMapping();
+    private:
+        virtual void updateMapping() = 0;
     public:
         MyAlgorithm(): wallsSensor(nullptr),
                        dirtSensor(nullptr),
                        batteryMeter(nullptr),
-                       relativeCurrentLocation(0, 0), // Initialize currentLocation as needed
                        totalSteps(0),
                        maxBatterySteps(0),
                        firstStep(true){};
-        ~MyAlgorithm() override = default;
+        ~MyAlgorithm() override{
+            std::cout << "In MyAlgorithm deconstructor" <<std::endl;
+        };
         void setMaxSteps(std::size_t maxSteps) override;
         void setWallsSensor(const WallsSensor& sensor) override;
         void setDirtSensor(const DirtSensor& sensor) override;
         void setBatteryMeter(const BatteryMeter& meter) override;
-        Step nextStep() override;
+        //Step nextStep() override;
 };
 #endif  // MY_ALGORITHM_H

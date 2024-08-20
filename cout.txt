@@ -1,0 +1,635 @@
+algo_idx = 0
+house_idx = 0
+STAV STAV STAV maxBattery = 20
+in thread 14519603028749216381in MyAlgorithm::setBatteryMeter next step maxBatterySteps= : 20
+ in thread [14519603028749216381]:  maxSteps 100
+ in thread [14519603028749216381]:  timePerStep 10
+ in thread [14519603028749216381]:  timeoutDuration: 1000 milliseconds
+in run 
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 2 is : -2
+ in thread [15198027488364904514]:  House::isWall for location: 0 ,2
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 0, 1
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 1, 0
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,1
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 0, -1
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 0
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 0, -1
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 0
+ in thread [15198027488364904514]:  batterySteps: 20
+ in thread [15198027488364904514]:  maxSteps: 100
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (0, -1)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 0
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 0, 0
+ in thread [15198027488364904514]:  to: dst = 0, -1
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 0currentLocation.second: 0
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 0currentLocation.second: -1
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::West in thread
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,1
+ in thread [15198027488364904514]:  new location: 1 ,1
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 1 is : 0
+ in thread [15198027488364904514]:  House::isWall for location: 0 ,1
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,1
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 1, -1
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, -1
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 1
+ in thread [15198027488364904514]:  batterySteps: 19
+ in thread [15198027488364904514]:  maxSteps: 99
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (1, -1)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, -1
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 0, -1
+ in thread [15198027488364904514]:  to: dst = 1, -1
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 0currentLocation.second: -1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: -1
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::South in thread
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,1
+ in thread [15198027488364904514]:  new location: 2 ,1
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 1 is : 0
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,1
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 3 ,1
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 0
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 2
+ in thread [15198027488364904514]:  batterySteps: 18
+ in thread [15198027488364904514]:  maxSteps: 98
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (1, 0)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, -1
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 1, -1
+ in thread [15198027488364904514]:  to: dst = 1, 0
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: -1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 0
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::East in thread
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,2
+ in thread [15198027488364904514]:  new location: 2 ,2
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 2 is : 1
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 1, 1
+ in thread [15198027488364904514]:  House::isWall for location: 3 ,2
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,1
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 0
+ in thread [15198027488364904514]:  dirtyDst we GOT: 1, 0
+ in thread [15198027488364904514]:  distanceFromDirt: 0
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 1
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 1
+ in thread [15198027488364904514]:  batterySteps: 17
+ in thread [15198027488364904514]:  maxSteps: 97
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0: 
+ in thread [15198027488364904514]: getStepFromMapping
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 0
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 0
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 0
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 2
+ in thread [15198027488364904514]:  amountOfDirt in location: 0
+ in thread [15198027488364904514]:  amountOfDirt: 9
+ in thread [15198027488364904514]:  new location: 2 ,2
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 2 is : 0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 1
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 1
+ in thread [15198027488364904514]:  batterySteps: 16
+ in thread [15198027488364904514]:  maxSteps: 96
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (1, 1)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 0
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 1, 0
+ in thread [15198027488364904514]:  to: dst = 1, 1
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 0
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::East in thread
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,3
+ in thread [15198027488364904514]:  new location: 2 ,3
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 3 is : 2
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 1, 2
+ in thread [15198027488364904514]:  House::isWall for location: 3 ,3
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 1
+ in thread [15198027488364904514]:  dirtyDst we GOT: 1, 1
+ in thread [15198027488364904514]:  distanceFromDirt: 0
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 2
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 0
+ in thread [15198027488364904514]:  batterySteps: 15
+ in thread [15198027488364904514]:  maxSteps: 95
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0: 
+ in thread [15198027488364904514]: getStepFromMapping
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 1
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 1
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 3
+ in thread [15198027488364904514]:  amountOfDirt in location: 1
+ in thread [15198027488364904514]:  amountOfDirt: 8
+ in thread [15198027488364904514]:  new location: 2 ,3
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 3 is : 1
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 1
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 1
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 3
+ in thread [15198027488364904514]:  amountOfDirt in location: 0
+ in thread [15198027488364904514]:  amountOfDirt: 7
+ in thread [15198027488364904514]:  new location: 2 ,3
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 3 is : 0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 1
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 2
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 2
+ in thread [15198027488364904514]:  batterySteps: 13
+ in thread [15198027488364904514]:  maxSteps: 93
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (1, 2)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 1
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 1, 1
+ in thread [15198027488364904514]:  to: dst = 1, 2
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::East in thread
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,4
+ in thread [15198027488364904514]:  new location: 2 ,4
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 4 is : 3
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 0, 2
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,5
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 1, 3
+ in thread [15198027488364904514]:  House::isWall for location: 3 ,4
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  dirtyDst we GOT: 1, 2
+ in thread [15198027488364904514]:  distanceFromDirt: 0
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 3
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 0
+ in thread [15198027488364904514]:  batterySteps: 12
+ in thread [15198027488364904514]:  maxSteps: 92
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0: 
+ in thread [15198027488364904514]: getStepFromMapping
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 2
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 4
+ in thread [15198027488364904514]:  amountOfDirt in location: 2
+ in thread [15198027488364904514]:  amountOfDirt: 6
+ in thread [15198027488364904514]:  new location: 2 ,4
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 4 is : 2
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 2
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 4
+ in thread [15198027488364904514]:  amountOfDirt in location: 1
+ in thread [15198027488364904514]:  amountOfDirt: 5
+ in thread [15198027488364904514]:  new location: 2 ,4
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 4 is : 1
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 2
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 4
+ in thread [15198027488364904514]:  amountOfDirt in location: 0
+ in thread [15198027488364904514]:  amountOfDirt: 4
+ in thread [15198027488364904514]:  new location: 2 ,4
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 4 is : 0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 1, 3
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 3
+ in thread [15198027488364904514]:  batterySteps: 9
+ in thread [15198027488364904514]:  maxSteps: 89
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (1, 3)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 2
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 1, 2
+ in thread [15198027488364904514]:  to: dst = 1, 3
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 2
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::East in thread
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,5
+ in thread [15198027488364904514]:  new location: 2 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 5 is : 4
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,5
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: 0, 3
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,6
+ in thread [15198027488364904514]:  House::isWall for location: 3 ,5
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  dirtyDst we GOT: 1, 3
+ in thread [15198027488364904514]:  distanceFromDirt: 0
+ in thread [15198027488364904514]:  unkwonDst we GOT: 0, 3
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 0
+ in thread [15198027488364904514]:  batterySteps: 8
+ in thread [15198027488364904514]:  maxSteps: 88
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0: 
+ in thread [15198027488364904514]: getStepFromMapping
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 3
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 5
+ in thread [15198027488364904514]:  amountOfDirt in location: 3
+ in thread [15198027488364904514]:  amountOfDirt: 3
+ in thread [15198027488364904514]:  new location: 2 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 5 is : 3
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 3
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 5
+ in thread [15198027488364904514]:  amountOfDirt in location: 2
+ in thread [15198027488364904514]:  amountOfDirt: 2
+ in thread [15198027488364904514]:  new location: 2 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 5 is : 2
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 3
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 5
+ in thread [15198027488364904514]:  amountOfDirt in location: 1
+ in thread [15198027488364904514]:  amountOfDirt: 1
+ in thread [15198027488364904514]:  new location: 2 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 5 is : 1
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  tiles[currentLocation] > 0
+ in thread [15198027488364904514]:  currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  Step is stay and we are not in docking- - reduce dirt
+ in thread [15198027488364904514]:  Dirt in relative location: 1, 3
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Simulator got Step::Stay in thread
+ in thread [15198027488364904514]:  Cleaning: 2, 5
+ in thread [15198027488364904514]:  amountOfDirt in location: 0
+ in thread [15198027488364904514]:  amountOfDirt: 0
+ in thread [15198027488364904514]:  new location: 2 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 2, 5 is : 0
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  currentDistanceFromDocking != -1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 0, 3
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 4
+ in thread [15198027488364904514]:  batterySteps: 4
+ in thread [15198027488364904514]:  maxSteps: 84
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (0, 3)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 1, 3
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 1, 3
+ in thread [15198027488364904514]:  to: dst = 0, 3
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 1currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 0currentLocation.second: 3
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::North in thread
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,5
+ in thread [15198027488364904514]:  new location: 1 ,5
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 5 is : 0
+ in thread [15198027488364904514]:  House::isWall for location: 0 ,5
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: -1, 3
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,6
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,5
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 3
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 0, 2
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 3
+ in thread [15198027488364904514]:  batterySteps: 3
+ in thread [15198027488364904514]:  maxSteps: 83
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (0, 2)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 3
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 0, 3
+ in thread [15198027488364904514]:  to: dst = 0, 2
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 0currentLocation.second: 3
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 0currentLocation.second: 2
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::West in thread
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,4
+ in thread [15198027488364904514]:  new location: 1 ,4
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 4 is : 0
+ in thread [15198027488364904514]:  House::isWall for location: 0 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  addTile: -1, 2
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,5
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 2
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: 0, 1
+ in thread [15198027488364904514]:  distanceFromUnkwon: 1
+ in thread [15198027488364904514]:  distanceFromDocking: 2
+ in thread [15198027488364904514]:  batterySteps: 2
+ in thread [15198027488364904514]:  maxSteps: 82
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)
+ in thread [15198027488364904514]:  (0, 1)  in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 2
+ in thread [15198027488364904514]:  if (onWayToClean)
+ in thread [15198027488364904514]:  from: currentLocation = 0, 2
+ in thread [15198027488364904514]:  to: dst = 0, 1
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 0currentLocation.second: 2
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 0currentLocation.second: 1
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  onWayToClean = false
+ in thread [15198027488364904514]:  Simulator got Step::West in thread
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,3
+ in thread [15198027488364904514]:  new location: 1 ,3
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 3 is : 0
+ in thread [15198027488364904514]:  House::isWall for location: 0 ,3
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,4
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 2 ,3
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,2
+ in thread [15198027488364904514]: calling addTile: 
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 1
+ in thread [15198027488364904514]:  dirtyDst we GOT: -1, -1
+ in thread [15198027488364904514]:  distanceFromDirt: -1
+ in thread [15198027488364904514]:  unkwonDst we GOT: -1, 2
+ in thread [15198027488364904514]:  distanceFromUnkwon: 2
+ in thread [15198027488364904514]:  distanceFromDocking: 1
+ in thread [15198027488364904514]:  batterySteps: 1
+ in thread [15198027488364904514]:  maxSteps: 81
+ in thread [15198027488364904514]:  distanceFromUnkwon != -1
+ in thread [15198027488364904514]:  got unknown
+ in thread [15198027488364904514]:  no tile to explore
+ in thread [15198027488364904514]:  (0, 0)  in thread [15198027488364904514]:  getStepFromMapping
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 1
+ in thread [15198027488364904514]:  needToReturn
+ in thread [15198027488364904514]:  from: currentLocation = 0, 1
+ in thread [15198027488364904514]:  to: dst = 0, 0
+ in thread [15198027488364904514]:  updateCurrentLocation
+ in thread [15198027488364904514]:  currentLocation.first: 0currentLocation.second: 1
+ in thread [15198027488364904514]:  Updated to: currentLocation.first: 0currentLocation.second: 0
+ in thread [15198027488364904514]:  robotDeterminedPath.empty()
+ in thread [15198027488364904514]:  needToReturn = false needToCharge = true; 
+ in thread [15198027488364904514]:  Simulator got Step::West in thread
+ in thread [15198027488364904514]:  House::isWall for location: 1 ,2
+ in thread [15198027488364904514]:  new location: 1 ,2
+
+myAlgo -> nextStep() 
+myAlgo
+ in thread [15198027488364904514]: Algorithm_D::nextStep()
+ in thread [15198027488364904514]: Algorithm_D::updateMapping()
+ in thread [15198027488364904514]:  Dirt Level in location: 1, 2 is : -2
+ in thread [15198027488364904514]:  getStepFromMapping currentLocation: 0, 0
+ in thread [15198027488364904514]:  Simulator got Step::Finish in thread
+ in thread [15198027488364904514]: NOT GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag 
+Done: Output is written to: example_1-Algorithm_D.txt
+Display simulation denied according to config.json.
+In deconstructor
+In MyAlgorithm deconstructor
+end main

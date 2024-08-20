@@ -10,6 +10,8 @@ add_compile_options(-fPIC -fvisibility=default -fvisibility-inlines-hidden)
 # List of source files
 set(CURRENT_ALGORITHM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Algorithm_D.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/HouseMappingGraph.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/MyAlgorithm.cpp
 )
 
 # Create the shared library

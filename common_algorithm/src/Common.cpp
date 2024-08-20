@@ -1,5 +1,5 @@
 #include "../include/common_enums.h"
-
+#include <thread>
 const std::map<Step, std::pair<int, int>> Common::stepMap = {
     {Step::North, {-1, 0}},
     {Step::East, {0, 1}},
@@ -17,39 +17,42 @@ const std::map<Direction, std::pair<int, int>> Common::directionMap = {
 };
 
 void Common::logStep(Step s) {
+	std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 	switch (s)
 	{
 		case Step::Stay:
-			Logger::getInstance().log("Simulator got Step::Stay", LogLevels::FILE);
-			std::cout <<"Simulator got Step::Stay" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::Stay", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::Stay in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::Stay");
 			break;
 		case Step::East:
-			Logger::getInstance().log("Simulator got Step::East", LogLevels::FILE);
-			std::cout <<"Simulator got Step::East" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::East", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::East in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::East");
 			break;
 		case Step::West:
-			Logger::getInstance().log("Simulator got Step::West", LogLevels::FILE);
-			std::cout <<"Simulator got Step::West" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::West", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::West in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::West");
 			break;
 		case Step::South:
-			Logger::getInstance().log("Simulator got Step::South", LogLevels::FILE);
-			std::cout <<"Simulator got Step::South" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::South", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::South in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::South");
 			break;
 		case Step::North:
-			Logger::getInstance().log("Simulator got Step::North", LogLevels::FILE);
-			std::cout <<"Simulator got Step::North" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::North", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::North in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::North");
 			break;
 		case Step::Finish:
-			Logger::getInstance().log("Simulator got Step::Finish", LogLevels::FILE);
-			std::cout <<"Simulator got Step::Finish" << std::endl;
+			Logger::getInstance().log(thread +" Simulator got Step::Finish", LogLevels::FILE);
+			std::cout <<thread <<" Simulator got Step::Finish in thread" << std::endl;
 			//Logger::getInstance().getLogger()->info("Simulator got Step::Finish");
 			break;
 	}
+	Logger::getInstance().log(thread + "\n", LogLevels::FILE);
+
 }
 
 

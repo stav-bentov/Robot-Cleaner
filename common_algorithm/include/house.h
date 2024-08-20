@@ -11,6 +11,7 @@
 #include "../../common/WallSensor.h"
 #include "common_enums.h"
 #include "input_manager.h"
+#include <thread>
 
 class House {
     private:
@@ -34,6 +35,7 @@ class House {
         bool isWall(std::pair<int, int> location) const;
         void getParameters(std::string& filePath);
         void createErrorName(std::string& houseFilePath);
+        
     public:
         House();
         House(std::string& filePath);
@@ -44,6 +46,7 @@ class House {
         int getDirtLevel() const;
         std::size_t getTotalAmountOfSteps() const;
         float getCurentBatterySteps() const;
+
 
         void updateLocation(Step step);
         bool inDockingStation() const;

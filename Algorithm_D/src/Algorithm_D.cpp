@@ -1,32 +1,40 @@
 #include "../include/Algorithm_D.h"
-
+#include <thread>
 REGISTER_ALGORITHM(Algorithm_D);
 
-void Algorithm_D::setMaxSteps(std::size_t maxSteps) {
-    std::cout << "MyAlgorithm::setMaxSteps" << std::endl;
-    totalSteps = maxSteps;
-} 
+void Algorithm_D::updateMapping() {
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 
-void Algorithm_D::setWallsSensor(const WallsSensor& sensor) {
-    std::cout << "MyAlgorithm::setWallsSensor" << std::endl;
-    wallsSensor = &sensor;
+    std::cout << thread <<"Algorithm_D::updateMapping()" << std::endl;
+    bool isVisited = houseMapping.isVisitedInCurrentLocation();
+    // Update current place amount of dirt
+    houseMapping.setDirt(dirtSensor->dirtLevel());
+    
+    // Add information on nearest tiles only if not visited yet (because its a waste to do this twice)
+    if (!isVisited) {
+        // Add current location close vertices
+        for (const auto& entry : Common::directionMap) {  
+            if (!wallsSensor->isWall(entry.first)) {
+                std::cout << thread <<"calling addTile: " << std::endl;
+                houseMapping.addTile(entry.first, Type::Floor);
+            }
+        }
+    }
 }
-
-void Algorithm_D::setDirtSensor(const DirtSensor& sensor) {
-    std::cout << "MyAlgorithm::setDirtSensor" << std::endl;
-    dirtSensor = &sensor; 
-}
-
-void Algorithm_D::setBatteryMeter(const BatteryMeter& meter) {
-    std::cout << "MyAlgorithm::setBatteryMeter" << std::endl;
-    batteryMeter = &meter;
-}
-
 
 Step Algorithm_D::nextStep() {
-    std::cout << " " << std::endl;
-    std::cout << "Algorithm_D::nextStep()" << std::endl;
-    std::cout << " " << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(10));
-    return Step::Finish;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+    Logger::getInstance().log(thread + " maxBatterySteps = "+std::to_string(maxBatterySteps) +".\n", LogLevels::FILE);
+
+    //std::cout << "in algorithm D next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
+    if (maxBatterySteps == 1) {
+        return Step::Finish;
+    }
+    
+    std::cout << thread <<"Algorithm_D::nextStep()" << std::endl;
+    updateMapping();
+    Step step = houseMapping.getStepFromMapping(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
+    totalSteps--;
+    return step;
 }

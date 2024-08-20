@@ -2,7 +2,7 @@
 
 SimConfigurationManager::SimConfigurationManager() {
     // Set default
-    maxSteps = 500;
+    timePerStep = 1;
     // TODO: add try- cath and write"set as default"
     std::string jsonString = readConfig("config/config.json");
     // Default parameters...
@@ -22,11 +22,11 @@ void SimConfigurationManager::loadParametersFromConfigFile(std::string& jsonStri
         // TODO: avoid throw!
     }
     
-    if (doc.HasMember("maxSteps") && doc["maxSteps"].IsInt()) {
-        maxSteps = doc["maxSteps"].GetInt();
+    if (doc.HasMember("timePerStep") && doc["timePerStep"].IsInt()) {
+        timePerStep = doc["timePerStep"].GetInt();
     }
 }
 
-int SimConfigurationManager::getMaxSteps() const {
-    return maxSteps;
+int SimConfigurationManager::getTimePerStep() const {
+    return timePerStep;
 }

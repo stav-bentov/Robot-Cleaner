@@ -1,5 +1,5 @@
 #include "../include/house.h"
-
+#include <thread>
 House::House(std::string& filePath) {
     try {
         getParameters(filePath);
@@ -19,6 +19,7 @@ void House::getParameters(std::string& filePath) {
     createErrorName(filePath);
     currentBatterySteps = maxBattery;
     currentLocation = dockingStationLocation;
+    std::cout << "STAV STAV STAV maxBattery = "  <<maxBattery << std::endl; 
 }
 
 void House::createErrorName(std::string& houseFilePath) {
@@ -50,9 +51,11 @@ std::vector<std::vector<int>> House::getHouseSurface() const {
 }
 
 int House::getDirtLevel() const{
-    std::cout << "Dirt Level in location: " << currentLocation.first << ", " << currentLocation.second << " is : " << houseSurface[currentLocation.first][currentLocation.second]<<std::endl;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 
-    Logger::getInstance().log("House:: getDirtLevel in " + std::to_string(currentLocation.first) + ","+ std::to_string(currentLocation.second) + ":" + std::to_string(houseSurface[currentLocation.first][currentLocation.second]) + "\n", LogLevels::FILE);
+    std::cout << thread<<" Dirt Level in location: " << currentLocation.first << ", " << currentLocation.second << " is : " << houseSurface[currentLocation.first][currentLocation.second]<<std::endl;
+
+    Logger::getInstance().log(thread + "House:: getDirtLevel in " + std::to_string(currentLocation.first) + ","+ std::to_string(currentLocation.second) + ":" + std::to_string(houseSurface[currentLocation.first][currentLocation.second]) + "\n", LogLevels::FILE);
 
     return houseSurface[currentLocation.first][currentLocation.second];
 }
@@ -71,39 +74,46 @@ float House::getCurentBatterySteps() const {
 }
 
 void House::charge() {
-    std::cout << "Charging: " << currentBatterySteps << "..." << std::endl;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+    std::cout <<thread << " Charging: " << currentBatterySteps << "..." << std::endl;
     double charge_increment = (maxBattery)/20.0;
     // Make sure the battery is not overloaded
     currentBatterySteps = std::min(currentBatterySteps + charge_increment, static_cast<double>(maxBattery));
-    std::cout << "Updated battery: " << currentBatterySteps << "." << std::endl;
+    std::cout << thread <<" Updated battery: " << currentBatterySteps << "." << std::endl;
 }
 
 void House::discharge() {
     currentBatterySteps--;
-    Logger::getInstance().log("Discharged, current battary:" + std::to_string(currentBatterySteps) + ".\n", LogLevels::FILE);
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+    Logger::getInstance().log(thread + "Discharged, current battary:" + std::to_string(currentBatterySteps) + ".\n", LogLevels::FILE);
 }
 
 void House::clean() {
-    std::cout << "Cleaning: " << currentLocation.first << ", " << currentLocation.second << std::endl;
-    Logger::getInstance().log("Cleaned in location: " + std::to_string(currentLocation.first) + ", " +std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+    std::cout <<thread << " Cleaning: " << currentLocation.first << ", " << currentLocation.second << std::endl;
+    Logger::getInstance().log(thread + " Cleaned in location: " + std::to_string(currentLocation.first) + ", " +std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
     amountOfDirt--;
     houseSurface[currentLocation.first][currentLocation.second]--;
-    std::cout << "amountOfDirt in location: " << houseSurface[currentLocation.first][currentLocation.second] << std::endl;
-    std::cout << "amountOfDirt: " << amountOfDirt << std::endl;
+    std::cout <<thread << " amountOfDirt in location: " << houseSurface[currentLocation.first][currentLocation.second] << std::endl;
+    std::cout <<thread << " amountOfDirt: " << amountOfDirt << std::endl;
 }
 
 /*
 	Get current step and update robot location in simulator and sensors
 */
 void House::updateLocation(Step step) {
-    Logger::getInstance().log("House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+    Logger::getInstance().log(thread +" House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
 
     std::pair<int, int> stepElements = Common::stepMap.at(step);
     currentLocation.first += stepElements.first;
     currentLocation.second += stepElements.second;
 
-    Logger::getInstance().log("House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
-    std::cout << "new location: " << currentLocation.first <<" ," << currentLocation.second <<std::endl<<std::endl;
+    Logger::getInstance().log(thread +" House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
+    std::cout <<thread << " new location: " << currentLocation.first <<" ," << currentLocation.second <<std::endl<<std::endl;
 }
 
 bool House::inDockingStation() const {
@@ -115,6 +125,8 @@ bool House::inDockingStation() const {
 */
 void House::makeStep(Step step) {
     Direction d;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
     switch (step)
 	{
 		case Step::Stay:
@@ -138,7 +150,7 @@ void House::makeStep(Step step) {
 		case Step::South:
             // Check valid step
             d = Common::stepToDirection(step);
-            ErrorManager::checkForError(isWall(d), "Error: step is thoward the wall!");
+            ErrorManager::checkForError(isWall(d), thread +" Error: step is thoward the wall!");
             
 			discharge();
 			break;
@@ -155,7 +167,8 @@ bool House::isWall(Direction d) const {
     std::pair<int, int> dirElements = Common::directionMap.at(d);
     int row = currentLocation.first + dirElements.first;
     int col = currentLocation.second + dirElements.second;
-    std::cout << "House::isWall for location: " << row <<" ," << col <<std::endl;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+    std::cout << thread <<" House::isWall for location: " << row <<" ," << col <<std::endl;
     return isWall({row, col});
 }
 

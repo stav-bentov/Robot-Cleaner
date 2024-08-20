@@ -14,7 +14,6 @@
 #include <chrono>
 #include <boost/asio.hpp>
 #include <boost/bind/bind.hpp>
-#include "../include/sim_config_manager.h"
 
 class MainManager {
     public:
@@ -29,25 +28,26 @@ class MainManager {
         std::vector<std::string> algorithms;
         std::vector<void*> algorithmsHandle;
         std::vector<std::vector<int>> scores;
+        std::vector<std::vector<std::unique_ptr<MySimulator>>> simulators;
         const int noResult;
         std::vector<std::string> algorithmNames;
         std::vector<std::string> housesNames;
 
-        std::mutex runningThreadsMutex;
-        std::condition_variable simulatiosCv;
+
         int runningThreads;
         std::vector<std::thread> threads;
-        int maxSteps;
 
         void loadFiles(std::string& path, std::vector<std::string>& container, std::string extension);
         void loadHouseFiles();
         void loadAlgorithmFiles();
-        void getMaxSteps();
         void openAlgorithms();
         void readParameters(int argc, char* argv[]);
-        void createSimulations();
+        void runSimulations();
         void closeAlgorithms();
         void writeResultsToCsv();
+        //void threadWork(AbstractAlgorithm& algorithm, std::string housePath, int algo_idx, int house_idx, std::string algorithmName);
+        void threadWork(MySimulator& simulator, std::mutex& coutMutex, std::mutex& runningThreadsMutex,std::condition_variable& simulatiosCv, int house_idx, int algo_idx);
+        //void createSimulators();
 };
 
 #endif  // MAIN_MANAGER_H

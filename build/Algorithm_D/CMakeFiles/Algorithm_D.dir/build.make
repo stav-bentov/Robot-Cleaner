@@ -83,17 +83,49 @@ Algorithm_D/CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D/src/Algorithm_D.cpp -o CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.s
 
+Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o: Algorithm_D/CMakeFiles/Algorithm_D.dir/flags.make
+Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D/src/HouseMappingGraph.cpp
+Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o: Algorithm_D/CMakeFiles/Algorithm_D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o -MF CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o.d -o CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D/src/HouseMappingGraph.cpp
+
+Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.i"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D/src/HouseMappingGraph.cpp > CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.i
+
+Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.s"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algorithm_D/src/HouseMappingGraph.cpp -o CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.s
+
+Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algorithm_D/CMakeFiles/Algorithm_D.dir/flags.make
+Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
+Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algorithm_D/CMakeFiles/Algorithm_D.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -MF CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d -o CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
+
+Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.i"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp > CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
+
+Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.s"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp -o CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
+
 # Object files for target Algorithm_D
 Algorithm_D_OBJECTS = \
-"CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.o"
+"CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.o" \
+"CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o" \
+"CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
 
 # External object files for target Algorithm_D
 Algorithm_D_EXTERNAL_OBJECTS =
 
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so: Algorithm_D/CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.o
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so: Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so: Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so: Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so: Algorithm_D/CMakeFiles/Algorithm_D.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgorithm_D.so"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algorithm_D && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Algorithm_D.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

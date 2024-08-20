@@ -5,13 +5,13 @@
 
 class SimConfigurationManager : public ConfigurationManager {
     private:
-        int maxSteps;
+        int timePerStep;
         void setDefaultParameters();
         void loadParametersFromConfigFile(std::string& jsonString);
 
     public:
         SimConfigurationManager();
-        int getMaxSteps() const;
+        int getTimePerStep() const;
 };
 
 #endif

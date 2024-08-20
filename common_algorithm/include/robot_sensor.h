@@ -10,10 +10,10 @@
 class RobotSensor {
     protected:
         // Static members that will be mutual to all sensors
-        static std::shared_ptr<House> house; // shared because mySimulator will point at it too
+        std::shared_ptr<House> house; // shared because mySimulator will point at it too
 
     public:
-        RobotSensor(){}
+        RobotSensor() : house(nullptr){}
         RobotSensor(std::shared_ptr<House> _house);
         virtual ~RobotSensor() {}
 };

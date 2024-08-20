@@ -130,6 +130,30 @@ Algorithm_D/fast:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/build
 .PHONY : Algorithm_D/fast
 
+__/common_algorithm/src/MyAlgorithm.o: __/common_algorithm/src/MyAlgorithm.cpp.o
+.PHONY : __/common_algorithm/src/MyAlgorithm.o
+
+# target to build an object file
+__/common_algorithm/src/MyAlgorithm.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
+.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.o
+
+__/common_algorithm/src/MyAlgorithm.i: __/common_algorithm/src/MyAlgorithm.cpp.i
+.PHONY : __/common_algorithm/src/MyAlgorithm.i
+
+# target to preprocess a source file
+__/common_algorithm/src/MyAlgorithm.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
+.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.i
+
+__/common_algorithm/src/MyAlgorithm.s: __/common_algorithm/src/MyAlgorithm.cpp.s
+.PHONY : __/common_algorithm/src/MyAlgorithm.s
+
+# target to generate assembly for a file
+__/common_algorithm/src/MyAlgorithm.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
+.PHONY : __/common_algorithm/src/MyAlgorithm.cpp.s
+
 src/Algorithm_D.o: src/Algorithm_D.cpp.o
 .PHONY : src/Algorithm_D.o
 
@@ -154,6 +178,30 @@ src/Algorithm_D.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/src/Algorithm_D.cpp.s
 .PHONY : src/Algorithm_D.cpp.s
 
+src/HouseMappingGraph.o: src/HouseMappingGraph.cpp.o
+.PHONY : src/HouseMappingGraph.o
+
+# target to build an object file
+src/HouseMappingGraph.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.o
+.PHONY : src/HouseMappingGraph.cpp.o
+
+src/HouseMappingGraph.i: src/HouseMappingGraph.cpp.i
+.PHONY : src/HouseMappingGraph.i
+
+# target to preprocess a source file
+src/HouseMappingGraph.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.i
+.PHONY : src/HouseMappingGraph.cpp.i
+
+src/HouseMappingGraph.s: src/HouseMappingGraph.cpp.s
+.PHONY : src/HouseMappingGraph.s
+
+# target to generate assembly for a file
+src/HouseMappingGraph.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algorithm_D/CMakeFiles/Algorithm_D.dir/build.make Algorithm_D/CMakeFiles/Algorithm_D.dir/src/HouseMappingGraph.cpp.s
+.PHONY : src/HouseMappingGraph.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,9 +211,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Algorithm_D"
+	@echo "... __/common_algorithm/src/MyAlgorithm.o"
+	@echo "... __/common_algorithm/src/MyAlgorithm.i"
+	@echo "... __/common_algorithm/src/MyAlgorithm.s"
 	@echo "... src/Algorithm_D.o"
 	@echo "... src/Algorithm_D.i"
 	@echo "... src/Algorithm_D.s"
+	@echo "... src/HouseMappingGraph.o"
+	@echo "... src/HouseMappingGraph.i"
+	@echo "... src/HouseMappingGraph.s"
 .PHONY : help
 
 

@@ -3,23 +3,18 @@
 REGISTER_ALGORITHM(Algo_209228600_A);
 
 void Algo_209228600_A::setMaxSteps(std::size_t maxSteps) {
-    std::cout << "MyAlgorithm::setMaxSteps" << std::endl;
-
     totalSteps = maxSteps;
 } 
 
 void Algo_209228600_A::setWallsSensor(const WallsSensor& sensor) {
-    std::cout << "MyAlgorithm::setWallsSensor" << std::endl;
     wallsSensor = &sensor;
 }
 
 void Algo_209228600_A::setDirtSensor(const DirtSensor& sensor) {
-    std::cout << "MyAlgorithm::setDirtSensor" << std::endl;
     dirtSensor = &sensor; 
 }
 
 void Algo_209228600_A::setBatteryMeter(const BatteryMeter& meter) {
-    std::cout << "MyAlgorithm::setBatteryMeter" << std::endl;
     batteryMeter = &meter;
     maxBatterySteps = batteryMeter->getBatteryState();
 }
