@@ -1,12 +1,17 @@
 #include "../include/error_manager.h"
 
 void ErrorManager::checkForError(bool declareError, std::string errorDescription, std::string errorFile) {
+    std::cerr << "checkForError:" << errorFile << std::endl;
     if (declareError) {
-        std::ofstream logFile(errorFile, std::ios_base::app);
-        if (logFile.is_open()) {
-            logFile << errorDescription << std::endl;
+        std::ofstream file(errorFile);
+        if (file.is_open()) {
+            std::cerr << "Wrote to file:" << errorFile << std::endl;
+            file << errorDescription << std::endl;
         }
-        logFile.close();
+        else {
+            std::cerr << "Did not Wrote to file:" << errorFile << std::endl;
+        }
+        file.close();
     }
 }
 

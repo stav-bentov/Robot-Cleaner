@@ -20,6 +20,8 @@ class HouseMappingGraph {
 
         std::unordered_map<std::pair<int, int>, int, pair_hash> tiles;
         std::unordered_set<std::pair<int, int>, pair_hash> visitedTiles;
+        std::unordered_set<std::pair<int, int>, pair_hash> dirtyTiles;
+        std::unordered_set<std::pair<int, int>, pair_hash> unkownTiles;
 
         // Contain the shortest path (with most unkwon tiles) to clean a tile
         std::stack<Step> cleanStack;
@@ -40,6 +42,7 @@ class HouseMappingGraph {
         int distanceFromUnkwon;
         std::pair<int, int> dirtyDst;
         std::pair<int, int> unkwonDst;
+
         std::pair<int, int> getRelativeLocation(Direction d);
         bool isDockingStation(std::pair<int, int> location) const;
         void updateCurrentLocation(Step s);
@@ -55,7 +58,16 @@ class HouseMappingGraph {
         void printStack(std::stack<Step> s);
         void shortestPathToDstWithMaximumUnknown(std::pair<int, int> start, std::pair<int, int> dst);
         Step getStepFromSrcToDst(std::pair<int, int> src, std::pair<int, int> dst);
-
+        bool shouldStayCharging(int batterySteps, int maxBatterySteps, int maxSteps);
+        Step getStepToTarget(std::pair<int, int> target);
+        bool canExploreUnknown(int batterySteps, int maxSteps, int distanceBetweenDockAndDst);
+        bool canReachAndCleanDirt(int batterySteps, int maxSteps, int distanceBetweenDockAndDst);
+        Step decideNextStep(int batterySteps, int maxSteps);
+        bool canCleanCurrentLocation(int batterySteps, int maxSteps);
+        bool shouldCleanCurrentLocation(int batterySteps, int maxSteps);
+        bool shouldFinish();
+        bool haveEnoghMaxSteps(int maxSteps, int distanceBetweenDockAndDst);
+        void shouldNeedToFinish(int maxSteps, int distanceFromUnkwon, int distanceFromDirt, int distanceOfUnkownFromDock, int distanceOfDirtFromDock);
     public:
         HouseMappingGraph();
         void addTile(std::pair<int, int> location, Type t);

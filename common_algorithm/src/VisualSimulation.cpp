@@ -139,30 +139,30 @@ void VisualSimulation::printHouse(bool printDir) {
             if (i == robotLocation.first && j == robotLocation.second) {
                 //Logger::getInstance().getLogger()->info("in i == robotLocation.first && j == robotLocation.second");
                 if (printDir)   {
-                    std::cout << elementToCodeColor[Elements::Direction] << " " << directionStringMap[currentStep] << " " << stringToCodeColor["Reset"];
+                    std::cerr << elementToCodeColor[Elements::Direction] << " " << directionStringMap[currentStep] << " " << stringToCodeColor["Reset"];
                 }         
                 else {
-                    std::cout << elementToCodeColor[Elements::Robot] << " " << infoRepMapping[Elements::Robot] << " " << stringToCodeColor["Reset"];    
+                    std::cerr << elementToCodeColor[Elements::Robot] << " " << infoRepMapping[Elements::Robot] << " " << stringToCodeColor["Reset"];    
                 }   
             } else {
                 if (map[i][j] == infoRepMapping[Elements::Wall]) {
-                    std::cout << elementToCodeColor[Elements::Wall] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
+                    std::cerr << elementToCodeColor[Elements::Wall] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
                 }
                 else if (map[i][j] == infoRepMapping[Elements::DockingStation])  {
-                    std::cout << elementToCodeColor[Elements::DockingStation] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
+                    std::cerr << elementToCodeColor[Elements::DockingStation] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
                 }
                 else {
-                    std::cout << " " << map[i][j] << " ";
+                    std::cerr << " " << map[i][j] << " ";
                 }
             }
 
         }
-        std::cout << std::endl;
+        std::cerr << std::endl;
     }
-    std::cout << "Left steps in battery: " << std::floor(static_cast<double>(batterySteps))  << ", out of " << maxBatterySteps << " " << std::endl;
-    std::cout << "Allowed number of steps: " << allowedNumberOfSteps << "             " << std::endl;
-    std::cout << std::endl;
-    std::cout.flush(); 
+    std::cerr << "Left steps in battery: " << std::floor(static_cast<double>(batterySteps))  << ", out of " << maxBatterySteps << " " << std::endl;
+    std::cerr << "Allowed number of steps: " << allowedNumberOfSteps << "             " << std::endl;
+    std::cerr << std::endl;
+    std::cerr.flush(); 
 } 
 
 void VisualSimulation::updateMap() {
@@ -189,12 +189,12 @@ void VisualSimulation::updateMap() {
 
 void VisualSimulation::startSimulation() {
     firstRun = true;
-    std::cout << std::endl << "SIMULATION STARTS ..." << std::endl;
+    std::cerr << std::endl << "SIMULATION STARTS ..." << std::endl;
 
     printHouse(false);
     firstRun = false;
     // Hide the cursor
-    std::cout << "\033[?25l";
+    std::cerr << "\033[?25l";
     for (Step step: steps) {
         currentStep = step;
         if (currentStep == Step::Finish) {
@@ -209,9 +209,9 @@ void VisualSimulation::startSimulation() {
         printHouse(false);
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    std::cout << std::endl << "SIMULATION ENDED" << std::endl;
+    std::cerr << std::endl << "SIMULATION ENDED" << std::endl;
     // Show the cursor
-    std::cout << "\033[?25h";
+    std::cerr << "\033[?25h";
 }
 
 void VisualSimulation::charge() {

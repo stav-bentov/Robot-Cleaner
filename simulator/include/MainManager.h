@@ -19,6 +19,7 @@ class MainManager {
     public:
         MainManager() : housePath("."), algoPath("."), numThreads(10), summaryOnly(false), noResult(-1), runningThreads(0) {};
         void run(int argc, char* argv[]);
+        
     private:
         std::string housePath;
         std::string algoPath;
@@ -32,7 +33,9 @@ class MainManager {
         const int noResult;
         std::vector<std::string> algorithmNames;
         std::vector<std::string> housesNames;
-
+        std::vector<std::pair<int, int>> simulatorsCorrd;
+        std::vector<bool> simulatorWasTaken;
+        int numSimulators;
 
         int runningThreads;
         std::vector<std::thread> threads;
@@ -45,9 +48,7 @@ class MainManager {
         void runSimulations();
         void closeAlgorithms();
         void writeResultsToCsv();
-        //void threadWork(AbstractAlgorithm& algorithm, std::string housePath, int algo_idx, int house_idx, std::string algorithmName);
-        void threadWork(MySimulator& simulator, std::mutex& coutMutex, std::mutex& runningThreadsMutex,std::condition_variable& simulatiosCv, int house_idx, int algo_idx);
-        //void createSimulators();
+        void createSimulators();
 };
 
 #endif  // MAIN_MANAGER_H

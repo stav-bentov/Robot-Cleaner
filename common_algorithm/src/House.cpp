@@ -1,6 +1,7 @@
 #include "../include/house.h"
 #include <thread>
 House::House(std::string& filePath) {
+    createErrorName(filePath);
     try {
         getParameters(filePath);
     }
@@ -16,10 +17,8 @@ House::House(std::string& filePath) {
 void House::getParameters(std::string& filePath) {
     InputManager inputManager(filePath);
     inputManager.getParameters(houseName, maxSteps, maxBattery, amountOfDirt, rows, cols, dockingStationLocation, houseSurface);
-    createErrorName(filePath);
     currentBatterySteps = maxBattery;
     currentLocation = dockingStationLocation;
-    std::cout << "STAV STAV STAV maxBattery = "  <<maxBattery << std::endl; 
 }
 
 void House::createErrorName(std::string& houseFilePath) {
@@ -27,6 +26,7 @@ void House::createErrorName(std::string& houseFilePath) {
     // Get the names
     std::string houseName = housePath.stem().string(); 
     errorFileName = houseName + ".error";
+    std::cerr << "errorFileName = " << errorFileName<< std::endl;
 }
 
 std::size_t House::getMaxSteps() const {
