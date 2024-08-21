@@ -136,8 +136,6 @@ Step HouseMappingGraph::getStepFromMapping(int batterySteps, int maxBatterySteps
 */
 bool HouseMappingGraph::shouldFinish() {
     // if we are in docking and we need to finish OR we dont have any accessible tile to reach (dirt or unkwon- finish)
-    // TODO: add the longer
-    //return isDockingStation(currentLocation) && (needToFinish || (dirtyTiles.size() == 0 && unkownTiles.size() == 0));
     return isDockingStation(currentLocation) && needToFinish;
 }
 

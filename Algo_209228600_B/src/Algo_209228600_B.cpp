@@ -5,7 +5,7 @@ REGISTER_ALGORITHM(Algo_209228600_B);
 void Algo_209228600_B::updateMapping() {
     std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 
-    std::cout << thread <<"Algorithm_E::updateMapping()" << std::endl;
+    std::cout << thread <<"B::updateMapping()" << std::endl;
     bool isVisited = houseMapping.isVisitedInCurrentLocation();
     // Update current place amount of dirt
     houseMapping.setDirt(dirtSensor->dirtLevel());
@@ -27,12 +27,12 @@ Step Algo_209228600_B::nextStep() {
 
     Logger::getInstance().log(thread + " maxBatterySteps = "+std::to_string(maxBatterySteps) +".\n", LogLevels::FILE);
 
-    std::cout << "in algorithm D next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
+    std::cout << "in algorithm B next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
     if (maxBatterySteps == 1) {
         return Step::Finish;
     }
     
-    std::cout << thread <<"Algorithm_D::nextStep()" << std::endl;
+    std::cout << thread <<"Algorithm_B::nextStep()" << std::endl;
     updateMapping();
     Step step = houseMapping.getStepFromMapping(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
     totalSteps--;

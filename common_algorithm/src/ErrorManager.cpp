@@ -3,7 +3,7 @@
 void ErrorManager::checkForError(bool declareError, std::string errorDescription, std::string errorFile) {
     std::cerr << "checkForError:" << errorFile << std::endl;
     if (declareError) {
-        std::ofstream file(errorFile);
+        std::ofstream file(errorFile, std::ios::app);
         if (file.is_open()) {
             std::cerr << "Wrote to file:" << errorFile << std::endl;
             file << errorDescription << std::endl;

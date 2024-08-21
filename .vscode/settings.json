@@ -85,7 +85,8 @@
         "xutility": "cpp",
         "coroutine": "cpp",
         "resumable": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "latch": "cpp"
     },
     "C_Cpp.dimInactiveRegions": false
 }

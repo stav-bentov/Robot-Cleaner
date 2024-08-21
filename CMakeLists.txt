@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 #add_subdirectory(Algo_209228600_B)
 # add_subdirectory(Algo_209228600_C)
 #add_subdirectory(Algorithm_D)
-#add_subdirectory(Algo_209228600_A)
+add_subdirectory(Algo_209228600_A)
 add_subdirectory(Algo_209228600_B)
 add_subdirectory(simulator)
 
@@ -19,6 +19,6 @@ set(common_libs
     #Algorithm_209228600_B
     # Algorithm_209228600_C
     #Algorithm_D
-    #Algo_209228600_A
+    Algo_209228600_A
     Algo_209228600_B
 )

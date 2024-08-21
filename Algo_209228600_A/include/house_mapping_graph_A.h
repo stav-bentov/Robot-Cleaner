@@ -14,7 +14,6 @@
 class HouseMappingGraphA : public HouseMappingGraph{
     public:
         Step decideNextStep(int batterySteps, int maxSteps) override;
-        void updateQ(std::pair<int, int>& location, std::unordered_set<std::pair<int, int>, pair_hash>& visited, 
-                                std::queue<std::pair<int, int>>& q) override;
+        void updateQ(std::pair<int, int>& location, std::unordered_set<std::pair<int, int>, pair_hash>& visited, std::queue<std::pair<int, int>>& q) override;
 };
 #endif

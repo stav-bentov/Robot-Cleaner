@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/myrobot.dir/MySimulator.cpp.o.d"
   "CMakeFiles/myrobot.dir/SimConfigManager.cpp.o"
   "CMakeFiles/myrobot.dir/SimConfigManager.cpp.o.d"
+  "CMakeFiles/myrobot.dir/Task.cpp.o"
+  "CMakeFiles/myrobot.dir/Task.cpp.o.d"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o.d"
   "CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o"

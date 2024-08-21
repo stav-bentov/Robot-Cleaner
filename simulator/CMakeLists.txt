@@ -39,6 +39,7 @@ add_executable(myrobot
     ${PROJECT_SOURCE_DIR}/MainManager.cpp
     ${PROJECT_SOURCE_DIR}/CsvManager.cpp
     ${PROJECT_SOURCE_DIR}/SimConfigManager.cpp
+    ${PROJECT_SOURCE_DIR}/Task.cpp
 )
 
 # Link the dl library

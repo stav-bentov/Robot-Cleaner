@@ -250,6 +250,30 @@ SimConfigManager.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.s
 .PHONY : SimConfigManager.cpp.s
 
+Task.o: Task.cpp.o
+.PHONY : Task.o
+
+# target to build an object file
+Task.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.o
+.PHONY : Task.cpp.o
+
+Task.i: Task.cpp.i
+.PHONY : Task.i
+
+# target to preprocess a source file
+Task.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.i
+.PHONY : Task.cpp.i
+
+Task.s: Task.cpp.s
+.PHONY : Task.s
+
+# target to generate assembly for a file
+Task.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.s
+.PHONY : Task.cpp.s
+
 __/common_algorithm/src/Common.o: __/common_algorithm/src/Common.cpp.o
 .PHONY : __/common_algorithm/src/Common.o
 
@@ -610,6 +634,9 @@ help:
 	@echo "... SimConfigManager.o"
 	@echo "... SimConfigManager.i"
 	@echo "... SimConfigManager.s"
+	@echo "... Task.o"
+	@echo "... Task.i"
+	@echo "... Task.s"
 	@echo "... __/common_algorithm/src/Common.o"
 	@echo "... __/common_algorithm/src/Common.i"
 	@echo "... __/common_algorithm/src/Common.s"

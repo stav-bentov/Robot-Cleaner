@@ -7,45 +7,24 @@ MySimulator::MySimulator()
 	  status("WORKING"),
 	  numberOfStepsMade(0) {}
 
-void MySimulator::getTimeout() {
-	std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-	// TODO: maybe add handle error?
-    SimConfigurationManager simConfigManager;
-    int timePerStep = simConfigManager.getTimePerStep();
-	std::cout << thread<<" maxSteps " << maxSteps<<std::endl;
-	std::cout << thread <<" timePerStep " << timePerStep<<std::endl;
-	timeoutDuration = std::chrono::milliseconds(timePerStep * maxSteps);
-	auto durationInMilliseconds = timeoutDuration.count(); // Get the number of milliseconds
-
-    // Print the duration
-    std::cout << thread <<" timeoutDuration: " << durationInMilliseconds << " milliseconds" << std::endl;
-
-}
-
 /*
 	Building House object from house file.
 	Builds corresponding sensors.
 	Set outputManager (input and ouput file name and house name)
 */
-void MySimulator::prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) {
-	try {
-		setHouse(houseFilePath);
-		setSensors();
-		om = OutputManager(houseFilePath, algoName);
-    }
-    catch (const std::exception& e) {
-        ErrorManager::checkForError(true, "Error: in house constructor");
-    }
+void MySimulator::prepareSimulationEnvironment(std::shared_ptr<House> housePtr, std::string houseFilePath, std::string algoName) {
+	setHouse(housePtr);
+	setSensors();
+	om = OutputManager(houseFilePath, algoName);
 }
 
-void MySimulator::setHouse(std::string houseFilePath) {
-	house = std::make_shared<House>(houseFilePath);
+void MySimulator::setHouse(std::shared_ptr<House> housePtr) {
+	house = housePtr;
 	maxSteps = house->getMaxSteps();
 	dockingStationLocation = house->getDockingStationLocation();
 	currentLocation = dockingStationLocation;
 	Logger::getInstance().log("Done loading the house.\n", LogLevels::FILE);
-}
+} 
 
 void MySimulator::setSensors() {
 	// Create sensors
@@ -65,24 +44,15 @@ void MySimulator::setAlgorithm(std::unique_ptr<AbstractAlgorithm> algo) {
 	myAlgo->setDirtSensor(dirtSensor);
 	myAlgo->setBatteryMeter(batteryMeter);
 	Logger::getInstance().log("Done setting algorithm and its sensors.\n", LogLevels::FILE);
-	getTimeout();
+	//getTimeout();
 }
 
 /*
 	Run robot- make steps according algorithm decision as long as:"continueWorking"
 */
 void MySimulator::run() {
-	bool stopFlag = false;
 	std::cout << "in run " << std::endl;
-    auto startTime = std::chrono::steady_clock::now();
 	while (numberOfStepsMade <= house->getMaxSteps()) {
-		auto currentTime = std::chrono::steady_clock::now();
-        auto elapsedTime = currentTime - startTime;
-
-        if (elapsedTime > timeoutDuration) {
-			stopFlag = true;
-			break;
-        }
 
 		std::cout <<"myAlgo -> nextStep() " << std::endl;
 		if (myAlgo) {
@@ -105,24 +75,14 @@ void MySimulator::run() {
 		numberOfStepsMade++;
 		
 	}
-	score = calculateScore(numberOfStepsMade, status, house->getAmountOfDirt(), house->inDockingStation(), maxSteps);
 
 	if (((batteryMeter.getBatteryState() == 0 && !house->inDockingStation()))){
 		status = "DEAD";
 	}
+	score = calculateScore();
 
-	if ((status == "FINISHED" && !house->inDockingStation()))
-	{
-		//Logger::getInstance().getLogger()->info("Error: algorithm returned FINISHED and not in docking station");
-	}
 	std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-	if (stopFlag) {
-		std::cout <<thread<< "GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
-	}
-	else
-	{
-		std::cout <<thread<< "NOT GOT stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag  stopFlag " << std::endl;
-	}
+	
 }
 
 /*
@@ -134,11 +94,13 @@ void MySimulator::setOutput() {
     std::cout.flush(); 
 }
 
-int MySimulator::getScore() const{
+int MySimulator::getScore(){
 	return score;
 }
 
-int MySimulator::calculateScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps) {
+int MySimulator::calculateScore() {
+	int amountOfDirtLeft = house->getAmountOfDirt();
+	bool inDocking = house->inDockingStation();
     if (status == "DEAD")
     {
         return maxSteps + amountOfDirtLeft * 300 + 2000;
@@ -149,5 +111,10 @@ int MySimulator::calculateScore(std::size_t numSteps, std::string status, int am
         return maxSteps + amountOfDirtLeft * 300 + 3000;
     }
     // else
-    return numSteps + amountOfDirtLeft * 300 + (inDocking ? 0 : 1000);
+	std::cout << "calculateScore" << std::endl;
+	std::cout << "amountOfDirtLeft " << amountOfDirtLeft << std::endl;
+	std::cout << "inDocking " << inDocking << std::endl;
+	std::cout << "maxSteps " << maxSteps << std::endl;
+	std::cout << "numberOfStepsMade " << numberOfStepsMade << std::endl;
+    return numberOfStepsMade + amountOfDirtLeft * 300 + (inDocking ? 0 : 1000);
 }

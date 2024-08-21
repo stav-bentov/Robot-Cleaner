@@ -38,8 +38,8 @@ class MySimulator {
         int score;
 
         void setSensors();
-        void setHouse(std::string houseFileName);
-        int calculateScore(std::size_t numSteps, std::string status, int amountOfDirtLeft, bool inDocking, std::size_t maxSteps);
+        void setHouse(std::shared_ptr<House> housePtr);
+        int calculateScore();
         void getTimeout();
 
     public:
@@ -51,11 +51,11 @@ class MySimulator {
             std::cout << "In deconstructor" <<std::endl;
         };
 
-        void prepareSimulationEnvironment(std::string houseFilePath, std::string algoName) ;
+        void prepareSimulationEnvironment(std::shared_ptr<House> housePtr, std::string houseFilePath, std::string algoName) ;
         void setAlgorithm(std::unique_ptr<AbstractAlgorithm> algo);
         void run();
         void setOutput();
-        int getScore() const;
+        int getScore();
 
 };
 #endif  // MY_SIMULATOR_H

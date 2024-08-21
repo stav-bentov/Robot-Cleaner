@@ -1,6 +1,6 @@
 #include "../include/input_manager.h"
 
-InputManager::InputManager(std::string& housePath) {
+InputManager::InputManager(const std::string& housePath) {
     dockingStationLocation = {-1, -1};
     amountOfDirt = 0;
 

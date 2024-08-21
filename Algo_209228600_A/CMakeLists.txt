@@ -10,6 +10,7 @@ add_compile_options(-fPIC -fvisibility=default -fvisibility-inlines-hidden)
 # List of source files
 set(CURRENT_ALGORITHM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Algo_209228600_A.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/HouseMappingGraphA.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/MyAlgorithm.cpp
     ${CMAKE_SOURCE_DIR}/common_algorithm/src/HouseMappingGraph.cpp
 )

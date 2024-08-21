@@ -16,6 +16,7 @@
 class House {
     private:
         std::string houseName;
+        std::string houseFilePath;
         std::size_t maxSteps;
         std::size_t maxBattery;
         int amountOfDirt;
@@ -33,12 +34,12 @@ class House {
         void discharge();
         void clean();
         bool isWall(std::pair<int, int> location) const;
-        void getParameters(std::string& filePath);
-        void createErrorName(std::string& houseFilePath);
+        void getParameters(const std::string& filePath);
+        void createErrorName();
         
     public:
         House();
-        House(std::string& filePath);
+        House(const std::string& filePath);
         std::size_t getMaxSteps() const;
         std::size_t getMaxBattery() const;
         int getAmountOfDirt() const;
@@ -46,13 +47,12 @@ class House {
         int getDirtLevel() const;
         std::size_t getTotalAmountOfSteps() const;
         float getCurentBatterySteps() const;
-
-
+        std::string getHouseName() const;
         void updateLocation(Step step);
         bool inDockingStation() const;
         void makeStep(Step step);
         bool isWall(Direction d) const;
-        std::string getHouseName() const;
+        std::string getHouseFilePath() const;
         // For simulation
         std::vector<std::vector<int>> getHouseSurface() const;
 };

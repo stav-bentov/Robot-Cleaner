@@ -1,7 +1,8 @@
 #include "../include/house.h"
 #include <thread>
-House::House(std::string& filePath) {
-    createErrorName(filePath);
+House::House(const std::string& filePath) {
+    houseFilePath = filePath;
+    createErrorName();
     try {
         getParameters(filePath);
     }
@@ -14,19 +15,18 @@ House::House(std::string& filePath) {
 /*
     Get all house parameters using Input manager
 */
-void House::getParameters(std::string& filePath) {
+void House::getParameters(const std::string& filePath) {
     InputManager inputManager(filePath);
     inputManager.getParameters(houseName, maxSteps, maxBattery, amountOfDirt, rows, cols, dockingStationLocation, houseSurface);
     currentBatterySteps = maxBattery;
     currentLocation = dockingStationLocation;
 }
 
-void House::createErrorName(std::string& houseFilePath) {
+void House::createErrorName() {
     std::filesystem::path housePath(houseFilePath);
     // Get the names
     std::string houseName = housePath.stem().string(); 
     errorFileName = houseName + ".error";
-    std::cerr << "errorFileName = " << errorFileName<< std::endl;
 }
 
 std::size_t House::getMaxSteps() const {
@@ -174,4 +174,8 @@ bool House::isWall(Direction d) const {
 
 std::string House::getHouseName() const{
     return houseName;
+}
+
+std::string House::getHouseFilePath() const{
+    return houseFilePath;
 }

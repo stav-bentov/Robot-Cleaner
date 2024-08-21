@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/CMakeLists.txt"
   "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/CMakeLists.txt"
   "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/CMakeLists.txt"
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
@@ -121,12 +122,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.25.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Algo_209228600_A/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Algo_209228600_B/CMakeFiles/CMakeDirectoryInformation.cmake"
   "simulator/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/DependInfo.cmake"
   "Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/DependInfo.cmake"
   "simulator/CMakeFiles/myrobot.dir/DependInfo.cmake"
   )

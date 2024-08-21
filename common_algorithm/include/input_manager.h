@@ -10,7 +10,7 @@
 
 class InputManager {
     public:
-        InputManager(std::string& housePath);
+        InputManager(const std::string& housePath);
         void getParameters(std::string& _houseName, std::size_t& _maxSteps, std::size_t& _maxBattery, int& _amountOfDirt,
                 int& _rows, int& _cols, std::pair<int, int>& _dockingStationLocation, std::vector<std::vector<int>>& _houseSurface) const;
     private:

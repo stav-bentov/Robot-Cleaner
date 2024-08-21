@@ -6,5 +6,5 @@ CXX_DEFINES = -DAlgo_209228600_B_EXPORTS
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -fPIC -fPIC -fvisibility=default -fvisibility-inlines-hidden -Wall -Wextra -Werror -pedantic -std=gnu++2a
+CXX_FLAGS = -fPIC -fPIC -fvisibility=default -fvisibility-inlines-hidden -Wall -Wextra -Werror -pedantic -std=gnu++20
 
