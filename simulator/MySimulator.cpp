@@ -91,7 +91,6 @@ void MySimulator::run() {
 		else {
 			std::cout <<"!myAlgo" << std::endl;
 		}
-		//std::cout << "myAlgo address: " << myAlgo << std::endl;
 
 		Step currentStep = myAlgo -> nextStep();
 		steps.push_back(currentStep);
@@ -102,7 +101,6 @@ void MySimulator::run() {
 			break;
 		}
 		
-		//std::cout << "house->makeStep(currentStep);" << std::endl;
 		house->makeStep(currentStep);
 		numberOfStepsMade++;
 		

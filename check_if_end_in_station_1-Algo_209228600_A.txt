@@ -1,0 +1,7 @@
+NumSteps = 2
+DirtLeft = 3
+Status = WORKING
+InDock = FALSE
+Score = 1902
+Steps: 
+WW

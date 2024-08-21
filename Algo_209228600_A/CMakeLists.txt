@@ -7,14 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 # Compile options for position-independent code and visibility
 add_compile_options(-fPIC -fvisibility=default -fvisibility-inlines-hidden)
 
-include_directories(${CMAKE_SOURCE_DIR}/..)
-include_directories(${CMAKE_SOURCE_DIR})
-
 # List of source files
 set(CURRENT_ALGORITHM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Algo_209228600_A.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/Vertex.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/HouseMappingGraph.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/MyAlgorithm.cpp
+    ${CMAKE_SOURCE_DIR}/common_algorithm/src/HouseMappingGraph.cpp
 )
 
 # Create the shared library

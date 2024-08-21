@@ -27,7 +27,7 @@ Step Algorithm_D::nextStep() {
 
     Logger::getInstance().log(thread + " maxBatterySteps = "+std::to_string(maxBatterySteps) +".\n", LogLevels::FILE);
 
-    //std::cout << "in algorithm D next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
+    std::cout << "in algorithm D next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
     if (maxBatterySteps == 1) {
         return Step::Finish;
     }

@@ -1,0 +1,7 @@
+NumSteps = 81
+DirtLeft = 0
+Status = FINISHED
+InDock = TRUE
+Score = 81
+Steps: 
+SESNWNWEssssssssssssssssssssWWsWsEEEssssssssssssssssssssWWWsEEEssssssssssssssssssF

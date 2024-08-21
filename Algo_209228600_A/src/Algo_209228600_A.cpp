@@ -1,33 +1,40 @@
-
 #include "../include/Algo_209228600_A.h"
+
 REGISTER_ALGORITHM(Algo_209228600_A);
 
-void Algo_209228600_A::setMaxSteps(std::size_t maxSteps) {
-    totalSteps = maxSteps;
-} 
+void Algo_209228600_A::updateMapping() {
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 
-void Algo_209228600_A::setWallsSensor(const WallsSensor& sensor) {
-    wallsSensor = &sensor;
+    std::cout << thread <<"Algorithm_E::updateMapping()" << std::endl;
+    bool isVisited = houseMapping.isVisitedInCurrentLocation();
+    // Update current place amount of dirt
+    houseMapping.setDirt(dirtSensor->dirtLevel());
+    
+    // Add information on nearest tiles only if not visited yet (because its a waste to do this twice)
+    if (!isVisited) {
+        // Add current location close vertices
+        for (const auto& entry : Common::directionMap) {  
+            if (!wallsSensor->isWall(entry.first)) {
+                std::cout << thread <<"calling addTile: " << std::endl;
+                houseMapping.addTile(entry.first, Type::Floor);
+            }
+        }
+    }
 }
 
-void Algo_209228600_A::setDirtSensor(const DirtSensor& sensor) {
-    dirtSensor = &sensor; 
-}
-
-void Algo_209228600_A::setBatteryMeter(const BatteryMeter& meter) {
-    batteryMeter = &meter;
-    maxBatterySteps = batteryMeter->getBatteryState();
-}
-
-/*
-    The Flow:
-        - Update BFS with current vertex and it's sorrundings
-        - Run Bfs
-        - If need to get back to the station- get back
-        - Else- if current location is dirty - clean
-            - Else- Check if the distance from nearest dirt location + its distance from docking station is less then battery steps- go in this direction
-                - Else- go back to docking station
-*/
 Step Algo_209228600_A::nextStep() {
-    return Step::Finish;
+    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
+
+    Logger::getInstance().log(thread + " maxBatterySteps = "+std::to_string(maxBatterySteps) +".\n", LogLevels::FILE);
+
+    std::cout << "in algorithm D next step maxBatterySteps= : " <<maxBatterySteps << "in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << std::endl;    
+    if (maxBatterySteps == 1) {
+        return Step::Finish;
+    }
+    
+    std::cout << thread <<"Algorithm_D::nextStep()" << std::endl;
+    updateMapping();
+    Step step = houseMapping.getStepFromMapping(batteryMeter->getBatteryState(), maxBatterySteps, totalSteps);
+    totalSteps--;
+    return step;
 }

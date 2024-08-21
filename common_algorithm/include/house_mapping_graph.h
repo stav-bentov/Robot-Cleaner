@@ -3,57 +3,84 @@
 
 #include <set>
 #include <unordered_map>
+#include <unordered_set>
 #include <map>
 #include <vector>
 #include <queue>
 #include <stack>
 #include <memory>
-#include "house.h"
+#include <thread>
 #include "common_enums.h"
-#include "vertex.h"
-#include "robot_walls_sensor.h"
+
 
 class HouseMappingGraph {
-    private:
-    
-        struct pair_hash {
-            template <class T1, class T2>
-            std::size_t operator ()(const std::pair<T1, T2>& p) const {
-                auto h1 = std::hash<T1>{}(p.first);
-                auto h2 = std::hash<T2>{}(p.second);
-                return h1 ^ h2; // Combine the hash values
-            }
+    protected:
+        enum class TilesType {
+            UnknownDirt = -1,
+            DockingStation = -2
         };
-        // Mapping of corrdinate and vetices 
-        std::unordered_map<std::pair<int, int>, std::unique_ptr<Vertex>, pair_hash> verticesMapping;
+
+        std::unordered_map<std::pair<int, int>, int, pair_hash> tiles;
+        std::unordered_set<std::pair<int, int>, pair_hash> visitedTiles;
+        std::unordered_set<std::pair<int, int>, pair_hash> dirtyTiles;
+        std::unordered_set<std::pair<int, int>, pair_hash> unkownTiles;
+
+        // Contain the shortest path (with most unkwon tiles) to clean a tile
+        std::stack<Step> cleanStack;
+        std::stack<Step> toDockingStack;
+
+        // Contain the shortest path (with most unkwon tiles) to docking satation/ to clean a tile
+        std::queue<std::pair<int, int>> robotDeterminedPath;
+
         const std::pair<int, int> dockingStationLocation;
         std::pair<int, int> currentLocation;
-        bool startFinish;
+        bool needToReturn;
+        bool onWayToClean;
+        bool needToFinish;
+        bool needToCharge;
+        bool onDeterminedWayFromCharging;
+        int currentDistanceFromDocking;
 
-        Step getStepByDiff(int diffrenceRow, int diffrenceCol);
-        bool isDockingStation(std::pair<int, int> location) const;
+        int distanceFromDirt;
+        int distanceFromUnkwon;
+        std::pair<int, int> dirtyDst;
+        std::pair<int, int> unkwonDst;
+
         std::pair<int, int> getRelativeLocation(Direction d);
-        bool needToReturn(int distanceFromStation, int maxSteps);
-        Step getFirstStep(const std::pair<int, int>& target, const std::pair<int, int>& start, const std::map<std::pair<int, int>, std::pair<int, int>>& parent);
-        Step getNextStep(bool choseDirtOrUnknownDst, int dirtDistance, std::pair<int, int> dirtOrUnknownDst, 
-                                    int maxSteps, int batterySteps, std::map<std::pair<int, int>, std::pair<int, int>>& parent, int maxBatterySteps);
+        bool isDockingStation(std::pair<int, int> location) const;
         void updateCurrentLocation(Step s);
-        int getDistanceFromDocking(std::pair<int, int> src);
-        bool getStartFinish() const;
-        int calculateStayingInDocking(int maxSteps, int maxBatterySteps);
-        bool checkLocation(std::pair<int, int>& location, int depth, int batterySteps, int maxSteps, 
-                                      std::map<std::pair<int, int>, std::pair<int, int>>& parent, bool& choseDirtOrUnknownDst,
-                                      bool isDirtOrUnknown, int& dirtDistance, std::pair<int, int>& dirtOrUnknownDst, Step& s);
-        void updateQ(std::pair<int, int>& location, std::set<std::pair<int, int>>& visited, 
-                                std::queue<std::pair<int, int>>& q, std::map<std::pair<int, int>, std::pair<int, int>>& parent);
+        void setDirt(std::pair<int, int> location, int dirt);
+        void reduceDirt(Step s);
+        Step directionToStep(Direction d);
+        void getDistanceFromDockingAndPotentialDst(int& distanceFromDocking);
+        Step getStepByDiff(int diffrenceRow, int diffrenceCol);
+        void getStepsFromParent(std::pair<int, int> dst, std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash>& parent, std::stack<Step>& fillStack);
+        int getDistanceFromDock(std::pair<int, int>& dst);
+        void printStack(std::stack<Step> s);
+        void shortestPathToDstWithMaximumUnknown(std::pair<int, int> start, std::pair<int, int> dst);
+        Step getStepFromSrcToDst(std::pair<int, int> src, std::pair<int, int> dst);
+        bool shouldStayCharging(int batterySteps, int maxBatterySteps, int maxSteps);
+        Step getStepToTarget(std::pair<int, int> target);
+        bool canExploreUnknown(int batterySteps, int maxSteps, int distanceBetweenDockAndDst);
+        bool canReachAndCleanDirt(int batterySteps, int maxSteps, int distanceBetweenDockAndDst);
+        bool canCleanCurrentLocation(int batterySteps, int maxSteps);
+        bool shouldCleanCurrentLocation(int batterySteps, int maxSteps);
+        bool shouldFinish();
+        bool haveEnoghMaxSteps(int maxSteps, int distanceBetweenDockAndDst);
+        void shouldNeedToFinish(int maxSteps, int distanceFromUnkwon, int distanceFromDirt, int distanceOfUnkownFromDock, int distanceOfDirtFromDock);
+        bool checkCloseDst(Step& s);
+        void calculateChargingTime(int batterySteps, int maxBatterySteps, int maxSteps);
+        
+
     public:
         HouseMappingGraph();
-        void addVertex(std::pair<int, int> location, Type t);
-        void addVertex(Direction d, Type t);
-        Step runBfs(int batterySteps, int maxBatterySteps, int maxSteps);
-        void setDirt(std::pair<int, int> location, int dirt);
+        void addTile(std::pair<int, int> location, Type t);
+        void addTile(Direction d, Type t);
         void setDirt(int dirt);
-        bool shouldFinish() const;
+        Step getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps);
+        bool isVisitedInCurrentLocation() const;
+        virtual Step decideNextStep(int batterySteps, int maxSteps) = 0;
+        virtual void updateQ(std::pair<int, int>& location, std::unordered_set<std::pair<int, int>, pair_hash>& visited, std::queue<std::pair<int, int>>& q) = 0;
 
 
 };

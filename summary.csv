@@ -1,2 +1,2 @@
-Algorithm\House,example_2,example_400,general_house_1,general_house_2,house_1,house_2,house_3
-Algorithm_D,6400,300,59,59,300,12,12
+Algorithm\House,allowed_steps_1_battery_steps_1,allowed_steps_1_battery_steps_not_1,allowed_steps_not_1_battery_steps_1,all_house_0_no_walls,all_house_0_with_walls,can_use_total_steps_1,can_use_total_steps_2,can_use_total_steps_3,check_if_end_in_station_1,check_if_end_in_station_2,check_if_used_all_number_of_steps_3,example_2,example_400_unreachable,general_house_1,general_house_2,large_parameters,stuck_dirt,stuck_robot
+Algo_209228600_B,5400,5400,5400,10,320,625,13,605,13,17,8200,676,81,74,24,1507,1500,NA

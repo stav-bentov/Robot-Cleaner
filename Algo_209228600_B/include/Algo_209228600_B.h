@@ -1,23 +1,24 @@
 #ifndef MY_ALGORITHM_B_H
 #define MY_ALGORITHM_B_H
-
-#include <queue>
-#include <unordered_set>
-#include <memory>
-#include <stack>
+#include "../../Common/AbstractAlgorithm.h"
 #include "../../algorithm/AlgorithmRegistration.h"
-#include "../../common/WallSensor.h"
-#include "../../common/DirtSensor.h"
-#include "../../common/BatteryMeter.h"
 #include "../../common_algorithm/include/my_algorithm.h"
 #include "house_mapping_graph_B.h"
+#include <thread>
+#include <chrono>
+#include <cstddef>
+#include <map>
+#include <memory>
+#include <unordered_set>
+#include <stack>
+#include <iostream>
 
-class Algo_209228600_B: public MyAlgorithm {
-    private:
-        HouseMappingGraphB houseMappingB;
-        void updateMapping_();
+class Algo_209228600_B : public MyAlgorithm {
     public:
-        Algo_209228600_B();
         Step nextStep() override;
+        
+    private:
+        void updateMapping() override;
+        HouseMappingGraphB houseMapping;
 };
-#endif  // MY_ALGORITHM_B_H
+#endif

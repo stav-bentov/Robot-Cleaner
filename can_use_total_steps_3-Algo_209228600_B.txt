@@ -1,0 +1,7 @@
+NumSteps = 13
+DirtLeft = 0
+Status = FINISHED
+InDock = TRUE
+Score = 13
+Steps: 
+WWsWssEEEssssF

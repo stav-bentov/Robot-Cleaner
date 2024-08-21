@@ -293,8 +293,6 @@ simulator/CMakeFiles/myrobot.dir/main.cpp.o: \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/house_mapping_graph.h \
  /usr/include/c++/9/set /usr/include/c++/9/bits/stl_set.h \
  /usr/include/c++/9/bits/stl_multiset.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/vertex.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_walls_sensor.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_walls_sensor.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../include/sim_config_manager.h \
  /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../include/../../common_algorithm/include/configuration_manager.h \

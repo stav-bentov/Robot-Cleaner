@@ -1,5 +1,5 @@
-#ifndef HOUSE_MAPPING_GRAPH_H_
-#define HOUSE_MAPPING_GRAPH_H_
+#ifndef HOUSE_MAPPING_GRAPH_D_H_
+#define HOUSE_MAPPING_GRAPH_D_H_
 
 #include <set>
 #include <unordered_map>
@@ -12,7 +12,7 @@
 #include "../../common_algorithm/include/common_enums.h"
 
 class HouseMappingGraph {
-    private:
+    protected:
         enum class TilesType {
             UnknownDirt = -1,
             DockingStation = -2
@@ -36,6 +36,7 @@ class HouseMappingGraph {
         bool onWayToClean;
         bool needToFinish;
         bool needToCharge;
+        bool onDeterminedWayFromCharging;
         int currentDistanceFromDocking;
 
         int distanceFromDirt;
@@ -68,14 +69,17 @@ class HouseMappingGraph {
         bool shouldFinish();
         bool haveEnoghMaxSteps(int maxSteps, int distanceBetweenDockAndDst);
         void shouldNeedToFinish(int maxSteps, int distanceFromUnkwon, int distanceFromDirt, int distanceOfUnkownFromDock, int distanceOfDirtFromDock);
+        bool checkCloseDst(Step& s);
+        void calculateChargingTime(int batterySteps, int maxBatterySteps, int maxSteps);
+
     public:
         HouseMappingGraph();
         void addTile(std::pair<int, int> location, Type t);
         void addTile(Direction d, Type t);
         void setDirt(int dirt);
-        Step getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps);
         bool isVisitedInCurrentLocation() const;
+        Step decideNextStep(int batterySteps, int maxSteps);
 
 
 };
-#endif  // HOUSE_MAPPING_GRAPH_H_
+#endif  // HOUSE_MAPPING_GRAPH_D_H_

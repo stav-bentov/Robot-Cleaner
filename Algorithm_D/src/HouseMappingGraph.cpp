@@ -6,6 +6,7 @@ HouseMappingGraph::HouseMappingGraph() : tiles(),
                                         needToReturn(false),
                                         needToFinish(false),
                                         needToCharge(false),
+                                        onDeterminedWayFromCharging(false),
                                         currentDistanceFromDocking(-1) {
         
     distanceFromDirt = -1;
@@ -13,6 +14,7 @@ HouseMappingGraph::HouseMappingGraph() : tiles(),
     dirtyDst = {-1, -1};
     unkwonDst = {-1, -1};
     addTile(dockingStationLocation, Type::DockingStation);
+    
 }
 
 void HouseMappingGraph::addTile(std::pair<int, int> location, Type t) {
@@ -21,7 +23,7 @@ void HouseMappingGraph::addTile(std::pair<int, int> location, Type t) {
     // Add tile for the first time
     if (tiles.find(location) == tiles.end()) {
         if (t != Type::DockingStation) {
-            // std::cout <<thread<< " addTile: " <<location.first << ", " << location.second<< std::endl;
+            std::cout <<thread<< " addTile: " <<location.first << ", " << location.second<< std::endl;
             // Tile is added for the first time so we dont know its dirt
             tiles[location] = static_cast<int>(TilesType::UnknownDirt);
         }
@@ -65,10 +67,10 @@ void HouseMappingGraph::reduceDirt(Step s) {
     // Assumption- vertex currentLocation exist
     if (s == Step::Stay) {
         if (tiles[currentLocation] != static_cast<int>(TilesType::DockingStation)) { 
-            // std::cout <<thread<< " Step is stay and we are not in docking- - reduce dirt" << std::endl;
+            std::cout <<thread<< " Step is stay and we are not in docking- - reduce dirt" << std::endl;
             // Clean here (not docking station)
             tiles[currentLocation]--;
-            // std::cout << thread<<" Dirt in relative location: " <<currentLocation.first << ", " << currentLocation.second << std::endl;
+            std::cout << thread<<" Dirt in relative location: " <<currentLocation.first << ", " << currentLocation.second << std::endl;
         }
     }
 }
@@ -76,208 +78,77 @@ void HouseMappingGraph::reduceDirt(Step s) {
 void HouseMappingGraph::updateCurrentLocation(Step s) {
     std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
 
-    // std::cout << thread<<" updateCurrentLocation" << std::endl;
+    std::cout << thread<<" updateCurrentLocation" << std::endl;
     // reduce dirt if needed
     reduceDirt(s);
 
     // Update location
-    // std::cout << thread<<" currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
+    std::cout << thread<<" currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
     std::pair<int, int> stepElements = Common::stepMap.at(s);
     currentLocation.first += stepElements.first;
     currentLocation.second += stepElements.second;
-    // std::cout << thread<<" Updated to: currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
+    std::cout << thread<<" Updated to: currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
 }
-
-/*
-    Run bfs and calculate next step
-*/
-/*Step HouseMappingGraph::getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-    // std::cout << thread<<" getStepFromMapping currentLocation: " << currentLocation.first << ", "<< currentLocation.second<< std::endl;
-    Step s;
-
-    // Check if was sent to clean current location and clean if there is enogh battery
-    // If there is not enogh battery- return to docking
-    if (currentDistanceFromDocking != -1) {
-        // std::cout << thread<<" currentDistanceFromDocking != -1"<< std::endl;
-
-        // Check if need to clean and if can clean
-        if (tiles[currentLocation] > 0) {
-            // std::cout << thread<<" tiles[currentLocation] > 0"<< std::endl;
-            // Check if can clean
-            if (currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)) {
-                // std::cout << thread<<" currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)"<< std::endl;
-                updateCurrentLocation(Step::Stay);
-                return Step::Stay;
-            }
-            else { // Cannot clean current location don't have enogh steps- return
-                // std::cout << thread<<" ELSE currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps)"<< std::endl;
-                shortestPathToDstWithMaximumUnknown(currentLocation, dockingStationLocation);
-                needToReturn = true;
-                currentDistanceFromDocking = -1;
-                return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
-            }
-        }
-        // Done cleaning current location- dont need this information
-        currentDistanceFromDocking = -1;
-    }
-
-    if (needToReturn) {
-        // std::cout << thread<<" needToReturn" << std::endl;
-
-        std::pair<int, int> dst = robotDeterminedPath.front();
-        robotDeterminedPath.pop();
-
-        // std::cout << thread<<" from: currentLocation = " <<currentLocation.first << ", " << currentLocation.second << std::endl;
-        // std::cout << thread<<" to: dst = " <<dst.first << ", " << dst.second << std::endl;
-        s = getStepFromSrcToDst(currentLocation, dst);
-        updateCurrentLocation(s);
-
-        // Done- with s will be in the docking station
-        if (robotDeterminedPath.empty()) {
-            // std::cout << thread<<" robotDeterminedPath.empty()"<< std::endl;
-            // std::cout << thread<<" needToReturn = false needToCharge = true; "<< std::endl;
-            needToReturn = false;
-            needToCharge = true;
-        }
-        return s;
-    }
-
-    if (needToFinish) {
-        return Step::Finish;
-    }
-
-    if (onWayToClean) {
-        // std::cout << thread<<" if (onWayToClean)" << std::endl;
-
-        std::pair<int, int> dst = robotDeterminedPath.front();
-        robotDeterminedPath.pop();
-
-        // std::cout << thread<<" from: currentLocation = " <<currentLocation.first << ", " << currentLocation.second << std::endl;
-        // std::cout << thread<<" to: dst = " <<dst.first << ", " << dst.second << std::endl;
-        s = getStepFromSrcToDst(currentLocation, dst);
-        updateCurrentLocation(s);
-
-        // Done- with s will be in the docking station
-        if (robotDeterminedPath.empty()) {
-            // std::cout << thread<<" robotDeterminedPath.empty()"<< std::endl;
-            // std::cout << thread<<" onWayToClean = false"<< std::endl;
-            onWayToClean = false;
-        }
-        return s;
-    }
-
-    // Need to decide where to go and if to clean
-    int distanceFromDocking = 0;
-    getDistanceFromDockingAndPotentialDst(distanceFromDocking);
-    // std::cout <<thread<< " dirtyDst we GOT: " << dirtyDst.first << ", " << dirtyDst.second << std::endl;
-    // std::cout << thread<<" distanceFromDirt: " << distanceFromDirt << std::endl;
-
-    // std::cout << thread<<" unkwonDst we GOT: " << unkwonDst.first << ", " << unkwonDst.second << std::endl;
-    // std::cout << thread<<" distanceFromUnkwon: " << distanceFromUnkwon << std::endl;
-
-    // std::cout << thread<<" distanceFromDocking: " << distanceFromDocking << std::endl;
-    // std::cout << thread<<" batterySteps: " << batterySteps << std::endl;
-    // std::cout << thread<<" maxSteps: " << maxSteps << std::endl;
-
-
-    // Charge until max battery
-    if (isDockingStation(currentLocation) && needToCharge && batterySteps < maxBatterySteps) {
-        // std::cout <<thread<< " isDockingStation(currentLocation) && needToCharge && batterySteps < maxBatterySteps" << std::endl;
-        // Can't achive full charge with current amount of steps
-        if (maxSteps < maxBatterySteps - batterySteps) {
-            // std::cout <<thread<< " maxSteps < maxBatterySteps - batterySteps): Step::Finish" << std::endl;
-            return Step::Finish;
-        }
-        return Step::Stay;
-    }
-
-    // Check if current location is dirty
-    if (tiles[currentLocation] > 0) {
-        // std::cout <<thread<< " tiles[currentLocation] > 0: " << std::endl;
-        // This is the closest dirt- call function again to clean
-        currentDistanceFromDocking = distanceFromDirt;
-        // std::cout <<thread<< "getStepFromMapping" << std::endl;
-        return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
-    }
-
-    // Check if we can clean with current battery steps
-    if (distanceFromDirt != -1) {
-        // Prefere dirt!
-        // Check if there is enogh to clean dirt (go to dst, clean 1 and then get back to docking)
-        int stepsToDstAndGetBack = distanceFromDirt + 1 + getDistanceFromDock(dirtyDst);
-        if (stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)) {
-            // std::cout << thread<<" stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)" << std::endl;
-            // std::cout << thread<<" Prefere dirt!" << std::endl;
-            shortestPathToDstWithMaximumUnknown(currentLocation, dirtyDst);
-            onWayToClean = true;
-            // std::cout <<thread<< "onWayToClean = true;" << std::endl;
-            // std::cout <<thread<< "getStepFromMapping" << std::endl;
-            return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
-        }
-    }
-    if (distanceFromUnkwon != -1) {
-        // std::cout << thread<<" distanceFromUnkwon != -1" << std::endl;
-        // std::cout << thread <<" got unknown" << std::endl;
-        // No dirt can be clean/ found- prefere unkwon
-        int stepsToDstAndGetBack = distanceFromUnkwon + getDistanceFromDock(unkwonDst);
-        if (stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)) {
-            // std::cout << thread<<" stepsToDstAndGetBack <= std::min(batterySteps, maxSteps)" << std::endl;
-            shortestPathToDstWithMaximumUnknown(currentLocation, unkwonDst);
-            onWayToClean = true;
-            return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
-        }
-    }
-    
-    // No dirt/ unkwon is found- return to docking and finish
-    // std::cout << thread <<" no tile to explore" << std::endl;
-    shortestPathToDstWithMaximumUnknown(currentLocation, dockingStationLocation);
-    needToReturn = true;
-    needToFinish = true;
-    // std::cout << thread<<" getStepFromMapping" << std::endl;
-    return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
-}*/
 
 Step HouseMappingGraph::getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps) {
     std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) + "]: ";
-    // std::cout << thread << "getStepFromMapping currentLocation: " << currentLocation.first << ", " << currentLocation.second << std::endl;
+    std::cout << thread << "getStepFromMapping currentLocation: " << currentLocation.first << ", " << currentLocation.second << std::endl;
 
     // If Im on way to clean- get from robotDeterminedPath the next step
     if (onWayToClean || needToReturn) {
-        // std::cout <<thread<< "if (onWayToClean)" << std::endl;
+        std::cout <<thread<< "if (onWayToClean)" << std::endl;
         if (!robotDeterminedPath.empty()) {
-            // std::cout <<thread<< "!robotDeterminedPath.empty()" << std::endl;
+            std::cout <<thread<< "!robotDeterminedPath.empty()" << std::endl;
             Step s = getStepFromSrcToDst(currentLocation, robotDeterminedPath.front());
             updateCurrentLocation(s);
             robotDeterminedPath.pop();
             return s;
         }
         // else- done robotDeterminedPath
-        // std::cout <<thread<< "onWayToClean = false;" << std::endl;
+        std::cout <<thread<< "onWayToClean = false;" << std::endl;
         onWayToClean = false;
         needToReturn = false;
     }
 
+    if (onDeterminedWayFromCharging) {
+        if (tiles[currentLocation] > 0) {
+            updateCurrentLocation(Step::Stay);
+            return Step::Stay;
+        }
+        // else- continue path
+        if (!robotDeterminedPath.empty()) {
+            std::cout <<thread<< "!robotDeterminedPath.empty()" << std::endl;
+            Step s = getStepFromSrcToDst(currentLocation, robotDeterminedPath.front());
+            updateCurrentLocation(s);
+            robotDeterminedPath.pop();
+            return s;
+        }
+        // else
+        onDeterminedWayFromCharging = false;
+    }
+
     if (shouldFinish()) {
-        // std::cout <<thread<< "shouldFinish()- return finish" << std::endl;
+        std::cout <<thread<< "shouldFinish()- return finish" << std::endl;
         return Step::Finish;
     }
 
     // Handle charging and return to docking station
     if (shouldStayCharging(batterySteps, maxBatterySteps, maxSteps)) {
-        // std::cout <<thread<< "shouldStayCharging(batterySteps, maxBatterySteps, maxSteps)- return stay" << std::endl;
-        return Step::Stay; // or the appropriate Step based on the condition
+        calculateChargingTime(batterySteps, maxBatterySteps, maxSteps);
+        if (onDeterminedWayFromCharging) {
+            return getStepFromMapping(batterySteps, maxBatterySteps, maxSteps);
+        }
+        std::cout <<thread<< "shouldStayCharging(batterySteps, maxBatterySteps, maxSteps)- return stay" << std::endl;
+        //return Step::Stay; // or the appropriate Step based on the condition
     }
 
     // Check if we need to clean the current location
     if (shouldCleanCurrentLocation(batterySteps, maxSteps)) {
-        // std::cout <<thread<< "shouldCleanCurrentLocation(batterySteps, maxSteps)- return stay" << std::endl;
+        std::cout <<thread<< "shouldCleanCurrentLocation(batterySteps, maxSteps)- return stay" << std::endl;
         updateCurrentLocation(Step::Stay);
         return Step::Stay;
     }
-
-    // std::cout <<thread<< "decideNextStep(batterySteps, maxSteps);" << std::endl;
+    
     // Handle cleaning, exploring, or finishing
     return decideNextStep(batterySteps, maxSteps);
 }
@@ -296,15 +167,103 @@ bool HouseMappingGraph::shouldFinish() {
     Check if need to stay in docking and charge
 */
 bool HouseMappingGraph::shouldStayCharging(int batterySteps, int maxBatterySteps, int maxSteps) {
-    // std::cout << "isDockingStation(currentLocation) " << isDockingStation(currentLocation) <<std::endl;
-    // std::cout << "needToCharge " << needToCharge<< std::endl;
-    // std::cout << "batterySteps " << batterySteps<< std::endl;
-    // std::cout << "maxBatterySteps " << maxBatterySteps<< std::endl;
-    // std::cout << "maxSteps " << maxSteps<< std::endl;
+    std::cout << "isDockingStation(currentLocation) " << isDockingStation(currentLocation) <<std::endl;
+    std::cout << "needToCharge " << needToCharge<< std::endl;
+    std::cout << "batterySteps " << batterySteps<< std::endl;
+    std::cout << "maxBatterySteps " << maxBatterySteps<< std::endl;
+    std::cout << "maxSteps " << maxSteps<< std::endl;
     if (batterySteps == maxBatterySteps) {
         needToCharge = false;
     }
     return isDockingStation(currentLocation) && needToCharge && batterySteps < maxBatterySteps && maxSteps > 0;
+}
+
+void HouseMappingGraph::calculateChargingTime(int batterySteps, int maxBatterySteps, int maxSteps) {
+    std::string thread = " in thread calculateChargingTime [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) + "]: ";
+    std::queue<std::tuple<std::pair<int, int>, std::vector<std::pair<int, int>>, int, int>> q; // Tuples of (current position, path, max clean, distance)
+    std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> visited; // position to (distance, max clean)
+    int depth = 0;
+
+    // currentLocation is docking Station...
+    q.push({currentLocation, {}, 0, 0});
+    visited[currentLocation] = {0, 0};
+    int currentDirtToBeCleaned = 0;
+    std::vector<std::pair<int, int>> result;
+    int cleanAmount = -1;
+    while(!q.empty()) {
+        int size = q.size();
+
+        // Add each neighbor of each tile in queue to it and update the distance from docking station
+        for (int i = 0; i < size; ++i) {
+            auto [current, path, maxDirt, currentDistance] = q.front();
+            q.pop();
+            
+            int currentDirt = (tiles.at(current) > 0 ? tiles.at(current) : 0);
+            // Calculate number of steps and clean until current tile
+            int stepsToAndFromDst = 2*currentDistance + maxDirt - currentDirt;
+            // Check if battery is enogh for this path...
+            if (stepsToAndFromDst + 1 <= maxBatterySteps && stepsToAndFromDst + 1 <= maxSteps) {
+                // if current battery steps is enogh- choose the path without charging
+                if (stepsToAndFromDst + 1 <= batterySteps) {
+                    // clean maxDirt minus dirt of current tile, and add the maximum amount of dirt that can be cleaned in current tile.
+                    cleanAmount = maxDirt - currentDirt + std::min(batterySteps - stepsToAndFromDst, currentDirt);
+                    if (cleanAmount > currentDirtToBeCleaned) {
+                        // Choose path
+                        currentDirtToBeCleaned = cleanAmount;
+                        result = path;
+                    }
+                }
+                else {
+                    // Check charge option
+                    int stepsToCharge = batterySteps - (stepsToAndFromDst + 1);
+                    int totalStepsToDo = stepsToCharge + (stepsToAndFromDst + 1);
+                    if (maxSteps >= totalStepsToDo) {int cleanAmount =  maxSteps - 2*currentDistance;
+                        cleanAmount = maxDirt - currentDirt + std::min(maxSteps - totalStepsToDo, currentDirt);
+                        if (cleanAmount > currentDirtToBeCleaned) {
+                            // Choose path
+                            currentDirtToBeCleaned = cleanAmount;
+                            result = path;
+                        }
+                    }
+                }
+            }
+            
+            // Consider all 4 possible directions
+            for (const auto& entry : Common::directionMap) {
+                std::pair<int, int> nextTile = {current.first + entry.second.first, current.second + entry.second.second};
+
+                if (tiles.find(nextTile) != tiles.end()) {
+                    int newMaxDirt = maxDirt + currentDirt;
+                    int newDistance = currentDistance + 1;
+
+                    if (visited.find(nextTile) == visited.end() || 
+                        visited[nextTile].first > newDistance || 
+                        (visited[nextTile].first == newDistance && visited[nextTile].second < newMaxDirt)) {
+                        
+                        // Update visited with new distance and max dirt count
+                        visited[nextTile] = {newDistance, newMaxDirt};
+
+                        // Create new path
+                        std::vector<std::pair<int, int>> newPath = path;
+                        newPath.push_back(nextTile);
+
+                        // Enqueue the next position
+                        q.push({nextTile, newPath, newMaxDirt, newDistance});
+                    }
+                }
+            }
+        }
+        ++depth;
+    }
+    
+    for (const auto& p : result) {
+        std::cout <<thread<< " (" << p.first << ", " << p.second << ") ";
+        robotDeterminedPath.push(p);
+    }
+    if (currentDirtToBeCleaned != 0) {
+        std::cout <<thread<< " currentDirtToBeCleaned != 0 !!!!" << std::endl;
+        onDeterminedWayFromCharging = true;
+    }
 }
 
 bool HouseMappingGraph::shouldCleanCurrentLocation(int batterySteps, int maxSteps) {
@@ -329,7 +288,7 @@ bool HouseMappingGraph::canCleanCurrentLocation(int batterySteps, int maxSteps) 
 
 Step HouseMappingGraph::decideNextStep(int batterySteps, int maxSteps) {
     // update distances and targets
-    int distanceFromDocking = 0;
+    int distanceFromDocking = -1;
     getDistanceFromDockingAndPotentialDst(distanceFromDocking);
 
     // std::cout << "DirtyDst: " << dirtyDst.first << ", " << dirtyDst.second << " Distance: " << distanceFromDirt << std::endl;
@@ -488,8 +447,8 @@ void HouseMappingGraph::getDistanceFromDockingAndPotentialDst(int& distanceFromD
             }
             updateQ(location, visited, q);
         }
-        // Found both potential dst
-        if (distanceFromUnkwon != -1 && distanceFromDirt != -1) {
+        // Found dirt (this is the highest priorety- exit loop)
+        if (distanceFromDirt != -1 && distanceFromDocking != -1) {
             break;
         }
         ++depth;
@@ -497,7 +456,6 @@ void HouseMappingGraph::getDistanceFromDockingAndPotentialDst(int& distanceFromD
 }
 
 int HouseMappingGraph::getDistanceFromDock(std::pair<int, int>& dst) {
-
     std::queue<std::pair<int, int>> q;
     std::unordered_set<std::pair<int, int>, pair_hash> visited;
     std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> parent;
@@ -543,6 +501,7 @@ void HouseMappingGraph::shortestPathToDstWithMaximumUnknown(std::pair<int, int> 
     visited[start] = {0, 0};
 
     while (!q.empty()) {
+        // TODO: maybe add size...
         auto [current, path, negOneCount, currentDistance] = q.front();
         q.pop();
 
@@ -582,7 +541,7 @@ void HouseMappingGraph::shortestPathToDstWithMaximumUnknown(std::pair<int, int> 
     }
 
     for (const auto& p : result) {
-        // std::cout <<thread<< " (" << p.first << ", " << p.second << ") ";
+        std::cout <<thread<< " (" << p.first << ", " << p.second << ") ";
         robotDeterminedPath.push(p);
     }
 }
@@ -685,3 +644,4 @@ bool HouseMappingGraph::isVisitedInCurrentLocation() const {
     }
     return true;
 }
+
