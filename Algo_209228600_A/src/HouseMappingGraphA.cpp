@@ -3,7 +3,6 @@
 Step HouseMappingGraphA::decideNextStep(int batterySteps, int maxSteps) {
     // update distances and targets
     getPotentialDst(true);
-    std::cout << "decideNextStep: " << currentLocation.first << ", " << currentLocation.second << std::endl;
 
     std::cout << "DirtyDst: " << dirtyDst.first << ", " << dirtyDst.second << " Distance: " << distanceFromDirt << std::endl;
     std::cout << "UnknownDst: " << unkwonDst.first << ", " << unkwonDst.second << " Distance: " << distanceFromUnkwon << std::endl;

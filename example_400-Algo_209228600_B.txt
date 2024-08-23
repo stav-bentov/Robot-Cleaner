@@ -1,7 +1,0 @@
-NumSteps = 288
-DirtLeft = 0
-Status = FINISHED
-InDock = TRUE
-Score = 288
-Steps: 
-EEEENWWSSsssWssWsNssssssssssssssssssWSSWEEEEENssssNWWWssssssssssssssssssEEEESsssssEsssNWWWWWssssssssssssssssssssEEEESSEEENssNWWWWWWWssssssssssssssssssssEEEEESsssEsssNWWWWWWssssssssssssssssssssEENEEEEESSssNWWWWWWWssssssssssssssssssssEEEEEESssssNWWWWWWssssssssssssssssssEEEEEEESssssNWWWWWWWF
