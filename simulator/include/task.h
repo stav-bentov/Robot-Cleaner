@@ -7,6 +7,7 @@
 #include "../../common/AbstractAlgorithm.h"
 #include "../../common_algorithm/include/house.h"
 #include "my_simulator.h"
+#include <semaphore>
 
 class Task {
     private:
@@ -21,14 +22,14 @@ class Task {
         int score;
         bool summaryOnly;
         int milisecondPerStep;
-        int& runningThreads;
+        std::shared_ptr<int> runningThreads;
         std::mutex& runningThreadsMutex;
-        std::condition_variable& simulatiosCv;
+        std::shared_ptr<std::condition_variable> simulatiosCv;
         std::string houseFilePath;
-        MySimulator simulator;
-
+        bool simFinished;
 
         // Set in run
+        MySimulator simulator;
         std::atomic<bool> guard;
         std::jthread myThread;
         int maxSteps;
@@ -41,23 +42,23 @@ class Task {
         // Private function for the timer handler
         static void timerHandler(const boost::system::error_code& ec, Task& task, std::chrono::time_point<std::chrono::system_clock> start, pthread_t threadHandler);
         void calcTimeout();
-        void calculateScore();
     public:
+    static std::mutex cerrMutex; // Declaration
         Task(std::unique_ptr<AbstractAlgorithm> algorithm, std::shared_ptr<House> house, int algoIdx, int houseIdx, 
                 std::string algoName, boost::asio::io_context& ioContext, std::latch& workDone,
-                bool& summaryOnly, int milisecondPerStep, int& runningThreads, std::mutex& runningThreadsMutex, 
-                std::condition_variable& simulatiosCv)
+                bool& summaryOnly, int milisecondPerStep, std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, 
+                std::shared_ptr<std::condition_variable> simulatiosCv)
             : algorithm(std::move(algorithm)), house(house), algoIdx(algoIdx), houseIdx(houseIdx), algoName(algoName), 
                 ioContext(ioContext), workDone(workDone), score(-200), summaryOnly(summaryOnly), milisecondPerStep(milisecondPerStep),
-                runningThreads(runningThreads), runningThreadsMutex(runningThreadsMutex), simulatiosCv(simulatiosCv), houseFilePath(house->getHouseFilePath()) {}
-        void taskWork();
+                runningThreads(runningThreads), runningThreadsMutex(runningThreadsMutex), simulatiosCv(simulatiosCv), houseFilePath(house->getHouseFilePath()), timeout(200) {}
         void run();
         int getScore() const;
         std::string getHouseName() const;
         std::string getAlgoName() const;
-        void join();
         void detach();
         int getAlgoIdx() const;
         int getHouseIdx() const;
+        void setOutput();
+        void threadComplete();
 
 };

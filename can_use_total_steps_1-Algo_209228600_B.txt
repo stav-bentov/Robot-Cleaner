@@ -1,7 +1,7 @@
-NumSteps = 20
+NumSteps = 9
 DirtLeft = 1
 Status = FINISHED
 InDock = TRUE
-Score = 320
+Score = 309
 Steps: 
-WWsWssEEEsssssssssssF
+WWsWssEEEF

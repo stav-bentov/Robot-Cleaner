@@ -3,6 +3,7 @@
 OutputManager::OutputManager(std::string housePath, std::string algoName) {
     houseFilePath = housePath;
     algorithmName = algoName;
+  //  std::cout << "algoName: " <<algoName << std::endl;
     createOuputName();
 }
 
@@ -10,6 +11,9 @@ OutputManager::OutputManager(std::string housePath, std::string algoName) {
     Extract name of input file from the path and add output_ to create output file name
 */
 void OutputManager::createOuputName() {
+  //  std::cout << "createOuputName: " << std::endl;
+  //  std::cout << "houseFilePath: " <<houseFilePath << std::endl;
+  //  std::cout << "algorithmName: " <<algorithmName << std::endl;
     std::filesystem::path housePath(houseFilePath);
 
     // Get the names
@@ -31,7 +35,7 @@ void OutputManager::writeOutput(std::vector<Step> steps, std::size_t numSteps, i
         file << getChar(s);
     }
     file.close();
-    std::cout << "Done: Output is written to: " << outputName << std::endl;
+  //  std::cout << "Done: Output is written to: " << outputName << std::endl;
 }
 
 std::string OutputManager::getChar(Step s) {
@@ -65,7 +69,7 @@ std::string OutputManager::getChar(Step s) {
 void OutputManager::displaySim() {
     if (configM.getDisplaySim()) {
         //Logger::getInstance().getLogger()->info("Display simulation accepted according to config.json.");
-        std::cout << "Display simulation accepted according to config.json." << std::endl;
+      //  std::cout << "Display simulation accepted according to config.json." << std::endl;
 
         VisualSimulation simulation;
         simulation.changeInfoRepMapping(configM);
@@ -76,6 +80,6 @@ void OutputManager::displaySim() {
     else
     {
         //Logger::getInstance().getLogger()->info("Display simulation denied according to config.json.");
-        std::cout << "Display simulation denied according to config.json." << std::endl;
+      //  std::cout << "Display simulation denied according to config.json." << std::endl;
     }
 }

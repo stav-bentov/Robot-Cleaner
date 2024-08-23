@@ -1,7 +1,7 @@
-NumSteps = 2
-DirtLeft = 3
-Status = WORKING
-InDock = FALSE
-Score = 1902
+NumSteps = 5
+DirtLeft = 2
+Status = FINISHED
+InDock = TRUE
+Score = 605
 Steps: 
-WW
+WWsEEF

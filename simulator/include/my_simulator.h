@@ -28,9 +28,10 @@ class MySimulator {
         size_t maxSteps;
 
         // Handle end run
-        OutputManager om;  
 	    std::vector<Step> steps;
 	    std::string status;
+        std::string housePath;
+        std::string algoName;
 
         // Cahnged throgh the running
         size_t numberOfStepsMade;
@@ -39,7 +40,6 @@ class MySimulator {
 
         void setSensors();
         void setHouse(std::shared_ptr<House> housePtr);
-        int calculateScore();
         void getTimeout();
 
     public:
@@ -48,14 +48,15 @@ class MySimulator {
         MySimulator& operator=(MySimulator&& other) noexcept = default;
         
         ~MySimulator() {
-            std::cout << "In deconstructor" <<std::endl;
+          //  std::cout << "In deconstructor" <<std::endl;
         };
 
-        void prepareSimulationEnvironment(std::shared_ptr<House> housePtr, std::string houseFilePath, std::string algoName) ;
+        void prepareSimulationEnvironment(std::shared_ptr<House> housePtr, std::string& housePath_, std::string& algoName_);
         void setAlgorithm(std::unique_ptr<AbstractAlgorithm> algo);
         void run();
         void setOutput();
         int getScore();
-
+        void calculateScore();
+        int getnumberOfStepsMade();
 };
 #endif  // MY_SIMULATOR_H

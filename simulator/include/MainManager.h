@@ -16,10 +16,11 @@
 #include <list>
 #include <boost/asio.hpp>
 #include <boost/bind/bind.hpp>
+#include <semaphore>
 
 class MainManager {
     public:
-        MainManager() : housePath("."), algoPath("."), numThreads(10), summaryOnly(false), noResult(-1), invalid(-2), runningThreads(0), milisecondPerStep(100) {};
+        MainManager() : housePath("."), algoPath("."), numThreads(10), summaryOnly(false), noResult(-1), invalid(-2), milisecondPerStep(100) {};
         void run(int argc, char* argv[]);
         
     private:
@@ -40,7 +41,6 @@ class MainManager {
         std::vector<std::pair<int, int>> simulatorsCorrd;
         std::vector<bool> simulatorWasTaken;
         int numSimulators;
-        int runningThreads;
         std::vector<std::thread> threads;
         int milisecondPerStep;
 
@@ -53,8 +53,12 @@ class MainManager {
         void readParameters(int argc, char* argv[]);
         void closeAlgorithms();
         void writeResultsToCsv();
-        void runTasks(boost::asio::io_context& ioContext);
+        void runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
+                            std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv);
         void manageTasks();
+        void createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, std::latch& workDone, 
+                            std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv);
+        void writeOutputFiles(std::list<Task>& tasks);
 };
 
 #endif  // MAIN_MANAGER_H

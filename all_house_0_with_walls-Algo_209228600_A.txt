@@ -1,7 +1,7 @@
-NumSteps = 4
+NumSteps = 8
 DirtLeft = 0
-Status = WORKING
-InDock = FALSE
-Score = 1004
+Status = FINISHED
+InDock = TRUE
+Score = 8
 Steps: 
-WWES
+WWESSNNEF

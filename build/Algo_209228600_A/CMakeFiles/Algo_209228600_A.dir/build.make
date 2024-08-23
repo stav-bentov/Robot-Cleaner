@@ -83,10 +83,24 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s: cma
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/Algo_209228600_A.cpp -o CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s
 
+Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/flags.make
+Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/HouseMappingGraphA.cpp
+Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o -MF CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o.d -o CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/HouseMappingGraphA.cpp
+
+Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/HouseMappingGraphA.cpp > CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i
+
+Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s"
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/HouseMappingGraphA.cpp -o CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s
+
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/flags.make
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -MF CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d -o CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
 
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.i: cmake_force
@@ -100,7 +114,7 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgor
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/flags.make
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -MF CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d -o CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
 
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i: cmake_force
@@ -114,6 +128,7 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMa
 # Object files for target Algo_209228600_A
 Algo_209228600_A_OBJECTS = \
 "CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o" \
+"CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o" \
 "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o" \
 "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
 
@@ -121,11 +136,12 @@ Algo_209228600_A_OBJECTS = \
 Algo_209228600_A_EXTERNAL_OBJECTS =
 
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o
+/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make
 /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms_so_output/libAlgo_209228600_A.so"
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Algo_209228600_A.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

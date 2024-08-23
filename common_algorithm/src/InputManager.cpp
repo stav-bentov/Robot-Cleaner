@@ -40,10 +40,7 @@ void InputManager::processParametersFromFile(std::ifstream& file) {
     ErrorManager::checkForError(!(rows >=0 && cols >= 0), "Error: one of the parameters is less then 0- update it"); 
 
     
-    Logger::getInstance().log("Proccessed parameters: maximum steps = " 
-                                            + std::to_string(maxSteps) + ", battery steps = " + std::to_string(maxBattery) 
-                                            + ", number of rows = " + std::to_string(rows) + ", number of cols = " 
-                                            + std::to_string(cols) + ".", LogLevels::FILE);
+  //  Logger::getInstance().log("Proccessed parameters: maximum steps = " + std::to_string(maxSteps) + ", battery steps = " + std::to_string(maxBattery) + ", number of rows = " + std::to_string(rows) + ", number of cols = " + std::to_string(cols) + ".", LogLevels::FILE);
 }
 
 /*

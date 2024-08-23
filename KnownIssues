@@ -1,0 +1,204 @@
+My Algorithm can be bit slow, also- I chose to stay in docking station until I get full battery (which is not the smartest.)
+I tryied to create a "smart charging" but I did not had the time to explore its efficeny dipply so I prefered subbmiting the working algorithms.
+If it matter this is the 3 functions that are change from the orginal in HouseMappingGraph.cpp with the "smart charging":
+
+[Explain: calculateChargingTime is being called when robot is in docking, it explore in a BFS way the tiles, while randoming
+dirt for unkown tiles. it saves the path, steps to charge of the path that gives us the maximum dirt,
+all of this under the limitation of maxSteps and maxBatterySteps.
+in getStepFromMapping, if onDeterminedWayFromCharging is true, we keep charging as the amount of steps for charging that was determined on calculateChargingTime and when finishing, making the path that also was determined there. 
+other seggestions based on this implementation is change the amount of dirt of the unkwon tiles (maybe to 0 or 1...)]
+
+Step HouseMappingGraph::getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps) {
+    // If Im on way to clean- get from robotDeterminedPath the next step
+    if (onWayToClean || needToReturn) {
+        if (!robotDeterminedPath.empty()) {
+            Step s = getStepFromSrcToDst(currentLocation, robotDeterminedPath.front());
+            updateCurrentLocation(s);
+            robotDeterminedPath.pop();
+            return s;
+        }
+        // else- done robotDeterminedPath
+        onWayToClean = false;
+
+        // If Im on docking because I dont have enogh battery steps -charge
+        if (needToReturn && !needToFinish) {
+            calculateChargingTime(batterySteps, maxBatterySteps, maxSteps);
+            needToReturn = false;
+        }
+    }
+
+    // Added //
+    if (onDeterminedWayFromCharging) {
+        // Charge required amount
+        if (stepsToCharge > 0) {
+            stepsToCharge--;
+            return Step::Stay;
+        }
+
+        // Clean tiles in path
+        if (tiles[currentLocation] > 0) {
+            updateCurrentLocation(Step::Stay);
+            return Step::Stay;
+        }
+        // if no tile to clean- continue in determined path
+        if (!robotDeterminedPath.empty()) {
+            Step s = getStepFromSrcToDst(currentLocation, robotDeterminedPath.front());
+            updateCurrentLocation(s);
+            robotDeterminedPath.pop();
+            return s;
+        }
+        // Done determined path- continue
+        onDeterminedWayFromCharging = false;
+    }
+    // Added //
+
+    if (shouldFinish()) {
+        return Step::Finish;
+    }
+
+    // Check if we need to clean the current location
+    if (shouldCleanCurrentLocation(batterySteps, maxSteps)) {
+        updateCurrentLocation(Step::Stay);
+        return Step::Stay;
+    }
+    
+    // Handle cleaning, exploring, or finishing
+    return decideNextStep(batterySteps, maxSteps);
+}
+
+
+void HouseMappingGraph::calculateChargingTime(int batterySteps, int maxBatterySteps, int maxSteps) {
+    std::queue<std::tuple<std::pair<int, int>, std::vector<std::pair<int, int>>, int, int>> q; // Tuples of (current position, path, max clean, distance)
+    std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> visited; // position to (distance, max clean)
+    int depth = 0;
+    int stepsForMission = 0;
+    stepsToCharge = 0;
+
+    // currentLocation is docking Station...
+    q.push({currentLocation, {}, 0, 0});
+    visited[currentLocation] = {0, 0};
+    int currentDirtToBeCleaned = 0;
+    std::vector<std::pair<int, int>> result;
+    int cleanAmount = -1;
+
+    // Create copy of Tiles with random dirt for unkwon tiles
+    std::unordered_map<std::pair<int, int>, int, pair_hash> newTiles;
+
+    for (const auto& [key, value] : tiles) {
+        int newValue = value;
+        if (value == -1) {
+            newValue = std::rand() % 10; // Random value between 0 and 9
+        }
+        if (value == -2) {
+            newValue = 0; // Random value between 0 and 9
+        }
+        newTiles[key] = newValue;
+    }
+
+
+    while(!q.empty()) {
+        int size = q.size();
+
+        // Add each neighbor of each tile in queue to it and update the distance from docking station
+        for (int i = 0; i < size; ++i) {
+            auto [current, path, maxDirt, currentDistance] = q.front();
+            q.pop();
+
+            if (current != dockingStationLocation) {
+                int currentDirt = newTiles.at(current);
+                // Calculate number of steps and clean until current tile
+                int stepsToAndFromDst = 2*currentDistance + maxDirt - currentDirt;
+                // Check if battery is enogh for this path...
+                if (stepsToAndFromDst + 1 <= maxBatterySteps && stepsToAndFromDst + 1 <= maxSteps) {
+                    // if current battery steps is enogh- choose the path without charging
+                    if (stepsToAndFromDst + 1 <= batterySteps) {
+                        // clean maxDirt minus dirt of current tile, and add the maximum amount of dirt that can be cleaned in current tile.
+                        cleanAmount = maxDirt - currentDirt + std::min(batterySteps - stepsToAndFromDst, currentDirt);
+                        if (cleanAmount > currentDirtToBeCleaned) {
+                            // Choose path
+                            currentDirtToBeCleaned = cleanAmount;
+                            result = path;
+                            stepsToCharge = 0;
+                        }
+                    }
+                    else {
+                        // For each option of dirt to clean- check if possibole
+                        for (int potentialDirtToClean = currentDirt; potentialDirtToClean >=1; potentialDirtToClean--) {
+
+                            // steps to have to clean at least potentialDirtToClean amount of dirt in current tile clean...
+                            int neededAmountOfStepsToHave = (stepsToAndFromDst + potentialDirtToClean) - batterySteps;
+                            // To get neededAmountOfStepsToHave steps from charging, I need to charge (20*neededAmount)/maxSteps, 
+                            // because each step on docking gives me maxSteps/20 steps.
+                            int stepsForChargingToGetSteps = std::ceil((20.0 * neededAmountOfStepsToHave) / maxBatterySteps);
+                            int StepsToChargeAndMission = stepsForChargingToGetSteps + neededAmountOfStepsToHave;
+
+                            if (maxSteps >= StepsToChargeAndMission) {
+                                cleanAmount = maxDirt - currentDirt + potentialDirtToClean;
+                                if (cleanAmount > currentDirtToBeCleaned) {
+                                    // Choose path
+                                    currentDirtToBeCleaned = cleanAmount;
+                                    result = path;
+                                    stepsForMission = StepsToChargeAndMission;
+                                    stepsToCharge = stepsForChargingToGetSteps;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Consider all 4 possible directions
+            for (const auto& entry : Common::directionMap) {
+                std::pair<int, int> nextTile = {current.first + entry.second.first, current.second + entry.second.second};
+
+                if (newTiles.find(nextTile) != newTiles.end()) {
+                    int nextTileDirt = newTiles.at(nextTile); // Ensure non-negative dirt
+                    int newMaxDirt = maxDirt + nextTileDirt;
+                    int newDistance = currentDistance + 1;
+
+                    bool shouldEnqueue = visited.find(nextTile) == visited.end() || 
+                                    visited[nextTile].first > newDistance || 
+                                    (visited[nextTile].first == newDistance && visited[nextTile].second < newMaxDirt);
+
+                    if (shouldEnqueue) {
+                        // Update visited with new distance and max dirt count
+                        visited[nextTile] = {newDistance, newMaxDirt};
+
+                        // Create new path
+                        std::vector<std::pair<int, int>> newPath = path;
+                        newPath.push_back(nextTile);
+
+                        // Enqueue the next position
+                        q.push({nextTile, newPath, newMaxDirt, newDistance});
+                    }
+                }
+            }
+        }
+        ++depth;
+    }
+
+    for (const auto& p : result) {
+        robotDeterminedPath.push(p);
+    }
+    if (currentDirtToBeCleaned != 0) {
+        onDeterminedWayFromCharging = true;
+    }
+}
+
+/*
+    Check if need to stay in docking and charge
+*/
+bool HouseMappingGraph::shouldStayCharging(int batterySteps, int maxBatterySteps, int maxSteps) {
+
+    // Can't charge more
+    if (batterySteps == maxBatterySteps) {
+        return false;
+    }
+
+    // If we need to charge and in docking- calculate how much we need to charge
+    if (needToCharge && isDockingStation(currentLocation)){ 
+        calculateChargingTime(batterySteps, maxBatterySteps,maxSteps);
+    }
+    return isDockingStation(currentLocation) && needToCharge && batterySteps < maxBatterySteps && maxSteps > 0;
+}

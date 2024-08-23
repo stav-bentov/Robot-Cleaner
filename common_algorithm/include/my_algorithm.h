@@ -33,7 +33,7 @@ class MyAlgorithm : public AbstractAlgorithm {
                        maxBatterySteps(0),
                        firstStep(true){};
         ~MyAlgorithm() override{
-            std::cout << "In MyAlgorithm deconstructor" <<std::endl;
+          //  std::cout << "In MyAlgorithm deconstructor" <<std::endl;
         };
         void setMaxSteps(std::size_t maxSteps) override;
         void setWallsSensor(const WallsSensor& sensor) override;

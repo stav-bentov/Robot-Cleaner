@@ -1,6 +1,0 @@
-STAV STAV STAV maxBattery = 1
-in MyAlgorithm::setBatteryMeter next step maxBatterySteps= : 1in thread 15018298479185809076
-maxSteps 400
-timePerStep 500
-timeoutDuration: 200000 milliseconds
-STAV STAV STAV maxBattery = 10

@@ -12,11 +12,11 @@ void MainManager::run(int argc, char* argv[]) {
     writeResultsToCsv();
 }
 
+
 void MainManager::calcTimeout() {
-	// TODO: maybe add handle error?
     SimConfigurationManager simConfigManager;
     milisecondPerStep = simConfigManager.getTimePerStep();
-    std::cout <<" milisecond Per Step: " << milisecondPerStep << " milliseconds" << std::endl;
+  //  std::cout <<" milisecond Per Step: " << milisecondPerStep << " milliseconds" << std::endl;
 }
 
 /*
@@ -71,9 +71,10 @@ void MainManager::createHouses() {
         try {
             auto sharedHouse = std::make_shared<House>(housePath);
             houses.emplace_back(sharedHouse);
+            housesNames.push_back(sharedHouse->getHouseName());
         }
         catch (const std::exception& e) {
-            std::cout << "ERROR: Failed creating house: " << housePath << " Exception: " << e.what() << std::endl;
+          //  std::cout << "ERROR: Failed creating house: " << housePath << " Exception: " << e.what() << std::endl;
             continue;
         }
     }
@@ -97,32 +98,22 @@ void MainManager::openAlgorithms() {
             std::filesystem::path algoPath(algo);
             ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algoPath.stem().string() + ".error");
         } else if (AlgorithmRegistrar::getAlgorithmRegistrar().end() == prevSize) {
-            std::cout << "Error loading algorithm library: No Algorithm Registered!" << std::endl;
+          //  std::cout << "Error loading algorithm library: No Algorithm Registered!" << std::endl;
         } else {
             algorithmsHandle.push_back(handle);
         }
     }
 }
 
-void MainManager::runTasks(boost::asio::io_context& ioContext) {
+void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, std::latch& workDone, 
+                            std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
     int algoIdx = 0;
     int houseIdx = 0;
     bool validAlgo = true;
-    
-    std::mutex runningThreadsMutex;
-    std::condition_variable simulatiosCv;
 
-    const long numberOfSimulations = algorithmsPath.size()*houses.size();
-    std::latch workDone(numberOfSimulations);
-
-    scores.resize(algorithmsPath.size(), std::vector<int>(houses.size(), noResult));
-
-    // Initiate tasks
-    std::list<Task> tasks;
     for (const auto& algo : AlgorithmRegistrar::getAlgorithmRegistrar()) {
         algorithmNames.push_back(algo.name());
         for (std::shared_ptr<House> house: houses) {
-            housesNames.push_back(house->getHouseName());
             if (!validAlgo) {
                 scores[algoIdx][houseIdx] = invalid;
                 continue;
@@ -135,37 +126,72 @@ void MainManager::runTasks(boost::asio::io_context& ioContext) {
                 ErrorManager::checkForError(true, "ERROR: Failed creating: " + algo.name(), algo.name() + ".error");
                 continue;
             } 
-            tasks.emplace_back(std::move(algorithm), house, algoIdx, houseIdx, algo.name(), ioContext, workDone,
-            summaryOnly, milisecondPerStep, runningThreads, runningThreadsMutex, simulatiosCv);
+
+            std::shared_ptr<House> houseCopy = std::make_shared<House>(*house);
+            std::cerr <<"Added task:" <<algo.name() <<" house:"<< houseCopy->getHouseName()<<std::endl;
+            std::cerr <<"details: algoIdx =" <<algoIdx <<" houseIdx= "<< houseIdx <<std::endl;
+            tasks.emplace_back(std::move(algorithm), houseCopy, algoIdx, houseIdx, algo.name(), ioContext, 
+                                workDone, summaryOnly, milisecondPerStep, runningThreads, runningThreadsMutex, simulatiosCv);
             houseIdx++;
         }
         algoIdx++;
         validAlgo = true;
         houseIdx = 0;
     }
+    std::cerr<< "task.size = " <<tasks.size()<< std::endl;
+}
 
+void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
+                            std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
     for (auto& task : tasks) {
+        bool notified = false;
         std::unique_lock<std::mutex> lockRunning(runningThreadsMutex);
-        simulatiosCv.wait(lockRunning, [this]{ return runningThreads < numThreads; });
-        runningThreads++;
+        std::cerr<< "in lockRunning for " <<task.getAlgoIdx()<< ", " << task.getHouseIdx()<< std::endl;
+        
+        while (*runningThreads >= numThreads) {
+            // Waiting for the condition variable with a timeout to avoid infinite waiting
+            if (simulatiosCv->wait_for(lockRunning, std::chrono::milliseconds(100)) == std::cv_status::no_timeout) {
+                notified = true;
+                break;
+            }
+            // Periodic sleep to avoid busy-waiting
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
+        if (!notified) {
+            std::cerr << "Thread woke up after timeout due to runningThreads = " << *runningThreads << std::endl;
+        }
+        
+        //simulatiosCv->wait(lockRunning, [this, runningThreads]{ return *runningThreads < numThreads; });
+        std::cerr<< "Passed CD- for run " <<task.getAlgoIdx() << ", " << task.getHouseIdx()<<" runningThreads ="<<*runningThreads<< std::endl;
+        (*runningThreads)++;
         task.run();
     }
-    // wait on latch, for all threads to report done
-    workDone.wait();
+    // Wait on latch, for all threads to report done
+    std::cerr<< "Stuck in wait" << std::endl;
 
-    std::cout << "Results:" << std::endl;
+}
+
+
+void MainManager::writeOutputFiles(std::list<Task>& tasks) {
+    std::cerr<< "writeOutputFiles" << std::endl;
     size_t taskIndex = 0;
-    for (auto& task: tasks) {
-        std::cout << " >>> Task " << taskIndex << " details: "<< task.getHouseName() << ", " << task.getAlgoName() << "score: " << task.getScore() << std::endl;
-        scores[task.getAlgoIdx()][task.getHouseIdx()] = task.getScore();
-        ++taskIndex;
-        task.detach();
+    if (!summaryOnly) {
+        for (auto& task: tasks) {
+            task.setOutput();
+            scores[task.getAlgoIdx()][task.getHouseIdx()] = task.getScore();
+            ++taskIndex;
+            task.detach();
+        }
     }
 }
 
 void MainManager::manageTasks() {
     boost::asio::io_context ioContext;
-    
+    std::mutex runningThreadsMutex;
+    std::shared_ptr<std::condition_variable> simulatiosCv = std::make_shared<std::condition_variable>();
+    std::shared_ptr<int> runningThreads = std::make_shared<int>(0);
+
     // Prevent the I/O context from stopping until all work is done.
     // Even if there is no active timer to wait for
     auto workGuard = boost::asio::make_work_guard(ioContext);
@@ -175,10 +201,21 @@ void MainManager::manageTasks() {
         ioContext.run();
     });
 
-    runTasks(ioContext);
+    const long numberOfSimulations = algorithmsHandle.size()*houses.size();
+    std::latch workDone(numberOfSimulations);
+
+    scores.resize(algorithmsHandle.size(), std::vector<int>(houses.size(), noResult));
+
+    std::list<Task> tasks;
+    createTasks(tasks, ioContext, workDone, runningThreads, runningThreadsMutex, simulatiosCv);
+
+    runTasks(tasks, runningThreads, runningThreadsMutex, simulatiosCv);
+    workDone.wait();
+
     // stop the io_context
     ioContext.stop();
-    std::cout << "Done prepereForTasks" << std::endl;
+    
+    writeOutputFiles(tasks);
 }
 
 void MainManager::closeAlgorithms() {
@@ -191,7 +228,13 @@ void MainManager::closeAlgorithms() {
     algorithmsHandle.clear();
 }
 
+
 void MainManager::writeResultsToCsv() {
-    CsvManager csvManager(algorithmNames, housesNames, scores);
-    csvManager.writeResultsToCsv();
+    try {
+        CsvManager csvManager(algorithmNames, housesNames, scores);
+        csvManager.writeResultsToCsv();
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 }

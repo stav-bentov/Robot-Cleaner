@@ -1,0 +1,287 @@
+Added task:Algo_209228600_B house:allowed_steps_1_battery_steps_1
+details: algoIdx =0 houseIdx= 0
+Added task:Algo_209228600_B house:allowed_steps_1_battery_steps_not_1
+details: algoIdx =0 houseIdx= 1
+Added task:Algo_209228600_B house:allowed_steps_not_1_battery_steps_1
+details: algoIdx =0 houseIdx= 2
+Added task:Algo_209228600_B house:all_house_0_with_walls
+details: algoIdx =0 houseIdx= 3
+Added task:Algo_209228600_B house:can_use_total_steps_1
+details: algoIdx =0 houseIdx= 4
+Added task:Algo_209228600_B house:can_use_total_steps_2
+details: algoIdx =0 houseIdx= 5
+Added task:Algo_209228600_B house:can_use_total_steps_3
+details: algoIdx =0 houseIdx= 6
+Added task:Algo_209228600_B house:check_if_end_in_station_1
+details: algoIdx =0 houseIdx= 7
+Added task:Algo_209228600_B house:check_if_end_in_station_2
+details: algoIdx =0 houseIdx= 8
+Added task:Algo_209228600_B house:check_if_used_all_number_of_steps_3
+details: algoIdx =0 houseIdx= 9
+Added task:Algo_209228600_B house:example_2
+details: algoIdx =0 houseIdx= 10
+Added task:Algo_209228600_B house:example_400_unreachable
+details: algoIdx =0 houseIdx= 11
+Added task:Algo_209228600_B house:general_house_1
+details: algoIdx =0 houseIdx= 12
+Added task:Algo_209228600_B house:general_house_2
+details: algoIdx =0 houseIdx= 13
+Added task:Algo_209228600_B house:large_parameters
+details: algoIdx =0 houseIdx= 14
+Added task:Algo_209228600_B house:stuck_dirt
+details: algoIdx =0 houseIdx= 15
+Added task:Algo_209228600_B house:stuck_robot
+details: algoIdx =0 houseIdx= 16
+task.size = 17
+in lockRunning for 0, 0
+Thread woke up after timeout due to runningThreads = 0
+Passed CD- for run 0, 0 runningThreads =0
+Task::run algoIdx 0 with houseIdx: 0
+Task::run calcTimeout 0 with houseIdx: 0timeout = 1
+ Task::taskWork prepareSimulationEnvironment  0, 0
+ Task::taskWork simulator.setAlgorithm 0, 0
+Done setting algorithm and its sensors.
+in lockRunning for 0, 1
+Thread woke up after timeout due to runningThreads = 1
+Passed CD- for run 0, 1 runningThreads =1
+Task::run algoIdx 0 with houseIdx: 1
+Task::run calcTimeout 0 with houseIdx: 1timeout = 1
+ Task::taskWork prepareSimulationEnvironment  0, 1
+ Task::taskWork simulator.run(); 0, 0
+in run
+Timer for task 0, 0 expired after 1
+Task::timerHandler: Task 0, 0 is stopped!
+Task::threadComplete for task 0, 0
+Timer already expired and wrote  algoIdx 0, 0
+ Task::taskWork simulator.setAlgorithm 0, 1
+Done setting algorithm and its sensors.
+in lockRunning for 0, 2
+Thread woke up after timeout due to runningThreads = 2
+Passed CD- for run 0, 2 runningThreads =2
+Task::run algoIdx 0 with houseIdx: 2
+Task::run calcTimeout 0 with houseIdx: 2timeout = 8
+ Task::taskWork prepareSimulationEnvironment  0 Task::taskWork simulator.run(); 0, 1
+in run
+, 2
+Finished and wrote  0, 1
+Task::threadComplete for task 0, 1
+ Task::taskWork simulator.setAlgorithm 0, 2
+Done setting algorithm and its sensors.
+in lockRunning for 0, 3
+Thread woke up after timeout due to runningThreads = 3
+Passed CD- for run 0, 3 runningThreads =3
+Task::run algoIdx 0 with houseIdx: 3
+Task::run calcTimeout 0 with houseIdx: 3 Task::taskWork simulator.run(); 0, 2
+in run
+timeout = 10
+Finished and wrote  0, 2
+Task::threadComplete for task 0, 2
+ Task::taskWork prepareSimulationEnvironment  0, 3
+ Task::taskWork simulator.setAlgorithm 0, 3
+Done setting algorithm and its sensors.
+in lockRunning for 0, 4 Task::taskWork simulator.run(); 0, 3
+in run
+
+Thread woke up after timeout due to runningThreads = 4
+Passed CD- for run 0, 4 runningThreads =4
+Task::run algoIdx 0 with houseIdx: 4
+Task::run calcTimeout 0 with houseIdx: 4timeout = 20
+ Task::taskWork prepareSimulationEnvironment  0, 4
+ Task::taskWork simulator.setAlgorithm 0, 4
+Done setting algorithm and its sensors.
+ Task::taskWork simulator.run(); 0, in lockRunning for 40,
+5
+Thread woke up after timeout due to runningThreads = 5
+Passed CD- for run 0, 5 runningThreads =5
+in run Finished and wrote  0, 3
+Task::threadComplete for task 0, 3
+
+Task::run algoIdx 0 with houseIdx: 5
+Task::run calcTimeout 0 with houseIdx: 5timeout = 100
+ Task::taskWork prepareSimulationEnvironment  0, 5
+ Task::taskWork simulator.setAlgorithm 0, 5
+Done setting algorithm and its sensors.
+in lockRunning for 0,  Task::taskWork simulator.run(); Finished and wrote  06
+Thread woke up after timeout due to runningThreads = 6
+Passed CD- for run 0, 6 runningThreads =0, 5
+in run
+, 6
+4
+Task::threadComplete for task 0, 4
+Task::run algoIdx 0 with houseIdx: 6
+Task::run calcTimeout 0 with houseIdx: 6timeout = 100
+ Task::taskWork prepareSimulationEnvironment  0, 6
+ Task::taskWork simulator.setAlgorithm 0, 6
+Finished and wrote  0, 5
+Task::threadComplete for task 0, 5
+Done setting algorithm and its sensors.
+in lockRunning for  Task::taskWork simulator.run(); 0, 06
+in run
+, 7
+Thread woke up after timeout due to runningThreads = 7
+Passed CD- for run 0, 7 runningThreads =7
+Task::run algoIdx 0 with houseIdx: 7
+Task::run calcTimeout 0 with houseIdx: 7timeout = 5
+ Task::taskWork prepareSimulationEnvironment  0, 7
+ Task::taskWork simulator.setAlgorithm 0, 7
+Done setting algorithm and its sensors.
+in lockRunning for 0, 8
+Thread woke up after timeout due to runningThreads =  Task::taskWork simulator.run(); 8
+Passed CD- for run 00, , 8 runningThreads =78
+Task::run algoIdx 0 with houseIdx: 8
+Task::run calcTimeout 0 with houseIdx: 8timeout = 100
+ Task::taskWork prepareSimulationEnvironment  0
+, 8
+in run
+ Task::taskWork simulator.setAlgorithm 0, 8
+Finished and wrote  0, 6
+Task::threadComplete for task 0, 6
+Done setting algorithm and its sensors.
+ Task::taskWork simulator.run(); in lockRunning for 0, 8
+in run
+0, 9
+Thread woke up after timeout due to runningThreads = 9
+Passed CD- for run 0, 9 runningThreads =9
+Task::run algoIdx 0 with houseIdx: 9
+Task::run calcTimeout 0 with houseIdx: 9timeout = 100
+ Task::taskWork prepareSimulationEnvironment  0, 9
+ Task::taskWork simulator.setAlgorithm 0, 9
+Done setting algorithm and its sensors.
+in lockRunning for 0, 10
+ Task::taskWork simulator.run(); 0, runningThreads = 9
+Finished and wrote  0, 8
+Task::threadComplete for task 0, 8
+9 in : 0, 4
+in run runningThreads = 8
+ in : Finished and wrote  0, 50
+, 7
+Task::threadComplete for task 0, 7
+runningThreads = 7 in : 0, 1
+runningThreads = 6 in : 0, 0
+Task::timerHandler: Timer for task runningThreads = 50 in : , 10 was canceled, 6
+
+Task::timerHandler: Timer for task runningThreads = 04,  in : 0, 32
+ was canceled
+runningThreads = 3Task::timerHandler: Timer for task 0 in : , 30 was canceled
+, 2
+Task::timerHandler: Timer for task 0, 4 was canceled
+Task::timerHandler: Timer for task 0, 5 was canceled
+runningThreads = 2 in : 0, 8
+Task::timerHandler: Timer for task 0, 6 was canceled
+Passed CD- for run 0, 10 runningThreads =2
+Task::timerHandler: Timer for task 0, 8 was canceled
+Task::timerHandler: Timer for task 0, 7 was canceled
+Task::timerHandler: Timer for task 0, 9 was canceled
+Finished and wrote  0, 9
+Task::threadComplete for task 0, 9
+Task::run algoIdx 0 with houseIdx: 10
+Task::run calcTimeout 0 with houseIdx: 10timeout = 100
+ Task::taskWork prepareSimulationEnvironment  0, 10
+ Task::taskWork simulator.setAlgorithm 0, 10
+Done setting algorithm and its sensors.
+in lockRunning for 0, 11
+Thread woke up after timeout due to runningThreads =  Task::taskWork simulator.run(); 0, 10
+in run
+3
+Passed CD- for run 0, 11 runningThreads =3
+Task::run algoIdx 0 with houseIdx: 11
+Task::run calcTimeout 0 with houseIdx: 11timeout = 400
+ Task::taskWork prepareSimulationEnvironment  0, 11
+ Task::taskWork simulator.setAlgorithm 0, 11
+Done setting algorithm and its sensors.
+ Task::taskWork simulator.run(); 0in lockRunning for 0, , 11
+12
+in run Thread woke up after timeout due to runningThreads = 4
+
+Passed CD- for run 0, 12 runningThreads =4
+Task::run algoIdx 0 with houseIdx: 12
+Task::run calcTimeout Timer for task 0, 010 expired after 100
+ with houseIdx: 12timeout = 81
+Task::timerHandler: Task 0, 10 is stopped!
+Task::threadComplete for task 0, 10
+ Task::taskWork prepareSimulationEnvironment  0, 12
+ Task::taskWork simulator.setAlgorithm 0, 12
+Done setting algorithm and its sensors.
+ Task::taskWork simulator.run(); in lockRunning for 0, 013
+Thread woke up after timeout due to runningThreads = 5
+Passed CD- for run 0, 13 runningThreads =5
+Task::run algoIdx 0,  with houseIdx: 13
+12Task::run calcTimeout 0 with houseIdx:
+13timeout = 81in run
+
+ Task::taskWork prepareSimulationEnvironment  0, 13
+ Task::taskWork simulator.setAlgorithm 0, 13
+Done setting algorithm and its sensors.
+ Task::taskWork simulator.run(); in lockRunning for 0, 130
+in run
+, 14
+Thread woke up after timeout due to runningThreads = 6
+Passed CD- for run 0, 14 runningThreads =6
+Task::run algoIdx 0 with houseIdx: 14
+Task::run calcTimeout 0 with houseIdx: 14timeout = 1000
+ Task::taskWork prepareSimulationEnvironment  0, 14
+ Task::taskWork simulator.setAlgorithm 0, 14
+Done setting algorithm and its sensors.
+in lockRunning for 0 Task::taskWork simulator.run(); , 150, 14
+in run
+
+Thread woke up after timeout due to runningThreads = 7
+Passed CD- for run 0, 15 runningThreads =7
+Task::run algoIdx 0 with houseIdx: 15
+Task::run calcTimeout 0 with houseIdx: 15timeout = 1000
+ Task::taskWork prepareSimulationEnvironment  0, 15
+ Task::taskWork simulator.setAlgorithm 0, 15
+Done setting algorithm and its sensors.
+in lockRunning for  Task::taskWork simulator.run(); 00, 15
+in run ,
+16
+Thread woke up after timeout due to runningThreads = 8
+Passed CD- for run 0, 16 runningThreads =8
+Task::run algoIdx 0 with houseIdx: 16
+Task::run calcTimeout 0 with houseIdx: 16timeout = 1000
+ Task::taskWork prepareSimulationEnvironment  0, 16
+ Task::taskWork simulator.setAlgorithm 0, 16
+Done setting algorithm and its sensors.
+runningThreads = Stuck in wait8 in : 0,  Task::taskWork simulator.run(); 9
+
+runningThreads = 7 in : 0, 10
+0, 16
+in run
+Timer for task 0, 12 expired after 471
+Task::timerHandler: Task 0, 12 is stopped!
+Task::threadComplete for task 0, 12
+Finished and wrote  0, 16
+Task::threadComplete for task 0, 16
+runningThreads = 6 in : 0, 7
+Timer already expired and wrote  algoIdx 0, 12
+runningThreads = 5Finished and wrote  0, 15
+ in : 0, 12
+Task::threadComplete for task 0, 15
+runningThreads = 4 in : 0, 16
+Finished and wrote  0, 14
+runningThreads = 3 in : 0, 15
+Task::threadComplete for task 0, 14
+runningThreads = 2 in : 0, 14
+Task::timerHandler: Task 0, 13, already wrote, before timer expiration
+Timer for task 0, 11 expired after 564
+Task::timerHandler: Task 0, 11 is stopped!
+Task::threadComplete for task 0, 11
+runningThreads = 1 in : 0, 11
+Finished and wrote  0, 13
+Task::threadComplete for task 0, 13
+terminate called without an active exception
+runningThreads = 0 in : 0, 13
+Task::timerHandler: Timer for task Task::setOutput algoName Algo_209228600_B with house: inputs/another_houses/allowed_steps_1_battery_steps_1.house
+Task::setOutput 0, 0
+simFinished 208
+errorInRun 0
+ ended fullyr: Algo_209228600_B, allowed_steps_1_battery_steps_1
+0, 16 was canceled
+Task::timerHandler: Timer for task 0, 15 was canceled
+Task::timerHandler: Timer for task 0, 14 was canceled
+Task::setOutput algoName Algo_209228600_B with house: inputs/another_houses/allowed_steps_1_battery_steps_not_1.house
+Task::setOutput 0, 1
+simFinished 1
+errorInRun 0
+ ended fullyr: Algo_209228600_B, allowed_steps_1_battery_steps_not_1
+Aborted

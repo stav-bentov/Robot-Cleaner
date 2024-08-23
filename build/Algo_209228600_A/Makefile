@@ -202,6 +202,30 @@ src/Algo_209228600_A.cpp.s:
 	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s
 .PHONY : src/Algo_209228600_A.cpp.s
 
+src/HouseMappingGraphA.o: src/HouseMappingGraphA.cpp.o
+.PHONY : src/HouseMappingGraphA.o
+
+# target to build an object file
+src/HouseMappingGraphA.cpp.o:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o
+.PHONY : src/HouseMappingGraphA.cpp.o
+
+src/HouseMappingGraphA.i: src/HouseMappingGraphA.cpp.i
+.PHONY : src/HouseMappingGraphA.i
+
+# target to preprocess a source file
+src/HouseMappingGraphA.cpp.i:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i
+.PHONY : src/HouseMappingGraphA.cpp.i
+
+src/HouseMappingGraphA.s: src/HouseMappingGraphA.cpp.s
+.PHONY : src/HouseMappingGraphA.s
+
+# target to generate assembly for a file
+src/HouseMappingGraphA.cpp.s:
+	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s
+.PHONY : src/HouseMappingGraphA.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,6 +244,9 @@ help:
 	@echo "... src/Algo_209228600_A.o"
 	@echo "... src/Algo_209228600_A.i"
 	@echo "... src/Algo_209228600_A.s"
+	@echo "... src/HouseMappingGraphA.o"
+	@echo "... src/HouseMappingGraphA.i"
+	@echo "... src/HouseMappingGraphA.s"
 .PHONY : help
 
 

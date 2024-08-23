@@ -1,57 +1,13 @@
 #include "../include/house_mapping_graph_B.h"
 
 Step HouseMappingGraphB::decideNextStep(int batterySteps, int maxSteps) {
-    std::queue<std::pair<int, int>> q;
-    std::unordered_set<std::pair<int, int>, pair_hash> visited;
-    
-    int distanceFromDocking = -1;
-    int depth = 0;
-    std::pair<int, int> dst;
-    int tileData;
-    int distance = -1;
-
-    q.push(currentLocation);
-    visited.insert(currentLocation);
-
-    while(!q.empty()) {
-        int size = q.size();
-
-        // Add each neighbor of each tile in queue to it and update the distance from docking station
-        for (int i = 0; i < size; ++i) {
-            std::pair<int, int> location = q.front();
-            q.pop();
-
-            // Distance from docking station is depth
-            if (isDockingStation(location)) {
-                distanceFromDocking = depth;
-            }
-            else if (tiles[location] != 0) {
-                dst = location;
-                tileData = tiles[location];
-                distance = depth;
-            }
-            updateQ(location, visited, q);
-        }
-        if (distanceFromDocking != -1 && distance != -1) {
-            break;
-        }
-        ++depth;
-    }
-    
-    if (distance != -1) {
-        int distanceFromDockAndDst = getDistanceFromDock(dst);
-        // check if can get to it
-        if ((tileData == -1 && distance + distanceFromDockAndDst <= std::min(batterySteps, maxSteps))
-            ||  (tileData > 0 && distance + 1 + distanceFromDockAndDst <= std::min(batterySteps, maxSteps))){
-            onWayToClean = true;
-            return getStepToTarget(dst);
-        }
-        
-        // Not enogh steps check if need to return AND finish
-        if ((tileData == -1 && distance + distanceFromDockAndDst > maxSteps)
-            ||  (tileData > 0 && distance + 1 + distanceFromDockAndDst > maxSteps)){
-            needToFinish = true;
-        }
+    getPotentialDst(false);
+    std::cout << "HouseMappingGraphB::decideNextStep: distanceInGeneral =  " << distanceInGeneral <<std::endl;
+    std::cout << "HouseMappingGraphB::decideNextStep: generalDst =  " << generalDst.first << ", "<<generalDst.second <<std::endl;
+    if (distanceInGeneral != -1 && enoghBatteryAndMaxSteps(distanceInGeneral, getDistanceFromDock(generalDst), batterySteps, maxSteps)) {
+        std::cout << "getStepToTarget(generalDst)" <<std::endl;
+        onWayToClean = true;
+        return getStepToTarget(generalDst);
     }
     
     // No dirt or unknown areas left, return to docking station
@@ -60,6 +16,7 @@ Step HouseMappingGraphB::decideNextStep(int batterySteps, int maxSteps) {
     return getStepToTarget(dockingStationLocation);
 }
 
+// Update queue with random order (so there is not priorty for certin direction in every step)
 void HouseMappingGraphB::updateQ(std::pair<int, int>& location, std::unordered_set<std::pair<int, int>, pair_hash>& visited, std::queue<std::pair<int, int>>& q) {
     std::vector<Direction> directions = {
         Direction::North, Direction::East, Direction::South, Direction::West

@@ -10,6 +10,7 @@
 #include <stack>
 #include <memory>
 #include <thread>
+#include <cmath>
 #include "common_enums.h"
 
 
@@ -40,11 +41,13 @@ class HouseMappingGraph {
         bool needToCharge;
         bool onDeterminedWayFromCharging;
         int currentDistanceFromDocking;
-
+        int stepsToCharge;
         int distanceFromDirt;
         int distanceFromUnkwon;
+        int distanceInGeneral;
         std::pair<int, int> dirtyDst;
         std::pair<int, int> unkwonDst;
+        std::pair<int, int> generalDst;
 
         std::pair<int, int> getRelativeLocation(Direction d);
         bool isDockingStation(std::pair<int, int> location) const;
@@ -52,7 +55,7 @@ class HouseMappingGraph {
         void setDirt(std::pair<int, int> location, int dirt);
         void reduceDirt(Step s);
         Step directionToStep(Direction d);
-        void getDistanceFromDockingAndPotentialDst(int& distanceFromDocking);
+        void getPotentialDst(bool priority);
         Step getStepByDiff(int diffrenceRow, int diffrenceCol);
         void getStepsFromParent(std::pair<int, int> dst, std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash>& parent, std::stack<Step>& fillStack);
         int getDistanceFromDock(std::pair<int, int>& dst);
@@ -66,12 +69,9 @@ class HouseMappingGraph {
         bool canCleanCurrentLocation(int batterySteps, int maxSteps);
         bool shouldCleanCurrentLocation(int batterySteps, int maxSteps);
         bool shouldFinish();
-        bool haveEnoghMaxSteps(int maxSteps, int distanceBetweenDockAndDst);
-        void shouldNeedToFinish(int maxSteps, int distanceFromUnkwon, int distanceFromDirt, int distanceOfUnkownFromDock, int distanceOfDirtFromDock);
+        bool shouldNeedToFinish(int batterySteps, int maxBatterySteps, int maxSteps, int distance);
         bool checkCloseDst(Step& s);
-        void calculateChargingTime(int batterySteps, int maxBatterySteps, int maxSteps);
-        
-
+        bool enoghBatteryAndMaxSteps(int distanceFromDst, int DistanceBetweenDstAndDock, int batterySteps, int maxSteps);
     public:
         HouseMappingGraph();
         void addTile(std::pair<int, int> location, Type t);

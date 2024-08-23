@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d"
   "CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o"
   "CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o.d"
+  "CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o"
+  "CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

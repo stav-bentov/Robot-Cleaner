@@ -2,31 +2,31 @@
 
 Step HouseMappingGraphA::decideNextStep(int batterySteps, int maxSteps) {
     // update distances and targets
-    int distanceFromDocking = -1;
-    getDistanceFromDockingAndPotentialDst(distanceFromDocking);
+    getPotentialDst(true);
+    std::cout << "decideNextStep: " << currentLocation.first << ", " << currentLocation.second << std::endl;
 
     std::cout << "DirtyDst: " << dirtyDst.first << ", " << dirtyDst.second << " Distance: " << distanceFromDirt << std::endl;
     std::cout << "UnknownDst: " << unkwonDst.first << ", " << unkwonDst.second << " Distance: " << distanceFromUnkwon << std::endl;
 
     int distanceOfDirtFromDock = distanceFromDirt == -1 ? -1 : getDistanceFromDock(dirtyDst);
     // Prefer dirt, but if none available, prefer exploring unknown areas
-    if (distanceFromDirt != -1 && canReachAndCleanDirt(batterySteps, maxSteps, distanceOfDirtFromDock)) {
+    if (distanceFromDirt != -1 && enoghBatteryAndMaxSteps(distanceFromDirt, distanceOfDirtFromDock, batterySteps, maxSteps)) {
         std::cout << "distanceFromDirt != -1 && canReachAndCleanDirt(batterySteps, maxSteps)" << std::endl;
         onWayToClean = true;
         return getStepToTarget(dirtyDst);
     }
 
     int distanceOfUnkownFromDock = distanceFromUnkwon == -1 ? -1 : getDistanceFromDock(unkwonDst);
-    if (distanceFromUnkwon != -1 && canExploreUnknown(batterySteps, maxSteps, distanceOfUnkownFromDock)) {
+    if (distanceFromUnkwon != -1 && enoghBatteryAndMaxSteps(distanceFromUnkwon, distanceOfUnkownFromDock, batterySteps, maxSteps)) {
         std::cout << "distanceFromUnkwon != -1 && canExploreUnknown(batterySteps, maxSteps)" << std::endl;
         onWayToClean = true;
         return getStepToTarget(unkwonDst);
     }
     
-    shouldNeedToFinish(maxSteps, distanceFromUnkwon, distanceFromDirt, distanceOfUnkownFromDock, distanceOfDirtFromDock);
-    // No dirt or unknown areas left, return to docking station
+    // No dirt or unknown areas left / don't have enogh battery- return to docking station
     needToReturn = true;
     needToCharge = true;
+
     return getStepToTarget(dockingStationLocation);
 }
 

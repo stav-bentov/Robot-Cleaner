@@ -2,7 +2,7 @@
 #define CSV_MANAGER_H
 
 #include "../../common_algorithm/include/common_enums.h"
-
+#include <algorithm>
 class CsvManager {
     private:
         std::vector<std::string> algorithmNames;

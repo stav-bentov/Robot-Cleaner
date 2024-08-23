@@ -2,13 +2,18 @@
 
 SimConfigurationManager::SimConfigurationManager() {
     // Set default
-    timePerStep = 1;
-    // TODO: add try- cath and write"set as default"
-    std::string jsonString = readConfig("config/config.json");
-    // Default parameters...
-    if (jsonString == "")
-        return;
-    loadParametersFromConfigFile(jsonString);
+    timePerStep = 100;
+    try {
+        std::string jsonString = readConfig("config/config.json");
+
+        // If the file could not be read, use default parameters.
+        if (jsonString == "")
+            return;
+
+        loadParametersFromConfigFile(jsonString);
+    } catch (const std::exception& e) {
+        std::cerr << "Error initializing SimConfigurationManager: " << e.what() << std::endl;
+    }
 }
 
 void SimConfigurationManager::loadParametersFromConfigFile(std::string& jsonString){
@@ -18,8 +23,8 @@ void SimConfigurationManager::loadParametersFromConfigFile(std::string& jsonStri
 
     // Check for parse errors 
     if (doc.HasParseError()) {
-        throw std::runtime_error("Parse error:" + doc.GetParseError());
-        // TODO: avoid throw!
+        std::cerr << "Error initializing SimConfigurationManager: " << doc.GetParseError() << std::endl;
+        return;
     }
     
     if (doc.HasMember("timePerStep") && doc["timePerStep"].IsInt()) {

@@ -86,7 +86,9 @@
         "coroutine": "cpp",
         "resumable": "cpp",
         "random": "cpp",
-        "latch": "cpp"
+        "latch": "cpp",
+        "semaphore": "cpp"
     },
-    "C_Cpp.dimInactiveRegions": false
+    "C_Cpp.dimInactiveRegions": false,
+    "cmake.configureOnOpen": false
 }

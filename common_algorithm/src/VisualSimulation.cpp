@@ -232,9 +232,9 @@ void VisualSimulation::clean() {
 }
 
 void VisualSimulation::clearMapArea(int height) {
-    std::cout << "\033[" << height << "A";
+  //  std::cout << "\033[" << height << "A";
     for (int i = 0; i < height; ++i) {
-        std::cout << "\033[2K\r"; // \r moves the cursor to the beginning of the line
+      //  std::cout << "\033[2K\r"; // \r moves the cursor to the beginning of the line
     }
 }
 

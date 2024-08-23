@@ -1,0 +1,9 @@
+example_400_unreachable
+MaxSteps = 400
+MaxBattery = 20
+Rows = 4
+Cols =10
+WWWW
+W D
+W 123456789
+1WWWWWW
