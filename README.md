@@ -5,24 +5,24 @@ Stav Ben-Tov
 
 To compile and build the project, follow these steps:
 
-bash
+```
 cmake -S . -B ./build
 cd build
 make
-cd ..
+```
 
-The algorithm shared object files (.so) will be created in the algorithms-so directory.
+The algorithm shared object files (.so) will be created in the algorithms-so directory and mytobot exe in main directory (should cd .. from build directory)
 
 ## Compilation and Building
 
 To run the robot, use the following commands:
-
+```
 ./myrobot 
-
+```
 or
-
+```
 ./myrobot -algo_path=______ -house_path=_____ ....
-
+```
 ### Explanation of Algorithms
 ## Algorithm A
 Algorithm A determines the next step based on the destination. The next destination is preferably the closest dirty tile. If no dirty tile is found or if it is not reachable (based on battery steps), the closest unknown tile (if reachable) will be chosen. If no such tile is found, the robot will return to the docking station to charge. 
