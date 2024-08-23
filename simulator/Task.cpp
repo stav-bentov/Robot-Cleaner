@@ -8,7 +8,6 @@ void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::ch
           std::lock_guard<std::mutex> lock(cerrMutex);
           std::cerr << "Task::timerHandler: Timer for task " << task.algoIdx << ", " << task.houseIdx << " was canceled" << std::endl;
         }
-        //task.threadComplete();
         
     } else if (!ec) {
         auto now = std::chrono::system_clock::now();
@@ -28,8 +27,7 @@ void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::ch
             // send a cancel request to the thread that seems to be stuck
             {
               std::lock_guard<std::mutex> lock(cerrMutex);
-              std::cerr << "Timer for task " << task.algoIdx << ", " << task.houseIdx << " expired after " << duration.count() << std::endl;
-              std::cerr << "Task::timerHandler: Task " << task.algoIdx << ", " << task.houseIdx << " is stopped!" << std::endl;
+              std::cerr << "Timer for task " << task.algoIdx << ", " << task.houseIdx << " expired after " << duration.count() <<"finished task because time ran out"<< std::endl;
             }
             task.threadComplete();
             pthread_cancel(threadHandler);
@@ -45,7 +43,6 @@ void Task::threadComplete() {
     {
         std::lock_guard<std::mutex> lockRunning(runningThreadsMutex);
         (*runningThreads)--;
-        std::cerr << "runningThreads = " << *runningThreads << " in : " << algoIdx << ", " << houseIdx << std::endl;
     }
     simulatiosCv->notify_all();
     workDone.count_down();
@@ -54,12 +51,10 @@ void Task::threadComplete() {
 void Task::calcTimeout() {
 	maxSteps = house->getMaxSteps();
   timeout = maxSteps*milisecondPerStep;
-  std::cerr <<"Task::run calcTimeout " << algoIdx << " with houseIdx: "<< houseIdx << "timeout = " << timeout <<std::endl;
 }
 
 
 void Task::run() {
-    //std::cerr <<"Task::run algoName " << algoName << " with house: "<< houseFilePath << std::endl;
     {
       std::lock_guard<std::mutex> lock(cerrMutex);
       std::cerr <<"Task::run algoIdx " << algoIdx << " with houseIdx: "<< houseIdx << std::endl;
@@ -70,12 +65,12 @@ void Task::run() {
 
     // Set simulator environment
     try {
-        std::cerr <<" Task::taskWork prepareSimulationEnvironment  " << algoIdx << ", "<< houseIdx << std::endl;
         simulator.prepareSimulationEnvironment(house, houseFilePath, algoName);
     } 
     catch (const std::exception& e) {
         std::cerr << "ERROR: Failed creating house: " << houseFilePath << "with algo: " << algoIdx << " Exception: " << e.what() << std::endl;
         errorInRun = true;
+        threadComplete();
         return;
     }
 
@@ -100,7 +95,6 @@ void Task::run() {
               timerHandler(ec, *this, curr_time, threadHandler);
           });
 
-          std::cerr <<" Task::taskWork simulator.run(); " << algoIdx << ", "<< houseIdx << std::endl;
           simulator.run();
           
           // After the task was done, or there was a timeout
@@ -114,7 +108,7 @@ void Task::run() {
               // The timer expired and wrote
               {
                 std::lock_guard<std::mutex> lock(cerrMutex);
-                std::cerr <<"Timer already expired and wrote  algoIdx " << algoIdx << ", "<< houseIdx << std::endl;
+                std::cerr <<"Timer already expired and wrote: " << algoIdx << ", "<< houseIdx << std::endl;
               }
           }
           else {
@@ -122,7 +116,7 @@ void Task::run() {
             threadComplete();
             {
                 std::lock_guard<std::mutex> lock(cerrMutex);
-                std::cerr <<"Finished and wrote  " << algoIdx << ", "<< houseIdx << std::endl;
+                std::cerr <<"Finished naturally: " << algoIdx << ", "<< houseIdx << std::endl;
             }
           }
         }
@@ -163,12 +157,6 @@ int Task::getHouseIdx() const {
 }
 
 void Task::setOutput() {
-      std::cerr <<"Task::setOutput algoName " << algoName << " with house: "<< houseFilePath << std::endl;
-      std::cerr <<"Task::setOutput " << algoIdx << ", "<< houseIdx << std::endl;
-      std::cerr <<"simFinished " << simFinished << std::endl;
-      std::cerr <<"errorInRun " << errorInRun << std::endl;
-  //  std::cout << "Task " << algoIdx << ", " << houseIdx << ", timer already expired and wrote" << std::endl;
-  //  std::cout << "simFinished " << simFinished << std::endl;
     // If simulation didnot finished on time- set score to be the initial score...
     if (simFinished && !errorInRun) {
         std::cerr << "Simulator for: " << algoName << ", " << house->getHouseName() << " ended fully" << std::endl;
@@ -176,7 +164,6 @@ void Task::setOutput() {
     }
     else {
       std::cerr << "Simulator for: " << algoName << ", " << house->getHouseName() << " was stopped" << std::endl;
-      std::cerr << "Task " << algoIdx << ", " << houseIdx << ", timer already expired and wrote" << std::endl;
     }
     score = simulator.getScore();
     simulator.setOutput();

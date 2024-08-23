@@ -8,18 +8,14 @@ void VisualSimulation::processFiles(std::string inputFileName, std::string outpu
 /*
     Process input file by using House class and builds the map for the visual simulation
 */
-void VisualSimulation::processInputFile(std::string& fileName)
-{
-    //Logger::getInstance().getLogger()->info("Start process input file for simulation ...");
+void VisualSimulation::processInputFile(std::string& fileName) {
     House h(fileName);
     loadParameters(h);
     loadHouseMapping(h);
-    //Logger::getInstance().getLogger()->info("Done process input file for simulation.");
 }
 
 /* Process output file that has a known structure*/
 void VisualSimulation::processOutputFile(std::string& fileName) {
-    //Logger::getInstance().getLogger()->info("Start process output file for simulation ...");
     std::ifstream file(fileName);
     std::string line;
     std::string str;
@@ -73,11 +69,9 @@ void VisualSimulation::processOutputFile(std::string& fileName) {
         try {
             steps.push_back(charTostep(c));
         } catch (const std::invalid_argument& e) {
-            //Logger::getInstance().getLogger()->error("Invalid direction string: {}", c);
             throw std::runtime_error("Invalid direction string: " + c);
         }
     }
-    //Logger::getInstance().getLogger()->info("Done process output file for simulation.");
 }
 
 Step VisualSimulation::charTostep(char c) {
@@ -102,7 +96,6 @@ void VisualSimulation::loadParameters(House& h) {
     amountOfDirt = h.getAmountOfDirt();
     dockingStationLocation = h.getDockingStationLocation();
     robotLocation = dockingStationLocation;
-    //Logger::getInstance().getLogger()->info("robot_location: ({}, {})", robotLocation.first, robotLocation.second);
 }
 
 std::string VisualSimulation::intToHouseElementString(int num) {
@@ -134,10 +127,7 @@ void VisualSimulation::printHouse(bool printDir) {
 
     for (int i = 0; i < int(map.size()); ++i) {
         for (int j = 0; j < int(map[i].size()); ++j) {
-            //Logger::getInstance().getLogger()->info("i = " + std::to_string(i) + " j = " + std::to_string(j));
-
             if (i == robotLocation.first && j == robotLocation.second) {
-                //Logger::getInstance().getLogger()->info("in i == robotLocation.first && j == robotLocation.second");
                 if (printDir)   {
                     std::cerr << elementToCodeColor[Elements::Direction] << " " << directionStringMap[currentStep] << " " << stringToCodeColor["Reset"];
                 }         
@@ -159,8 +149,6 @@ void VisualSimulation::printHouse(bool printDir) {
         }
         std::cerr << std::endl;
     }
-    std::cerr << "Left steps in battery: " << std::floor(static_cast<double>(batterySteps))  << ", out of " << maxBatterySteps << " " << std::endl;
-    std::cerr << "Allowed number of steps: " << allowedNumberOfSteps << "             " << std::endl;
     std::cerr << std::endl;
     std::cerr.flush(); 
 } 
@@ -232,9 +220,9 @@ void VisualSimulation::clean() {
 }
 
 void VisualSimulation::clearMapArea(int height) {
-  //  std::cout << "\033[" << height << "A";
+    std::cerr << "\033[" << height << "A";
     for (int i = 0; i < height; ++i) {
-      //  std::cout << "\033[2K\r"; // \r moves the cursor to the beginning of the line
+        std::cerr << "\033[2K\r"; // \r moves the cursor to the beginning of the line
     }
 }
 

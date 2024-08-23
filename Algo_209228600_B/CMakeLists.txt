@@ -21,7 +21,7 @@ add_library(${PROJECT_NAME} SHARED
 
 # Set the output directory for the shared library
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/algorithms_so_output
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/algorithms-so
 )
 
 # Set compiler options

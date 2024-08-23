@@ -2,10 +2,8 @@
 
 Step HouseMappingGraphB::decideNextStep(int batterySteps, int maxSteps) {
     getPotentialDst(false);
-    std::cout << "HouseMappingGraphB::decideNextStep: distanceInGeneral =  " << distanceInGeneral <<std::endl;
-    std::cout << "HouseMappingGraphB::decideNextStep: generalDst =  " << generalDst.first << ", "<<generalDst.second <<std::endl;
+    
     if (distanceInGeneral != -1 && enoghBatteryAndMaxSteps(distanceInGeneral, getDistanceFromDock(generalDst), batterySteps, maxSteps)) {
-        std::cout << "getStepToTarget(generalDst)" <<std::endl;
         onWayToClean = true;
         return getStepToTarget(generalDst);
     }

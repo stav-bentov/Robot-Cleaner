@@ -4,20 +4,16 @@ Step HouseMappingGraphA::decideNextStep(int batterySteps, int maxSteps) {
     // update distances and targets
     getPotentialDst(true);
 
-    std::cout << "DirtyDst: " << dirtyDst.first << ", " << dirtyDst.second << " Distance: " << distanceFromDirt << std::endl;
-    std::cout << "UnknownDst: " << unkwonDst.first << ", " << unkwonDst.second << " Distance: " << distanceFromUnkwon << std::endl;
-
     int distanceOfDirtFromDock = distanceFromDirt == -1 ? -1 : getDistanceFromDock(dirtyDst);
     // Prefer dirt, but if none available, prefer exploring unknown areas
     if (distanceFromDirt != -1 && enoghBatteryAndMaxSteps(distanceFromDirt, distanceOfDirtFromDock, batterySteps, maxSteps)) {
-        std::cout << "distanceFromDirt != -1 && canReachAndCleanDirt(batterySteps, maxSteps)" << std::endl;
         onWayToClean = true;
         return getStepToTarget(dirtyDst);
     }
 
+    // If not enogh steps for dirt / dirt was not found- go to unkwon tile
     int distanceOfUnkownFromDock = distanceFromUnkwon == -1 ? -1 : getDistanceFromDock(unkwonDst);
     if (distanceFromUnkwon != -1 && enoghBatteryAndMaxSteps(distanceFromUnkwon, distanceOfUnkownFromDock, batterySteps, maxSteps)) {
-        std::cout << "distanceFromUnkwon != -1 && canExploreUnknown(batterySteps, maxSteps)" << std::endl;
         onWayToClean = true;
         return getStepToTarget(unkwonDst);
     }

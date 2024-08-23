@@ -17,12 +17,9 @@ HouseMappingGraph::HouseMappingGraph() : tiles(),
 }
 
 void HouseMappingGraph::addTile(std::pair<int, int> location, Type t) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
     // Add tile for the first time
     if (tiles.find(location) == tiles.end()) {
         if (t != Type::DockingStation) {
-          //  std::cout <<thread<< " addTile: " <<location.first << ", " << location.second<< std::endl;
             // Tile is added for the first time so we dont know its dirt
             tiles[location] = static_cast<int>(TilesType::UnknownDirt);
         }
@@ -61,67 +58,49 @@ void HouseMappingGraph::setDirt(int dirt) {
 }
 
 void HouseMappingGraph::reduceDirt(Step s) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
     // Assumption- vertex currentLocation exist
     if (s == Step::Stay) {
         if (tiles[currentLocation] != static_cast<int>(TilesType::DockingStation)) { 
-          //  std::cout <<thread<< " Step is stay and we are not in docking- - reduce dirt" << std::endl;
             // Clean here (not docking station)
             tiles[currentLocation]--;
-          //  std::cout << thread<<" Dirt in relative location: " <<currentLocation.first << ", " << currentLocation.second << std::endl;
         }
     }
 }
 
 void HouseMappingGraph::updateCurrentLocation(Step s) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-  //  std::cout << thread<<" updateCurrentLocation" << std::endl;
     // reduce dirt if needed
     reduceDirt(s);
 
     // Update location
-  //  std::cout << thread<<" currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
     std::pair<int, int> stepElements = Common::stepMap.at(s);
     currentLocation.first += stepElements.first;
     currentLocation.second += stepElements.second;
-  //  std::cout << thread<<" Updated to: currentLocation.first: "<<currentLocation.first << "currentLocation.second: "<<currentLocation.second << std::endl;
 }
 
 Step HouseMappingGraph::getStepFromMapping(int batterySteps, int maxBatterySteps, int maxSteps) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) + "]: ";
-    std::cout << thread << "HouseMappingGraph:getStepFromMapping currentLocation: " << currentLocation.first << ", " << currentLocation.second << std::endl;
-
     // If robot on way to clean- get from robotDeterminedPath the next step
     if (onWayToClean || needToReturn) {
-        std::cout <<thread<< "onWayToClean || needToReturn" << std::endl;
         if (!robotDeterminedPath.empty()) {
-          //  std::cout <<thread<< "!robotDeterminedPath.empty()" << std::endl;
             Step s = getStepFromSrcToDst(currentLocation, robotDeterminedPath.front());
             updateCurrentLocation(s);
             robotDeterminedPath.pop();
             return s;
         }
         // else- done robotDeterminedPath
-        std::cout <<thread<< "onWayToClean = false;" << std::endl;
         onWayToClean = false;
     }
 
     // Handle charging and return to docking station
     if (shouldStayCharging(batterySteps, maxBatterySteps, maxSteps)) {
-        std::cout <<thread<< "shouldStayCharging(batterySteps, maxBatterySteps, maxSteps)- return stay" << std::endl;
         return Step::Stay; // or the appropriate Step based on the condition
     }
 
     if (shouldFinish()) {
-        std::cout <<thread<< "shouldFinish()- return finish" << std::endl;
         return Step::Finish;
     }
 
     // Check if we need to clean the current location
     if (shouldCleanCurrentLocation(batterySteps, maxSteps)) {
-        std::cout <<thread<< "shouldCleanCurrentLocation(batterySteps, maxSteps)- return stay" << std::endl;
         updateCurrentLocation(Step::Stay);
         return Step::Stay;
     }
@@ -142,12 +121,6 @@ bool HouseMappingGraph::shouldFinish() {
     Check if need to stay in docking and charge
 */
 bool HouseMappingGraph::shouldStayCharging(int batterySteps, int maxBatterySteps, int maxSteps) {
-  //  std::cout << "isDockingStation(currentLocation) " << isDockingStation(currentLocation) <<std::endl;
-  //  std::cout << "needToCharge " << needToCharge<< std::endl;
-  //  std::cout << "batterySteps " << batterySteps<< std::endl;
-  //  std::cout << "maxBatterySteps " << maxBatterySteps<< std::endl;
-  //  std::cout << "maxSteps " << maxSteps<< std::endl;
-
     // Can't charge more
     if (batterySteps == maxBatterySteps) {
         needToCharge = false;
@@ -157,19 +130,11 @@ bool HouseMappingGraph::shouldStayCharging(int batterySteps, int maxBatterySteps
     if (needToFinish) {
         return false;
     }
-    std::cout << "needToReturn"<< needToReturn<< std::endl;
     
     // Got to docking station because of needing did not have enogh steps- check if there is a need to stay charging
     if (needToReturn && isDockingStation(currentLocation)) {
-        std::cout << "needToReturn && isDockingStation(currentLocation)"<< std::endl;
         needToReturn = false;
         getPotentialDst(true);
-
-        std::cout << "batterySteps " << batterySteps<< std::endl;
-        std::cout << "maxBatterySteps " << maxBatterySteps<< std::endl;
-        std::cout << "maxSteps " << maxSteps<< std::endl;
-        std::cout << "distanceFromDirt " << distanceFromDirt<< std::endl;
-        std::cout << "distanceFromUnkwon " << distanceFromUnkwon<< std::endl;
 
         if (shouldNeedToFinish(batterySteps, maxBatterySteps, maxSteps, distanceFromDirt) &&
             shouldNeedToFinish(batterySteps, maxBatterySteps, maxSteps, distanceFromUnkwon)) {
@@ -178,15 +143,12 @@ bool HouseMappingGraph::shouldStayCharging(int batterySteps, int maxBatterySteps
             return false;
         }
     } 
-    std::cout << "needToCharge && isDockingStation(currentLocation) && batterySteps < maxBatterySteps && maxSteps > 0"<< std::endl;
     return needToCharge && isDockingStation(currentLocation) && batterySteps < maxBatterySteps && maxSteps > 0;
 }
 
 
 bool HouseMappingGraph::shouldCleanCurrentLocation(int batterySteps, int maxSteps) {
-    std::cout << "HouseMappingGraph::shouldCleanCurrentLocation"<< std::endl;
     if (tiles[currentLocation] > 0 && canCleanCurrentLocation(batterySteps, maxSteps)) {
-        // std::cout << "Cleaning current location." << std::endl;
         if (tiles[currentLocation] == 1) {
             // For calculating distance only once
             currentDistanceFromDocking = -1;
@@ -198,37 +160,26 @@ bool HouseMappingGraph::shouldCleanCurrentLocation(int batterySteps, int maxStep
 }
 
 bool HouseMappingGraph::canCleanCurrentLocation(int batterySteps, int maxSteps) {
-    std::cout << "HouseMappingGraph::canCleanCurrentLocation"<< std::endl;
-    std::cout << "currentDistanceFromDocking = "<<currentDistanceFromDocking<< std::endl;
     // Check if we have enough battery and steps to clean the current location and return to the docking station
     if (currentDistanceFromDocking == -1) {
         currentDistanceFromDocking = getDistanceFromDock(currentLocation);
     }
-    std::cout << "currentDistanceFromDocking = "<<currentDistanceFromDocking<< std::endl;
-    std::cout << "currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps) = "<<(currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps))<< std::endl;
     return currentDistanceFromDocking + 1 <= std::min(batterySteps, maxSteps);
 }
 
 bool HouseMappingGraph::shouldNeedToFinish(int batterySteps, int maxBatterySteps, int maxSteps, int distance){
-    std::cout << "shouldNeedToFinish"<< std::endl;
-    std::cout << "distance "<< distance<<std::endl;
     // Check if there is a point in stay charging
     if (distance != -1) {
         int stepsToDo = 2*distance;
-        std::cout << "stepsToDo " << stepsToDo<< std::endl;
 
         // If robot is fully charged- he can do the calening
         // +1 for the cleaning
         if (stepsToDo + 1 <= maxBatterySteps) {
-            std::cout << "stepsToDo + 1 <= maxBatterySteps"<< std::endl;
             // Check regarding to maxSteps
             int stepsMissing = stepsToDo - batterySteps;
-            std::cout << "stepsMissing " << stepsMissing<< std::endl;
             // +1 for the cleaning
             int stepsToCharge = std::ceil((20.0 * (stepsMissing + 1)) / maxSteps);
-            std::cout << "stepsToCharge " << stepsToCharge<< std::endl;
             if (stepsToCharge + stepsToDo + 1 <= maxSteps) {
-                std::cout << "stepsToCharge + stepsToDo + 1 <= maxSteps"<< std::endl;
                 return false;
             }
         }
@@ -237,10 +188,6 @@ bool HouseMappingGraph::shouldNeedToFinish(int batterySteps, int maxBatterySteps
 }
 
 bool HouseMappingGraph::enoghBatteryAndMaxSteps(int distanceFromDst, int DistanceBetweenDstAndDock, int batterySteps, int maxSteps) {
-    std::cout << "HouseMappingGraphB::enoghBatteryAndMaxSteps: distanceFromDst =  " << distanceFromDst <<std::endl;
-    std::cout << "HouseMappingGraphB::enoghBatteryAndMaxSteps: DistanceBetweenDstAndDock =  " << DistanceBetweenDstAndDock <<std::endl;
-    std::cout << "HouseMappingGraphB::enoghBatteryAndMaxSteps: batterySteps =  " << batterySteps <<std::endl;
-    std::cout << "HouseMappingGraphB::enoghBatteryAndMaxSteps: maxSteps =  " << maxSteps <<std::endl;
     return distanceFromDst + 1 + DistanceBetweenDstAndDock <= std::min(batterySteps, maxSteps);
 }
 
@@ -352,7 +299,6 @@ int HouseMappingGraph::getDistanceFromDock(std::pair<int, int>& dst) {
     std::unordered_set<std::pair<int, int>, pair_hash> visited;
     std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> parent;
     int depth = 0;
-    std::cout << "HouseMappingGraph::getDistanceFromDock for " << dst.first << ", "<< dst.second << std::endl;
     // Set queue
     q.push(dockingStationLocation);
     visited.insert(dockingStationLocation);
@@ -367,7 +313,6 @@ int HouseMappingGraph::getDistanceFromDock(std::pair<int, int>& dst) {
             
             // Distance from docking station is depth
             if (location == dst) {
-            std::cout << "HouseMappingGraph::getDistanceFromDock depth= " << depth << std::endl;
                 return depth;
             }
 
@@ -380,11 +325,6 @@ int HouseMappingGraph::getDistanceFromDock(std::pair<int, int>& dst) {
 }
 
 void HouseMappingGraph::shortestPathToDstWithMaximumUnknown(std::pair<int, int> start, std::pair<int, int> dst) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-   if (robotDeterminedPath.size() > 0) {
-        throw std::runtime_error(thread + "!!!robotDeterminedPath.size() > 0");
-    }
     std::queue<std::tuple<std::pair<int, int>, std::vector<std::pair<int, int>>, int, int>> q; // Tuples of (current position, path, negOneCount, distance)
     std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> visited; // position to (distance, maxNegOneCount)
     std::vector<std::pair<int, int>> result;
@@ -394,7 +334,6 @@ void HouseMappingGraph::shortestPathToDstWithMaximumUnknown(std::pair<int, int> 
 
     while (!q.empty()) {
         int size = q.size();
-        // TODO: maybe add size...
         for (int i = 0; i < size; ++i) {
             auto [current, path, negOneCount, currentDistance] = q.front();
             q.pop();
@@ -442,8 +381,6 @@ void HouseMappingGraph::shortestPathToDstWithMaximumUnknown(std::pair<int, int> 
 }
 
 void HouseMappingGraph::getStepsFromParent(std::pair<int, int> dst, std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash>& parent, std::stack<Step>& fillStack) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
     std::pair<int, int> current = dst;
     std::pair<int, int> prev = dst;
     int rowDiff = 0;
@@ -456,15 +393,11 @@ void HouseMappingGraph::getStepsFromParent(std::pair<int, int> dst, std::unorder
         colDiff = current.second - prev.second;
         fillStack.push(getStepByDiff(rowDiff, colDiff));
     }
-    printStack(fillStack);
-    // std::cout << thread<<" getStepsFromParent" << std::endl;
+    //printStack(fillStack);
 
 }
 
 void HouseMappingGraph::printStack(std::stack<Step> s) {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-    // std::cout << thread<<" printStack" << std::endl;
     std::stack<Step> tempStack;
     while (!s.empty()) {
         // Get the top element
@@ -473,22 +406,22 @@ void HouseMappingGraph::printStack(std::stack<Step> s) {
         switch (top)
         {
         case Step::South:
-            // std::cout << "South" << " ";
+            std::cout << "South" << " ";
             break;
         case Step::West:
-            // std::cout << "West" << " ";
+            std::cout << "West" << " ";
             break;
         case Step::North:
-            // std::cout << "North" << " ";
+            std::cout << "North" << " ";
             break;
         case Step::East:
-            // std::cout << "East" << " ";
+            std::cout << "East" << " ";
             break;
         case Step::Stay:
-            // std::cout << "Stay" << " ";
+            std::cout << "Stay" << " ";
             break;
         case Step::Finish:
-            // std::cout << "Finish" << " ";
+            std::cout << "Finish" << " ";
             break;
         }
         // Pop the top element
@@ -496,7 +429,7 @@ void HouseMappingGraph::printStack(std::stack<Step> s) {
         // Push it onto the temporary stack
         tempStack.push(top);
     }
-    // std::cout << std::endl;
+    std::cout << std::endl;
 
     // Restore the original stack
     while (!tempStack.empty()) {
@@ -513,23 +446,18 @@ Step HouseMappingGraph::getStepFromSrcToDst(std::pair<int, int> src, std::pair<i
 
 Step HouseMappingGraph::getStepByDiff(int diffrenceRow, int diffrenceCol) {
     if (diffrenceRow == -1 && diffrenceCol == 0) {
-        // std::cout <<"Step::South" << std::endl;
         return Step::South;
     }
     if (diffrenceRow == 1 && diffrenceCol == 0) {
-        // std::cout <<"Step::North" << std::endl;
         return Step::North;
     }
     if (diffrenceRow == 0 && diffrenceCol == -1) {
-        // std::cout <<"Step::East" << std::endl;
         return Step::East;
     }
     if (diffrenceRow == 0 && diffrenceCol == 1) {
-        // std::cout <<"Step::West" << std::endl;
         return Step::West;
     }
     // diffrenceRow == 0 && diffrenceCol == 0) 
-    // std::cout <<"Step::Stay" << std::endl;
     return Step::Stay;
 }
 

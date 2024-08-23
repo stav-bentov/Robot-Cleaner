@@ -10,7 +10,6 @@ void CsvManager::writeResultsToCsv() {
 
     // Eracse spaces
     std::vector<std::string> modifiedHousesNames;
-  //  std::cout << "modifiedHousesNames"<<std::endl; // Debugging print
     for (std::string house : housesNames) {
         std::string result = house;
         result.erase(std::remove(result.begin(), result.end(), '\n'), result.end());

@@ -1,0 +1,7 @@
+NumSteps = 6
+DirtLeft = 5
+Status = FINISHED
+InDock = TRUE
+Score = 1506
+Steps: 
+WWESENF

@@ -16,7 +16,6 @@ void MainManager::run(int argc, char* argv[]) {
 void MainManager::calcTimeout() {
     SimConfigurationManager simConfigManager;
     milisecondPerStep = simConfigManager.getTimePerStep();
-  //  std::cout <<" milisecond Per Step: " << milisecondPerStep << " milliseconds" << std::endl;
 }
 
 /*
@@ -74,7 +73,6 @@ void MainManager::createHouses() {
             housesNames.push_back(sharedHouse->getHouseName());
         }
         catch (const std::exception& e) {
-          //  std::cout << "ERROR: Failed creating house: " << housePath << " Exception: " << e.what() << std::endl;
             continue;
         }
     }
@@ -92,13 +90,10 @@ void MainManager::loadAlgorithmFiles(){
 */
 void MainManager::openAlgorithms() {
     for (std::string algo : algorithmsPath) {
-        const auto& prevSize = AlgorithmRegistrar::getAlgorithmRegistrar().end();
         void* handle = dlopen(algo.c_str(), RTLD_LAZY);
         if (!handle) {
             std::filesystem::path algoPath(algo);
             ErrorManager::checkForError(true, "ERROR: Unable to open error file: " + algo, algoPath.stem().string() + ".error");
-        } else if (AlgorithmRegistrar::getAlgorithmRegistrar().end() == prevSize) {
-          //  std::cout << "Error loading algorithm library: No Algorithm Registered!" << std::endl;
         } else {
             algorithmsHandle.push_back(handle);
         }
@@ -128,8 +123,6 @@ void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& i
             } 
 
             std::shared_ptr<House> houseCopy = std::make_shared<House>(*house);
-            std::cerr <<"Added task:" <<algo.name() <<" house:"<< houseCopy->getHouseName()<<std::endl;
-            std::cerr <<"details: algoIdx =" <<algoIdx <<" houseIdx= "<< houseIdx <<std::endl;
             tasks.emplace_back(std::move(algorithm), houseCopy, algoIdx, houseIdx, algo.name(), ioContext, 
                                 workDone, summaryOnly, milisecondPerStep, runningThreads, runningThreadsMutex, simulatiosCv);
             houseIdx++;
@@ -138,7 +131,6 @@ void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& i
         validAlgo = true;
         houseIdx = 0;
     }
-    std::cerr<< "task.size = " <<tasks.size()<< std::endl;
 }
 
 void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
@@ -146,7 +138,6 @@ void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningT
     for (auto& task : tasks) {
         bool notified = false;
         std::unique_lock<std::mutex> lockRunning(runningThreadsMutex);
-        std::cerr<< "in lockRunning for " <<task.getAlgoIdx()<< ", " << task.getHouseIdx()<< std::endl;
         
         while (*runningThreads >= numThreads) {
             // Waiting for the condition variable with a timeout to avoid infinite waiting
@@ -162,19 +153,13 @@ void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningT
             std::cerr << "Thread woke up after timeout due to runningThreads = " << *runningThreads << std::endl;
         }
         
-        //simulatiosCv->wait(lockRunning, [this, runningThreads]{ return *runningThreads < numThreads; });
-        std::cerr<< "Passed CD- for run " <<task.getAlgoIdx() << ", " << task.getHouseIdx()<<" runningThreads ="<<*runningThreads<< std::endl;
         (*runningThreads)++;
         task.run();
     }
-    // Wait on latch, for all threads to report done
-    std::cerr<< "Stuck in wait" << std::endl;
-
 }
 
 
 void MainManager::writeOutputFiles(std::list<Task>& tasks) {
-    std::cerr<< "writeOutputFiles" << std::endl;
     size_t taskIndex = 0;
     if (!summaryOnly) {
         for (auto& task: tasks) {
@@ -191,6 +176,10 @@ void MainManager::manageTasks() {
     std::mutex runningThreadsMutex;
     std::shared_ptr<std::condition_variable> simulatiosCv = std::make_shared<std::condition_variable>();
     std::shared_ptr<int> runningThreads = std::make_shared<int>(0);
+    const long numberOfSimulations = algorithmsHandle.size()*houses.size();
+    std::latch workDone(numberOfSimulations);
+    scores.resize(algorithmsHandle.size(), std::vector<int>(houses.size(), noResult));
+    std::list<Task> tasks;
 
     // Prevent the I/O context from stopping until all work is done.
     // Even if there is no active timer to wait for
@@ -201,15 +190,11 @@ void MainManager::manageTasks() {
         ioContext.run();
     });
 
-    const long numberOfSimulations = algorithmsHandle.size()*houses.size();
-    std::latch workDone(numberOfSimulations);
-
-    scores.resize(algorithmsHandle.size(), std::vector<int>(houses.size(), noResult));
-
-    std::list<Task> tasks;
     createTasks(tasks, ioContext, workDone, runningThreads, runningThreadsMutex, simulatiosCv);
 
     runTasks(tasks, runningThreads, runningThreadsMutex, simulatiosCv);
+
+    // Wait on latch, for all threads to report done
     workDone.wait();
 
     // stop the io_context
@@ -220,6 +205,7 @@ void MainManager::manageTasks() {
 
 void MainManager::closeAlgorithms() {
     AlgorithmRegistrar::getAlgorithmRegistrar().clear();
+    
     for (void* handle : algorithmsHandle) {
         if (handle) {
             dlclose(handle);

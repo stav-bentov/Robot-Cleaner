@@ -6,8 +6,7 @@ std::string ConfigurationManager::readConfig(const std::string& configFileName) 
     // Got help from: https://www.geeksforgeeks.org/rapidjson-file-read-write-in-cpp/
     std::ifstream configFile(configFileName);
     if (!configFile.is_open()) {
-        //Logger::getInstance().getLogger()->error("Failed to open file 'config.json'. Will use default parameters.");
-        std::cerr << "Failed to open file 'visualisation_config.json'. Will use default parameters" << std::endl;
+        Logger::getInstance().logToConsoleError("Failed to open file 'visualisation_config.json'. Will use default parameters");
         return "";
     }
 
@@ -20,7 +19,7 @@ std::string ConfigurationManager::readConfig(const std::string& configFileName) 
 }
 
 /* 
-    We dont want to enable a represetation of robot/ docking station/ wall as digit (this belongs to flooe dirt level)
+    Prevent represetation of robot/ docking station/ wall as digit (this belongs to flooe dirt level)
 */
 bool ConfigurationManager::isNotDigit(const std::string& str) {
     if(str.empty() || str.size() > 1)

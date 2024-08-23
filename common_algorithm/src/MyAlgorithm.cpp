@@ -15,6 +15,4 @@ void MyAlgorithm::setDirtSensor(const DirtSensor& sensor) {
 void MyAlgorithm::setBatteryMeter(const BatteryMeter& meter) {
     batteryMeter = &meter;
     maxBatterySteps = batteryMeter->getBatteryState();
-  //  std::cout <<"in thread " << std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) << "in MyAlgorithm::setBatteryMeter next step maxBatterySteps= : " <<maxBatterySteps << std::endl;    
-
 }

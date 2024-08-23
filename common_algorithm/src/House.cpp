@@ -52,11 +52,6 @@ std::vector<std::vector<int>> House::getHouseSurface() const {
 
 int House::getDirtLevel() const{
     std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-  //  std::cout << thread<<" Dirt Level in location: " << currentLocation.first << ", " << currentLocation.second << " is : " << houseSurface[currentLocation.first][currentLocation.second]<<std::endl;
-
-  //  Logger::getInstance().log(thread + "House:: getDirtLevel in " + std::to_string(currentLocation.first) + ","+ std::to_string(currentLocation.second) + ":" + std::to_string(houseSurface[currentLocation.first][currentLocation.second]) + "\n", LogLevels::FILE);
-
     return houseSurface[currentLocation.first][currentLocation.second];
 }
 
@@ -74,40 +69,18 @@ float House::getCurentBatterySteps() const {
 }
 
 void House::charge() {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-    if (currentBatterySteps < 0) {
-        std::cerr  << " ERROR: currentBatterySteps: " << currentBatterySteps << "..." << std::endl;
-        throw std::runtime_error("currentBatterySteps less then 0"); 
-
-    }
-    // TODO: Delete this
-    if (static_cast<size_t>(currentBatterySteps) >= maxBattery + 1) {
-        std::cerr  << " ERROR: currentBatterySteps: " << currentBatterySteps << "..." << std::endl;
-        std::cerr  << " ERROR: maxBattery: " << maxBattery << "..." << std::endl;
-        throw std::runtime_error("Charged more then need"); 
-    }
-  //  std::cout <<thread << " Charging: " << currentBatterySteps << "..." << std::endl;
     double charge_increment = (maxBattery)/20.0;
     // Make sure the battery is not overloaded
     currentBatterySteps = std::min(currentBatterySteps + charge_increment, static_cast<double>(maxBattery));
-  //  std::cout << thread <<" Updated battery: " << currentBatterySteps << "." << std::endl;
 }
 
 void House::discharge() {
     currentBatterySteps--;
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-  //  Logger::getInstance().log(thread + "Discharged, current battary:" + std::to_string(currentBatterySteps) + ".\n", LogLevels::FILE);
 }
 
 void House::clean() {
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-  //  std::cout <<thread << " Cleaning: " << currentLocation.first << ", " << currentLocation.second << std::endl;
-  //  Logger::getInstance().log(thread + " Cleaned in location: " + std::to_string(currentLocation.first) + ", " +std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
     amountOfDirt--;
     houseSurface[currentLocation.first][currentLocation.second]--;
-  //  std::cout <<thread << " amountOfDirt in location: " << houseSurface[currentLocation.first][currentLocation.second] << std::endl;
-  //  std::cout <<thread << " amountOfDirt: " << amountOfDirt << std::endl;
 }
 
 /*
@@ -115,15 +88,9 @@ void House::clean() {
 */
 void House::updateLocation(Step step) {
     std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-
-  //  Logger::getInstance().log(thread +" House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
-
     std::pair<int, int> stepElements = Common::stepMap.at(step);
     currentLocation.first += stepElements.first;
     currentLocation.second += stepElements.second;
-
-  //  Logger::getInstance().log(thread +" House:: Update location from: " + std::to_string(currentLocation.first) + ", " + std::to_string(currentLocation.second) + ".\n", LogLevels::FILE);
-  //  std::cout <<thread << " new location: " << currentLocation.first <<" ," << currentLocation.second <<std::endl<<std::endl;
 }
 
 bool House::inDockingStation() const {
@@ -177,8 +144,6 @@ bool House::isWall(Direction d) const {
     std::pair<int, int> dirElements = Common::directionMap.at(d);
     int row = currentLocation.first + dirElements.first;
     int col = currentLocation.second + dirElements.second;
-    std::string thread = " in thread [" + std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id())) +"]: ";
-  //  std::cout << thread <<" House::isWall for location: " << row <<" ," << col <<std::endl;
     return isWall({row, col});
 }
 

@@ -21,31 +21,30 @@ void Common::logStep(Step s) {
 	switch (s)
 	{
 		case Step::Stay:
-			//Logger::getInstance().log(thread +" Simulator got Step::Stay", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::Stay", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::Stay in thread" << std::endl;
 			break;
 		case Step::East:
-			//Logger::getInstance().log(thread +" Simulator got Step::East", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::East", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::East in thread" << std::endl;
 			break;
 		case Step::West:
-			//Logger::getInstance().log(thread +" Simulator got Step::West", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::West", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::West in thread" << std::endl;
 			break;
 		case Step::South:
-			//Logger::getInstance().log(thread +" Simulator got Step::South", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::South", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::South in thread" << std::endl;
 			break;
 		case Step::North:
-			//Logger::getInstance().log(thread +" Simulator got Step::North", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::North", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::North in thread" << std::endl;
 			break;
 		case Step::Finish:
-			//Logger::getInstance().log(thread +" Simulator got Step::Finish", LogLevels::FILE);
+			Logger::getInstance().log(thread +" Simulator got Step::Finish", LogLevels::FILE);
 			std::cout <<thread <<" Simulator got Step::Finish in thread" << std::endl;
 			break;
 	}
-	//Logger::getInstance().log(thread + "\n", LogLevels::FILE);
 
 }
 
@@ -74,6 +73,7 @@ Direction Common::stepToDirection(Step s) {
 			break;
 		}
         default:
+			// Should NOT happen
             throw std::runtime_error("Unknown step direction");
     }
     return d;
