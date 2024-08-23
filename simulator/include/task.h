@@ -18,13 +18,15 @@ class Task {
         const int houseIdx; 
         std::string algoName;
         boost::asio::io_context& ioContext;
-        std::latch& workDone; // will follow ending of multipule tasks
+        std::latch& workDone; // Will follow ending of multipule tasks
         int score;
         bool summaryOnly;
         int milisecondPerStep;
+
         std::shared_ptr<int> runningThreads;
         std::mutex& runningThreadsMutex;
         std::shared_ptr<std::condition_variable> simulatiosCv;
+
         std::string houseFilePath;
         bool simFinished;
 
@@ -33,8 +35,6 @@ class Task {
         std::atomic<bool> guard;
         std::jthread myThread;
         int maxSteps;
-        // task that doesn't finish on time shall got -1
-        // otherwise, shall get the time in took to finish
         int timeout;
         int initialDirt;
         bool errorInRun;
@@ -42,6 +42,7 @@ class Task {
         // Private function for the timer handler
         static void timerHandler(const boost::system::error_code& ec, Task& task, std::chrono::time_point<std::chrono::system_clock> start, pthread_t threadHandler);
         void calcTimeout();
+        void threadComplete();
     public:
     static std::mutex cerrMutex; // Declaration
         Task(std::unique_ptr<AbstractAlgorithm> algorithm, std::shared_ptr<House> house, int algoIdx, int houseIdx, 
@@ -58,7 +59,6 @@ class Task {
         void detach();
         int getAlgoIdx() const;
         int getHouseIdx() const;
-        void setOutput();
-        void threadComplete();
+        void setOutputAndCalcScore(bool withOutputFile);
 
 };

@@ -1,8 +1,14 @@
 #include "include/task.h"
 
-std::mutex Task::cerrMutex; // Definition
+// Static mutex to synchronize access to std::cerr for logging purposes
+std::mutex Task::cerrMutex; 
+
+/*
+    Handles timer events by checking if the timer was canceled or expired. 
+    If the timer expired, cancels the associated thread.
+*/
 void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::chrono::time_point<std::chrono::system_clock> start, pthread_t threadHandler) {
-    // Succeeed- up to time!
+    // Check if the timer operation was aborted- if not, abort
     if (ec == boost::asio::error::operation_aborted) {
         {
           std::lock_guard<std::mutex> lock(cerrMutex);
@@ -10,21 +16,23 @@ void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::ch
         }
         
     } else if (!ec) {
+        // Timer expired successfully; calculate the elapsed time
         auto now = std::chrono::system_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
-        // print duration that passed
-        // Only one of the timer or the task's completion writes the result and signals the latch.
+        // Print duration that passed
+        // Only one of the timer or the task's completion writes the result and signals the latch
         bool expected = false;
         bool success = task.guard.compare_exchange_strong(expected, true);
         if(!success) {
-            // Timer already expired and stopped
+            // Timer expired but task already completed.
             {
               std::lock_guard<std::mutex> lock(cerrMutex);
               std::cerr << "Task::timerHandler: Task " << task.algoIdx << ", " << task.houseIdx << ", already wrote, before timer expiration" << std::endl;
             }
         }
         else {
-            // send a cancel request to the thread that seems to be stuck
+            // Timer expired and the task was not completed; cancel the thread
+            // Send a cancel request to the thread that seems to be stuck and update the end of run
             {
               std::lock_guard<std::mutex> lock(cerrMutex);
               std::cerr << "Timer for task " << task.algoIdx << ", " << task.houseIdx << " expired after " << duration.count() <<"finished task because time ran out"<< std::endl;
@@ -35,33 +43,45 @@ void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::ch
     }
 }
 
+/*
+    Run once after ending of each thread.
+    Logs the completion of a thread, updates the count of running threads, 
+    and notifies any waiting threads. Also decreases the countdown latch.
+*/
 void Task::threadComplete() {
+    // Log the completion of the thread
     {
       std::lock_guard<std::mutex> lock(cerrMutex);
       std::cerr << "Task::threadComplete for task " << algoIdx << ", " << houseIdx  << std::endl;
     }
+    // Decrease the count of running threads and notify any waiting threads
     {
         std::lock_guard<std::mutex> lockRunning(runningThreadsMutex);
         (*runningThreads)--;
     }
-    simulatiosCv->notify_all();
-    workDone.count_down();
+    simulatiosCv->notify_all(); // Notify all waiting threads that a task has completed
+    workDone.count_down(); // Decrease the countdown latch
 }
 
 void Task::calcTimeout() {
+    // Calculate the timeout based on the maximum steps and milliseconds per step
 	maxSteps = house->getMaxSteps();
-  timeout = maxSteps*milisecondPerStep;
+    timeout = maxSteps*milisecondPerStep;
 }
 
-
+/*
+    Sets up the simulation environment, starts a new thread to run the simulation, 
+    sets a timer for task timeout, and handles both normal completion and errors.
+*/
 void Task::run() {
-    {
-      std::lock_guard<std::mutex> lock(cerrMutex);
-      std::cerr <<"Task::run algoIdx " << algoIdx << " with houseIdx: "<< houseIdx << std::endl;
-    }
-
     calcTimeout();
     errorInRun = false;
+    
+    // Log the start of the task.
+    {
+      std::lock_guard<std::mutex> lock(cerrMutex);
+      std::cerr <<"Task::run algoIdx " << algoIdx << " with houseIdx: "<< houseIdx << "with timeout: "<<timeout<< std::endl;
+    }
 
     // Set simulator environment
     try {
@@ -70,11 +90,10 @@ void Task::run() {
     catch (const std::exception& e) {
         std::cerr << "ERROR: Failed creating house: " << houseFilePath << "with algo: " << algoIdx << " Exception: " << e.what() << std::endl;
         errorInRun = true;
-        threadComplete();
+        threadComplete(); // Notify that the task is complete even if an error occurred.
         return;
     }
 
-    std::cerr <<" Task::taskWork simulator.setAlgorithm " << algoIdx << ", "<< houseIdx << std::endl;
     // Set algorithm in simulator
     simulator.setAlgorithm(std::move(algorithm));
 
@@ -84,7 +103,7 @@ void Task::run() {
           pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, nullptr);
           pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, nullptr);     
 
-          // Set the timer
+          // Set the timer for task timeout
           boost::asio::steady_timer timer(ioContext, std::chrono::milliseconds(timeout));
           auto curr_time = std::chrono::system_clock::now();
           auto threadHandler = pthread_self();
@@ -112,6 +131,7 @@ void Task::run() {
               }
           }
           else {
+            // Task completed successfully.
             simFinished = true;
             threadComplete();
             {
@@ -121,10 +141,11 @@ void Task::run() {
           }
         }
         catch (const std::exception& e) {
-          ErrorManager::checkForError(true, "ERROR: Failed running: " + algoName + "with house: " + house->getHouseName(), algoName + ".error");
-          std::cerr << "Error: " << e.what() << std::endl;
-          errorInRun = true;
-          threadComplete();
+            // Handle any errors that occur during the simulation run.
+            ErrorManager::checkForError(true, "ERROR: Failed running: " + algoName + "with house: " + house->getHouseName(), algoName + ".error");
+            std::cerr << "Error: " << e.what() << std::endl;
+            errorInRun = true;
+            threadComplete();
         }
     });
 }
@@ -156,7 +177,11 @@ int Task::getHouseIdx() const {
     return houseIdx;
 }
 
-void Task::setOutput() {
+/*
+    Sets the output of the simulation, logging whether it finished successfully or was stopped, 
+    and updates the task's score accordingly.
+*/
+void Task::setOutputAndCalcScore(bool withOutputFile) {
     // If simulation didnot finished on time- set score to be the initial score...
     if (simFinished && !errorInRun) {
         std::cerr << "Simulator for: " << algoName << ", " << house->getHouseName() << " ended fully" << std::endl;
@@ -165,6 +190,9 @@ void Task::setOutput() {
     else {
       std::cerr << "Simulator for: " << algoName << ", " << house->getHouseName() << " was stopped" << std::endl;
     }
-    score = simulator.getScore();
-    simulator.setOutput();
+    // Get updated score and write to output if required
+    score = simulator.getScore(); 
+    if (withOutputFile) {
+        simulator.setOutput();
+    }
 }

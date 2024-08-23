@@ -1,5 +1,5 @@
 {
-    "displaySimulation": false,
+    "displaySimulation": true,
     "representationInSim": {
         "wall": "#",
         "dockingStation": "D",

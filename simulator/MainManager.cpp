@@ -50,7 +50,11 @@ void MainManager::readParameters(int argc, char* argv[]) {
 /*
     Gets path to laod files with of type extension and push to container
 */
-void MainManager::loadFiles(std::string& path, std::vector<std::string>& container, std::string extension) {
+void MainManager::loadFiles(std::string path, std::vector<std::string>& container, std::string extension) {
+    // I have intention to send ERROR!
+    ErrorManager::checkForError(!std::filesystem::exists(path), "Directory does not exist: " + path);
+    ErrorManager::checkForError(!std::filesystem::is_directory(path), "Path is not a directory: " + path);
+    
     for (const auto& entry : std::filesystem::directory_iterator(path)) {
         if (entry.path().extension() == extension) {
             container.push_back(entry.path().string());
@@ -65,6 +69,10 @@ void MainManager::loadHouseFiles() {
     loadFiles(housePath, housespath, ".house");
 }
 
+/*
+    Creates House objects from loaded house 
+    files and stores them in a container, also populates the house names.
+*/
 void MainManager::createHouses() {
     for (const auto& housePath : housespath) {
         try {
@@ -100,6 +108,10 @@ void MainManager::openAlgorithms() {
     }
 }
 
+/*
+    Creates Task objects for each combination of algorithm and house, with corresponding properties
+     and adds them to the task list.
+*/
 void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, std::latch& workDone, 
                             std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
     int algoIdx = 0;
@@ -133,6 +145,10 @@ void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& i
     }
 }
 
+/*
+    Executes tasks from the list by managing thread limits 
+    and waiting for the condition variable to signal when a thread slot is available.
+*/
 void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
                             std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
     for (auto& task : tasks) {
@@ -158,19 +174,25 @@ void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningT
     }
 }
 
-
+/*
+    Writes the output of each task to files 
+    if not in summary-only mode, updates task scores, and detaches tasks.
+*/
 void MainManager::writeOutputFiles(std::list<Task>& tasks) {
     size_t taskIndex = 0;
-    if (!summaryOnly) {
-        for (auto& task: tasks) {
-            task.setOutput();
-            scores[task.getAlgoIdx()][task.getHouseIdx()] = task.getScore();
-            ++taskIndex;
-            task.detach();
-        }
+    for (auto& task: tasks) {
+        task.setOutputAndCalcScore(!summaryOnly);
+        scores[task.getAlgoIdx()][task.getHouseIdx()] = task.getScore();
+        ++taskIndex;
+        task.detach();
     }
+    
 }
 
+/*
+    Manages the overall task execution process, including creating tasks, 
+    running them, waiting for completion, and handling the I/O context.
+*/
 void MainManager::manageTasks() {
     boost::asio::io_context ioContext;
     std::mutex runningThreadsMutex;
@@ -203,6 +225,9 @@ void MainManager::manageTasks() {
     writeOutputFiles(tasks);
 }
 
+/*
+    Clears algorithm registrations and closes all opened algorithm handles.
+*/
 void MainManager::closeAlgorithms() {
     AlgorithmRegistrar::getAlgorithmRegistrar().clear();
     

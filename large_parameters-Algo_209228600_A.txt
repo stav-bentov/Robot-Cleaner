@@ -1,7 +1,0 @@
-NumSteps = 15
-DirtLeft = 0
-Status = FINISHED
-InDock = TRUE
-Score = 15
-Steps: 
-WWWWSEsssssEEENF

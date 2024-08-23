@@ -46,10 +46,7 @@ class MySimulator {
         MySimulator();
         MySimulator(MySimulator&& other) noexcept = default;
         MySimulator& operator=(MySimulator&& other) noexcept = default;
-        
-        ~MySimulator() {
-          //  std::cout << "In deconstructor" <<std::endl;
-        };
+        ~MySimulator() = default;
 
         void prepareSimulationEnvironment(std::shared_ptr<House> housePtr, std::string& housePath_, std::string& algoName_);
         void setAlgorithm(std::unique_ptr<AbstractAlgorithm> algo);

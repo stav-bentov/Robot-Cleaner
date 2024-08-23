@@ -1,0 +1,9 @@
+can_use_total_steps_1
+MaxSteps = 20
+MaxBattery = 10
+Rows =4
+Cols =6
+W210DW
+ 0WWW
+W00WW
+WW1WW

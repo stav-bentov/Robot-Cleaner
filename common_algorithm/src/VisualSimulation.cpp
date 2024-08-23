@@ -129,28 +129,30 @@ void VisualSimulation::printHouse(bool printDir) {
         for (int j = 0; j < int(map[i].size()); ++j) {
             if (i == robotLocation.first && j == robotLocation.second) {
                 if (printDir)   {
-                    std::cerr << elementToCodeColor[Elements::Direction] << " " << directionStringMap[currentStep] << " " << stringToCodeColor["Reset"];
+                    std::cout << elementToCodeColor[Elements::Direction] << " " << directionStringMap[currentStep] << " " << stringToCodeColor["Reset"];
                 }         
                 else {
-                    std::cerr << elementToCodeColor[Elements::Robot] << " " << infoRepMapping[Elements::Robot] << " " << stringToCodeColor["Reset"];    
+                    std::cout << elementToCodeColor[Elements::Robot] << " " << infoRepMapping[Elements::Robot] << " " << stringToCodeColor["Reset"];    
                 }   
             } else {
                 if (map[i][j] == infoRepMapping[Elements::Wall]) {
-                    std::cerr << elementToCodeColor[Elements::Wall] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
+                    std::cout << elementToCodeColor[Elements::Wall] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
                 }
                 else if (map[i][j] == infoRepMapping[Elements::DockingStation])  {
-                    std::cerr << elementToCodeColor[Elements::DockingStation] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
+                    std::cout << elementToCodeColor[Elements::DockingStation] << " " << map[i][j] << " " << stringToCodeColor["Reset"];
                 }
                 else {
-                    std::cerr << " " << map[i][j] << " ";
+                    std::cout << " " << map[i][j] << " ";
                 }
             }
 
         }
-        std::cerr << std::endl;
+        std::cout << std::endl;
     }
-    std::cerr << std::endl;
-    std::cerr.flush(); 
+    std::cout << "Left steps in battery: " << std::floor(batterySteps) << ", out of " << maxBatterySteps << "             " << std::endl;
+    std::cout << "Allowed number of steps: " << allowedNumberOfSteps << "             " << std::endl;
+    std::cout << std::endl;
+    std::cout.flush(); 
 } 
 
 void VisualSimulation::updateMap() {
@@ -177,12 +179,12 @@ void VisualSimulation::updateMap() {
 
 void VisualSimulation::startSimulation() {
     firstRun = true;
-    std::cerr << std::endl << "SIMULATION STARTS ..." << std::endl;
+    std::cout << std::endl << "SIMULATION STARTS ..." << std::endl;
 
     printHouse(false);
     firstRun = false;
     // Hide the cursor
-    std::cerr << "\033[?25l";
+    std::cout << "\033[?25l";
     for (Step step: steps) {
         currentStep = step;
         if (currentStep == Step::Finish) {
@@ -197,9 +199,9 @@ void VisualSimulation::startSimulation() {
         printHouse(false);
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    std::cerr << std::endl << "SIMULATION ENDED" << std::endl;
+    std::cout << std::endl << "SIMULATION ENDED" << std::endl;
     // Show the cursor
-    std::cerr << "\033[?25h";
+    std::cout << "\033[?25h";
 }
 
 void VisualSimulation::charge() {
@@ -220,9 +222,9 @@ void VisualSimulation::clean() {
 }
 
 void VisualSimulation::clearMapArea(int height) {
-    std::cerr << "\033[" << height << "A";
+    std::cout << "\033[" << height << "A";
     for (int i = 0; i < height; ++i) {
-        std::cerr << "\033[2K\r"; // \r moves the cursor to the beginning of the line
+        std::cout << "\033[2K\r"; // \r moves the cursor to the beginning of the line
     }
 }
 

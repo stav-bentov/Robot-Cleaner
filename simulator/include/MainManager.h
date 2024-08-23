@@ -45,7 +45,7 @@ class MainManager {
         int milisecondPerStep;
 
         void calcTimeout();
-        void loadFiles(std::string& path, std::vector<std::string>& container, std::string extension);
+        void loadFiles(std::string path, std::vector<std::string>& container, std::string extension);
         void loadHouseFiles();
         void createHouses();
         void loadAlgorithmFiles();

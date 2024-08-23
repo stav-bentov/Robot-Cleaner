@@ -1,0 +1,11 @@
+all_house_0_with_walls
+MaxSteps = 10
+MaxBattery = 10
+Rows = 10
+Cols =10
+WWWWWW
+W00DW
+WW0WW
+WW0WW
+W000W
+WWWWWW

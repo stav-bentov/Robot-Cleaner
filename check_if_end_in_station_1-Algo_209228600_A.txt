@@ -1,7 +1,0 @@
-NumSteps = 5
-DirtLeft = 2
-Status = FINISHED
-InDock = TRUE
-Score = 605
-Steps: 
-WWsEEF
