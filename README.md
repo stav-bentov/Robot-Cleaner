@@ -40,7 +40,7 @@ The algorithm shared object files (.so) will be created in the algorithms-so dir
 To run the robot, use the following commands:
 ```
 ./myrobot -algo_path=______ -house_path=_____ -num_threads=_____....
-
+```
 Default values: 
 - algo_path and house_path set to current directory
 - num_threads is set to its maximum- 10
