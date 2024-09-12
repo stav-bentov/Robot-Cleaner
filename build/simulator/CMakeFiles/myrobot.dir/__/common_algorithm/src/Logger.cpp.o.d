@@ -1,7 +1,7 @@
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/Logger.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/Logger.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/logger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/logger.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

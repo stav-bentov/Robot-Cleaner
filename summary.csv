@@ -1,3 +1,3 @@
-Algorithm\House,1-Small house
-Algo_209228600_A,2800
-Algo_209228600_B,5800
+Algorithm\House,All Characters,Distant Dirt,Filled Column,Filled Line,Immediate Finish,Invalid Character,Maze,Minimum Battery,Mock Algorithm - Dead Robot,Mock Algorithm - Working Robot,Sanity,Steps Taken,Trappd Dirt
+Algo_209228600_A,73,348,9,9,13500,27,75,3,0,3600,136,8,927
+Algo_209228600_B,73,348,9,9,13500,31,75,3,0,3600,140,8,925

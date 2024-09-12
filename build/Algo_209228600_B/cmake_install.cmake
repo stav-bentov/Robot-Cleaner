@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B
+# Install script for directory: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

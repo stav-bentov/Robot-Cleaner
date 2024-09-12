@@ -112,8 +112,8 @@ void MainManager::openAlgorithms() {
     Creates Task objects for each combination of algorithm and house, with corresponding properties
      and adds them to the task list.
 */
-void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, std::latch& workDone, 
-                            std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
+void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, 
+                              std::latch& workDone, std::counting_semaphore<>& semaphore) {
     int algoIdx = 0;
     int houseIdx = 0;
     bool validAlgo = true;
@@ -136,7 +136,7 @@ void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& i
 
             std::shared_ptr<House> houseCopy = std::make_shared<House>(*house);
             tasks.emplace_back(std::move(algorithm), houseCopy, algoIdx, houseIdx, algo.name(), ioContext, 
-                                workDone, summaryOnly, milisecondPerStep, runningThreads, runningThreadsMutex, simulatiosCv);
+                                workDone, summaryOnly, milisecondPerStep, semaphore);
             houseIdx++;
         }
         algoIdx++;
@@ -149,27 +149,9 @@ void MainManager::createTasks(std::list<Task>& tasks, boost::asio::io_context& i
     Executes tasks from the list by managing thread limits 
     and waiting for the condition variable to signal when a thread slot is available.
 */
-void MainManager::runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
-                            std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv) {
+void MainManager::runTasks(std::list<Task>& tasks, std::counting_semaphore<>& semaphore) {
     for (auto& task : tasks) {
-        bool notified = false;
-        std::unique_lock<std::mutex> lockRunning(runningThreadsMutex);
-        
-        while (*runningThreads >= numThreads) {
-            // Waiting for the condition variable with a timeout to avoid infinite waiting
-            if (simulatiosCv->wait_for(lockRunning, std::chrono::milliseconds(100)) == std::cv_status::no_timeout) {
-                notified = true;
-                break;
-            }
-            // Periodic sleep to avoid busy-waiting
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        }
-
-        if (!notified) {
-            std::cerr << "Thread woke up after timeout due to runningThreads = " << *runningThreads << std::endl;
-        }
-        
-        (*runningThreads)++;
+        semaphore.acquire();  // Wait for an available thread
         task.run();
     }
 }
@@ -195,13 +177,11 @@ void MainManager::writeOutputFiles(std::list<Task>& tasks) {
 */
 void MainManager::manageTasks() {
     boost::asio::io_context ioContext;
-    std::mutex runningThreadsMutex;
-    std::shared_ptr<std::condition_variable> simulatiosCv = std::make_shared<std::condition_variable>();
-    std::shared_ptr<int> runningThreads = std::make_shared<int>(0);
     const long numberOfSimulations = algorithmsHandle.size()*houses.size();
     std::latch workDone(numberOfSimulations);
     scores.resize(algorithmsHandle.size(), std::vector<int>(houses.size(), noResult));
     std::list<Task> tasks;
+    std::counting_semaphore<> semaphore(numThreads);
 
     // Prevent the I/O context from stopping until all work is done.
     // Even if there is no active timer to wait for
@@ -212,9 +192,9 @@ void MainManager::manageTasks() {
         ioContext.run();
     });
 
-    createTasks(tasks, ioContext, workDone, runningThreads, runningThreadsMutex, simulatiosCv);
+    createTasks(tasks, ioContext, workDone, semaphore);
 
-    runTasks(tasks, runningThreads, runningThreadsMutex, simulatiosCv);
+    runTasks(tasks, semaphore);
 
     // Wait on latch, for all threads to report done
     workDone.wait();

@@ -1,8 +1,8 @@
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/Algo_209228600_A.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/Algo_209228600_A.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/Algo_209228600_A.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/AbstractAlgorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/Algo_209228600_A.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/AbstractAlgorithm.h \
  /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -14,12 +14,12 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
  /usr/include/c++/11/pstl/pstl_config.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/BatteryMeter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/DirtSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/AlgorithmRegistration.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/../common/AlgorithmRegistrar.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/BatteryMeter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../Common/DirtSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/AlgorithmRegistration.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/../common/AlgorithmRegistrar.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -216,19 +216,19 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o: \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/../common/AbstractAlgorithm.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/my_algorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../algorithm/../common/AbstractAlgorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/my_algorithm.h \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h /usr/include/c++/11/stack \
  /usr/include/c++/11/bits/stl_stack.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/AbstractAlgorithm.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/DirtSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/BatteryMeter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/house.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/AbstractAlgorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/DirtSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/../../common/BatteryMeter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/house.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -251,14 +251,14 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/common_enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/common_enums.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/iostream \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/logger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/logger.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/bits/unique_lock.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/error_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/input_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/error_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/input_manager.h \
  /usr/include/c++/11/thread /usr/include/c++/11/stop_token \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
@@ -266,10 +266,10 @@ Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o: \
  /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/house_mapping_graph_A.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/house_mapping_graph_A.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/house_mapping_graph.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_A/src/../include/../../common_algorithm/include/house_mapping_graph.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot"
-  "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/myrobot.pdb"
+  "/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/myrobot"
+  "/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/myrobot.pdb"
   "CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o"
   "CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o.d"
   "CMakeFiles/myrobot.dir/CsvManager.cpp.o"

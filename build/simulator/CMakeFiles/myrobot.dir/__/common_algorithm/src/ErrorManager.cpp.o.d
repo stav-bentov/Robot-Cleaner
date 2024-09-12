@@ -1,7 +1,7 @@
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/ErrorManager.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/ErrorManager.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/error_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/error_manager.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -208,7 +208,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/fstream \
@@ -218,10 +218,10 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/logger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/logger.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/limits \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/error_manager.h
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/error_manager.h

@@ -1,7 +1,7 @@
 simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/AlgorithmRegistrar.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/AlgorithmRegistrar.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/AlgorithmRegistrar.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/AlgorithmRegistrar.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -209,9 +209,9 @@ simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o: \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/AbstractAlgorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/AbstractAlgorithm.h \
  /usr/include/c++/11/cstddef \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/BatteryMeter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/../common/DirtSensor.h
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/BatteryMeter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/../common/DirtSensor.h

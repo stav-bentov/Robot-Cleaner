@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
+CMAKE_SOURCE_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build
+CMAKE_BINARY_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build
 
 # Include any dependencies generated for this target.
 include Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/depend.make
@@ -70,60 +70,60 @@ include Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/progress.make
 include Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/flags.make
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/flags.make
-Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o"
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o -c /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp > CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp > CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.i
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp -o CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/Algo_209228600_B.cpp -o CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.s
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/flags.make
-Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o"
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o -c /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp > CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp > CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.i
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp -o CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B/src/HouseMappingGraphB.cpp -o CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.s
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/flags.make
-Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o -c /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp > CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp > CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/MyAlgorithm.cpp -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/flags.make
-Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -c /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -MF CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o -c /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp > CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp > CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/HouseMappingGraph.cpp -o CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
 
 # Object files for target Algo_209228600_B
 Algo_209228600_B_OBJECTS = \
@@ -135,24 +135,24 @@ Algo_209228600_B_OBJECTS = \
 # External object files for target Algo_209228600_B
 Algo_209228600_B_EXTERNAL_OBJECTS =
 
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make
-/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so"
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Algo_209228600_B.dir/link.txt --verbose=$(VERBOSE)
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/Algo_209228600_B.cpp.o
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/src/HouseMappingGraphB.cpp.o
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build.make
+/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so: Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so"
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Algo_209228600_B.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so
+Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so
 .PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/build
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B && $(CMAKE_COMMAND) -P CMakeFiles/Algo_209228600_B.dir/cmake_clean.cmake
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B && $(CMAKE_COMMAND) -P CMakeFiles/Algo_209228600_B.dir/cmake_clean.cmake
 .PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/clean
 
 Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/depend:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/Algo_209228600_B /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/Algo_209228600_B /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Algo_209228600_B/CMakeFiles/Algo_209228600_B.dir/depend
 

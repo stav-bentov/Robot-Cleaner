@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
+CMAKE_SOURCE_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build
+CMAKE_BINARY_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A//CMakeFiles/progress.marks
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 0
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_A//CMakeFiles/progress.marks
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/clean
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/preinstall
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/preinstall
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
 .PHONY : Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ Algo_209228600_A: Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/rule
 
 # fast build rule for target.
 Algo_209228600_A/fast:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build
 .PHONY : Algo_209228600_A/fast
 
 __/common_algorithm/src/HouseMappingGraph.o: __/common_algorithm/src/HouseMappingGraph.cpp.o
@@ -135,7 +135,7 @@ __/common_algorithm/src/HouseMappingGraph.o: __/common_algorithm/src/HouseMappin
 
 # target to build an object file
 __/common_algorithm/src/HouseMappingGraph.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o
 .PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.o
 
 __/common_algorithm/src/HouseMappingGraph.i: __/common_algorithm/src/HouseMappingGraph.cpp.i
@@ -143,7 +143,7 @@ __/common_algorithm/src/HouseMappingGraph.i: __/common_algorithm/src/HouseMappin
 
 # target to preprocess a source file
 __/common_algorithm/src/HouseMappingGraph.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.i
 .PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.i
 
 __/common_algorithm/src/HouseMappingGraph.s: __/common_algorithm/src/HouseMappingGraph.cpp.s
@@ -151,7 +151,7 @@ __/common_algorithm/src/HouseMappingGraph.s: __/common_algorithm/src/HouseMappin
 
 # target to generate assembly for a file
 __/common_algorithm/src/HouseMappingGraph.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/HouseMappingGraph.cpp.s
 .PHONY : __/common_algorithm/src/HouseMappingGraph.cpp.s
 
 __/common_algorithm/src/MyAlgorithm.o: __/common_algorithm/src/MyAlgorithm.cpp.o
@@ -159,7 +159,7 @@ __/common_algorithm/src/MyAlgorithm.o: __/common_algorithm/src/MyAlgorithm.cpp.o
 
 # target to build an object file
 __/common_algorithm/src/MyAlgorithm.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.o
 .PHONY : __/common_algorithm/src/MyAlgorithm.cpp.o
 
 __/common_algorithm/src/MyAlgorithm.i: __/common_algorithm/src/MyAlgorithm.cpp.i
@@ -167,7 +167,7 @@ __/common_algorithm/src/MyAlgorithm.i: __/common_algorithm/src/MyAlgorithm.cpp.i
 
 # target to preprocess a source file
 __/common_algorithm/src/MyAlgorithm.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.i
 .PHONY : __/common_algorithm/src/MyAlgorithm.cpp.i
 
 __/common_algorithm/src/MyAlgorithm.s: __/common_algorithm/src/MyAlgorithm.cpp.s
@@ -175,7 +175,7 @@ __/common_algorithm/src/MyAlgorithm.s: __/common_algorithm/src/MyAlgorithm.cpp.s
 
 # target to generate assembly for a file
 __/common_algorithm/src/MyAlgorithm.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/__/common_algorithm/src/MyAlgorithm.cpp.s
 .PHONY : __/common_algorithm/src/MyAlgorithm.cpp.s
 
 src/Algo_209228600_A.o: src/Algo_209228600_A.cpp.o
@@ -183,7 +183,7 @@ src/Algo_209228600_A.o: src/Algo_209228600_A.cpp.o
 
 # target to build an object file
 src/Algo_209228600_A.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.o
 .PHONY : src/Algo_209228600_A.cpp.o
 
 src/Algo_209228600_A.i: src/Algo_209228600_A.cpp.i
@@ -191,7 +191,7 @@ src/Algo_209228600_A.i: src/Algo_209228600_A.cpp.i
 
 # target to preprocess a source file
 src/Algo_209228600_A.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.i
 .PHONY : src/Algo_209228600_A.cpp.i
 
 src/Algo_209228600_A.s: src/Algo_209228600_A.cpp.s
@@ -199,7 +199,7 @@ src/Algo_209228600_A.s: src/Algo_209228600_A.cpp.s
 
 # target to generate assembly for a file
 src/Algo_209228600_A.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/Algo_209228600_A.cpp.s
 .PHONY : src/Algo_209228600_A.cpp.s
 
 src/HouseMappingGraphA.o: src/HouseMappingGraphA.cpp.o
@@ -207,7 +207,7 @@ src/HouseMappingGraphA.o: src/HouseMappingGraphA.cpp.o
 
 # target to build an object file
 src/HouseMappingGraphA.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.o
 .PHONY : src/HouseMappingGraphA.cpp.o
 
 src/HouseMappingGraphA.i: src/HouseMappingGraphA.cpp.i
@@ -215,7 +215,7 @@ src/HouseMappingGraphA.i: src/HouseMappingGraphA.cpp.i
 
 # target to preprocess a source file
 src/HouseMappingGraphA.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.i
 .PHONY : src/HouseMappingGraphA.cpp.i
 
 src/HouseMappingGraphA.s: src/HouseMappingGraphA.cpp.s
@@ -223,7 +223,7 @@ src/HouseMappingGraphA.s: src/HouseMappingGraphA.cpp.s
 
 # target to generate assembly for a file
 src/HouseMappingGraphA.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/build.make Algo_209228600_A/CMakeFiles/Algo_209228600_A.dir/src/HouseMappingGraphA.cpp.s
 .PHONY : src/HouseMappingGraphA.cpp.s
 
 # Help Target
@@ -258,6 +258,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

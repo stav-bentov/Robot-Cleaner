@@ -1,8 +1,8 @@
 simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/RobotBatteryMeter.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/RobotBatteryMeter.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/robot_battery_meter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/robot_sensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/robot_battery_meter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/robot_sensor.h \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -202,7 +202,7 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/iostream \
  /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/house.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/house.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/algorithm \
  /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
@@ -231,17 +231,17 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/../../common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/common_enums.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/logger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/logger.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/bits/unique_lock.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/error_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/input_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/error_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/input_manager.h \
  /usr/include/c++/11/thread /usr/include/c++/11/stop_token \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
@@ -249,4 +249,4 @@ simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
  /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/common_algorithm/src/../include/../../common/BatteryMeter.h
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/common_algorithm/src/../include/../../common/BatteryMeter.h

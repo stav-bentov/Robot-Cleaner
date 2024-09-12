@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.pdb"
-  "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so"
+  "/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.pdb"
+  "/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/algorithms-so/libAlgo_209228600_B.so"
   "CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o"
   "CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/HouseMappingGraph.cpp.o.d"
   "CMakeFiles/Algo_209228600_B.dir/__/common_algorithm/src/MyAlgorithm.cpp.o"

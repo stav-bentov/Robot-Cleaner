@@ -43,7 +43,7 @@ class MainManager {
         int numSimulators;
         std::vector<std::thread> threads;
         int milisecondPerStep;
-
+        
         void calcTimeout();
         void loadFiles(std::string path, std::vector<std::string>& container, std::string extension);
         void loadHouseFiles();
@@ -53,11 +53,10 @@ class MainManager {
         void readParameters(int argc, char* argv[]);
         void closeAlgorithms();
         void writeResultsToCsv();
-        void runTasks(std::list<Task>& tasks, std::shared_ptr<int> runningThreads, 
-                            std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv);
+        void runTasks(std::list<Task>& tasks, std::counting_semaphore<>& semaphore);
         void manageTasks();
-        void createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, std::latch& workDone, 
-                            std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, std::shared_ptr<std::condition_variable> simulatiosCv);
+        void createTasks(std::list<Task>& tasks, boost::asio::io_context& ioContext, 
+                              std::latch& workDone, std::counting_semaphore<>& semaphore);
         void writeOutputFiles(std::list<Task>& tasks);
 };
 

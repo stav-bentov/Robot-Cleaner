@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/.. -I/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
+CXX_INCLUDES = -I/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/.. -I/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner
 
 CXX_FLAGS = -fPIC -Wall -Wextra -Werror -pedantic -std=gnu++20
 

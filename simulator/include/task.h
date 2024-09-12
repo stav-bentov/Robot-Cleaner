@@ -22,10 +22,7 @@ class Task {
         int score;
         bool summaryOnly;
         int milisecondPerStep;
-
-        std::shared_ptr<int> runningThreads;
-        std::mutex& runningThreadsMutex;
-        std::shared_ptr<std::condition_variable> simulatiosCv;
+        std::counting_semaphore<>& semaphore;
 
         std::string houseFilePath;
         bool simFinished;
@@ -47,11 +44,10 @@ class Task {
     static std::mutex cerrMutex; // Declaration
         Task(std::unique_ptr<AbstractAlgorithm> algorithm, std::shared_ptr<House> house, int algoIdx, int houseIdx, 
                 std::string algoName, boost::asio::io_context& ioContext, std::latch& workDone,
-                bool& summaryOnly, int milisecondPerStep, std::shared_ptr<int> runningThreads, std::mutex& runningThreadsMutex, 
-                std::shared_ptr<std::condition_variable> simulatiosCv)
+                bool& summaryOnly, int milisecondPerStep, std::counting_semaphore<>& _semaphore)
             : algorithm(std::move(algorithm)), house(house), algoIdx(algoIdx), houseIdx(houseIdx), algoName(algoName), 
                 ioContext(ioContext), workDone(workDone), score(-200), summaryOnly(summaryOnly), milisecondPerStep(milisecondPerStep),
-                runningThreads(runningThreads), runningThreadsMutex(runningThreadsMutex), simulatiosCv(simulatiosCv), houseFilePath(house->getHouseFilePath()), timeout(200) {}
+                semaphore(_semaphore), houseFilePath(house->getHouseFilePath()), timeout(200) {}
         void run();
         int getScore() const;
         std::string getHouseName() const;

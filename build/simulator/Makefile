@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
+CMAKE_SOURCE_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build
+CMAKE_BINARY_DIR = /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator//CMakeFiles/progress.marks
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/CMakeFiles 0
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/simulator//CMakeFiles/progress.marks
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/clean
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/preinstall
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/preinstall
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 simulator/CMakeFiles/myrobot.dir/rule:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/CMakeFiles/myrobot.dir/rule
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simulator/CMakeFiles/myrobot.dir/rule
 .PHONY : simulator/CMakeFiles/myrobot.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ myrobot: simulator/CMakeFiles/myrobot.dir/rule
 
 # fast build rule for target.
 myrobot/fast:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/build
 .PHONY : myrobot/fast
 
 AlgorithmRegistrar.o: AlgorithmRegistrar.cpp.o
@@ -135,7 +135,7 @@ AlgorithmRegistrar.o: AlgorithmRegistrar.cpp.o
 
 # target to build an object file
 AlgorithmRegistrar.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.o
 .PHONY : AlgorithmRegistrar.cpp.o
 
 AlgorithmRegistrar.i: AlgorithmRegistrar.cpp.i
@@ -143,7 +143,7 @@ AlgorithmRegistrar.i: AlgorithmRegistrar.cpp.i
 
 # target to preprocess a source file
 AlgorithmRegistrar.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.i
 .PHONY : AlgorithmRegistrar.cpp.i
 
 AlgorithmRegistrar.s: AlgorithmRegistrar.cpp.s
@@ -151,7 +151,7 @@ AlgorithmRegistrar.s: AlgorithmRegistrar.cpp.s
 
 # target to generate assembly for a file
 AlgorithmRegistrar.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/AlgorithmRegistrar.cpp.s
 .PHONY : AlgorithmRegistrar.cpp.s
 
 CsvManager.o: CsvManager.cpp.o
@@ -159,7 +159,7 @@ CsvManager.o: CsvManager.cpp.o
 
 # target to build an object file
 CsvManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.o
 .PHONY : CsvManager.cpp.o
 
 CsvManager.i: CsvManager.cpp.i
@@ -167,7 +167,7 @@ CsvManager.i: CsvManager.cpp.i
 
 # target to preprocess a source file
 CsvManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.i
 .PHONY : CsvManager.cpp.i
 
 CsvManager.s: CsvManager.cpp.s
@@ -175,7 +175,7 @@ CsvManager.s: CsvManager.cpp.s
 
 # target to generate assembly for a file
 CsvManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/CsvManager.cpp.s
 .PHONY : CsvManager.cpp.s
 
 MainManager.o: MainManager.cpp.o
@@ -183,7 +183,7 @@ MainManager.o: MainManager.cpp.o
 
 # target to build an object file
 MainManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.o
 .PHONY : MainManager.cpp.o
 
 MainManager.i: MainManager.cpp.i
@@ -191,7 +191,7 @@ MainManager.i: MainManager.cpp.i
 
 # target to preprocess a source file
 MainManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.i
 .PHONY : MainManager.cpp.i
 
 MainManager.s: MainManager.cpp.s
@@ -199,7 +199,7 @@ MainManager.s: MainManager.cpp.s
 
 # target to generate assembly for a file
 MainManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MainManager.cpp.s
 .PHONY : MainManager.cpp.s
 
 MySimulator.o: MySimulator.cpp.o
@@ -207,7 +207,7 @@ MySimulator.o: MySimulator.cpp.o
 
 # target to build an object file
 MySimulator.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o
 .PHONY : MySimulator.cpp.o
 
 MySimulator.i: MySimulator.cpp.i
@@ -215,7 +215,7 @@ MySimulator.i: MySimulator.cpp.i
 
 # target to preprocess a source file
 MySimulator.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.i
 .PHONY : MySimulator.cpp.i
 
 MySimulator.s: MySimulator.cpp.s
@@ -223,7 +223,7 @@ MySimulator.s: MySimulator.cpp.s
 
 # target to generate assembly for a file
 MySimulator.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.s
 .PHONY : MySimulator.cpp.s
 
 SimConfigManager.o: SimConfigManager.cpp.o
@@ -231,7 +231,7 @@ SimConfigManager.o: SimConfigManager.cpp.o
 
 # target to build an object file
 SimConfigManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.o
 .PHONY : SimConfigManager.cpp.o
 
 SimConfigManager.i: SimConfigManager.cpp.i
@@ -239,7 +239,7 @@ SimConfigManager.i: SimConfigManager.cpp.i
 
 # target to preprocess a source file
 SimConfigManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.i
 .PHONY : SimConfigManager.cpp.i
 
 SimConfigManager.s: SimConfigManager.cpp.s
@@ -247,7 +247,7 @@ SimConfigManager.s: SimConfigManager.cpp.s
 
 # target to generate assembly for a file
 SimConfigManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/SimConfigManager.cpp.s
 .PHONY : SimConfigManager.cpp.s
 
 Task.o: Task.cpp.o
@@ -255,7 +255,7 @@ Task.o: Task.cpp.o
 
 # target to build an object file
 Task.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.o
 .PHONY : Task.cpp.o
 
 Task.i: Task.cpp.i
@@ -263,7 +263,7 @@ Task.i: Task.cpp.i
 
 # target to preprocess a source file
 Task.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.i
 .PHONY : Task.cpp.i
 
 Task.s: Task.cpp.s
@@ -271,7 +271,7 @@ Task.s: Task.cpp.s
 
 # target to generate assembly for a file
 Task.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/Task.cpp.s
 .PHONY : Task.cpp.s
 
 __/common_algorithm/src/Common.o: __/common_algorithm/src/Common.cpp.o
@@ -279,7 +279,7 @@ __/common_algorithm/src/Common.o: __/common_algorithm/src/Common.cpp.o
 
 # target to build an object file
 __/common_algorithm/src/Common.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.o
 .PHONY : __/common_algorithm/src/Common.cpp.o
 
 __/common_algorithm/src/Common.i: __/common_algorithm/src/Common.cpp.i
@@ -287,7 +287,7 @@ __/common_algorithm/src/Common.i: __/common_algorithm/src/Common.cpp.i
 
 # target to preprocess a source file
 __/common_algorithm/src/Common.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.i
 .PHONY : __/common_algorithm/src/Common.cpp.i
 
 __/common_algorithm/src/Common.s: __/common_algorithm/src/Common.cpp.s
@@ -295,7 +295,7 @@ __/common_algorithm/src/Common.s: __/common_algorithm/src/Common.cpp.s
 
 # target to generate assembly for a file
 __/common_algorithm/src/Common.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Common.cpp.s
 .PHONY : __/common_algorithm/src/Common.cpp.s
 
 __/common_algorithm/src/ConfigurationManager.o: __/common_algorithm/src/ConfigurationManager.cpp.o
@@ -303,7 +303,7 @@ __/common_algorithm/src/ConfigurationManager.o: __/common_algorithm/src/Configur
 
 # target to build an object file
 __/common_algorithm/src/ConfigurationManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.o
 .PHONY : __/common_algorithm/src/ConfigurationManager.cpp.o
 
 __/common_algorithm/src/ConfigurationManager.i: __/common_algorithm/src/ConfigurationManager.cpp.i
@@ -311,7 +311,7 @@ __/common_algorithm/src/ConfigurationManager.i: __/common_algorithm/src/Configur
 
 # target to preprocess a source file
 __/common_algorithm/src/ConfigurationManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.i
 .PHONY : __/common_algorithm/src/ConfigurationManager.cpp.i
 
 __/common_algorithm/src/ConfigurationManager.s: __/common_algorithm/src/ConfigurationManager.cpp.s
@@ -319,7 +319,7 @@ __/common_algorithm/src/ConfigurationManager.s: __/common_algorithm/src/Configur
 
 # target to generate assembly for a file
 __/common_algorithm/src/ConfigurationManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ConfigurationManager.cpp.s
 .PHONY : __/common_algorithm/src/ConfigurationManager.cpp.s
 
 __/common_algorithm/src/ErrorManager.o: __/common_algorithm/src/ErrorManager.cpp.o
@@ -327,7 +327,7 @@ __/common_algorithm/src/ErrorManager.o: __/common_algorithm/src/ErrorManager.cpp
 
 # target to build an object file
 __/common_algorithm/src/ErrorManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.o
 .PHONY : __/common_algorithm/src/ErrorManager.cpp.o
 
 __/common_algorithm/src/ErrorManager.i: __/common_algorithm/src/ErrorManager.cpp.i
@@ -335,7 +335,7 @@ __/common_algorithm/src/ErrorManager.i: __/common_algorithm/src/ErrorManager.cpp
 
 # target to preprocess a source file
 __/common_algorithm/src/ErrorManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.i
 .PHONY : __/common_algorithm/src/ErrorManager.cpp.i
 
 __/common_algorithm/src/ErrorManager.s: __/common_algorithm/src/ErrorManager.cpp.s
@@ -343,7 +343,7 @@ __/common_algorithm/src/ErrorManager.s: __/common_algorithm/src/ErrorManager.cpp
 
 # target to generate assembly for a file
 __/common_algorithm/src/ErrorManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/ErrorManager.cpp.s
 .PHONY : __/common_algorithm/src/ErrorManager.cpp.s
 
 __/common_algorithm/src/House.o: __/common_algorithm/src/House.cpp.o
@@ -351,7 +351,7 @@ __/common_algorithm/src/House.o: __/common_algorithm/src/House.cpp.o
 
 # target to build an object file
 __/common_algorithm/src/House.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.o
 .PHONY : __/common_algorithm/src/House.cpp.o
 
 __/common_algorithm/src/House.i: __/common_algorithm/src/House.cpp.i
@@ -359,7 +359,7 @@ __/common_algorithm/src/House.i: __/common_algorithm/src/House.cpp.i
 
 # target to preprocess a source file
 __/common_algorithm/src/House.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.i
 .PHONY : __/common_algorithm/src/House.cpp.i
 
 __/common_algorithm/src/House.s: __/common_algorithm/src/House.cpp.s
@@ -367,7 +367,7 @@ __/common_algorithm/src/House.s: __/common_algorithm/src/House.cpp.s
 
 # target to generate assembly for a file
 __/common_algorithm/src/House.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/House.cpp.s
 .PHONY : __/common_algorithm/src/House.cpp.s
 
 __/common_algorithm/src/InputManager.o: __/common_algorithm/src/InputManager.cpp.o
@@ -375,7 +375,7 @@ __/common_algorithm/src/InputManager.o: __/common_algorithm/src/InputManager.cpp
 
 # target to build an object file
 __/common_algorithm/src/InputManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.o
 .PHONY : __/common_algorithm/src/InputManager.cpp.o
 
 __/common_algorithm/src/InputManager.i: __/common_algorithm/src/InputManager.cpp.i
@@ -383,7 +383,7 @@ __/common_algorithm/src/InputManager.i: __/common_algorithm/src/InputManager.cpp
 
 # target to preprocess a source file
 __/common_algorithm/src/InputManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.i
 .PHONY : __/common_algorithm/src/InputManager.cpp.i
 
 __/common_algorithm/src/InputManager.s: __/common_algorithm/src/InputManager.cpp.s
@@ -391,7 +391,7 @@ __/common_algorithm/src/InputManager.s: __/common_algorithm/src/InputManager.cpp
 
 # target to generate assembly for a file
 __/common_algorithm/src/InputManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/InputManager.cpp.s
 .PHONY : __/common_algorithm/src/InputManager.cpp.s
 
 __/common_algorithm/src/Logger.o: __/common_algorithm/src/Logger.cpp.o
@@ -399,7 +399,7 @@ __/common_algorithm/src/Logger.o: __/common_algorithm/src/Logger.cpp.o
 
 # target to build an object file
 __/common_algorithm/src/Logger.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.o
 .PHONY : __/common_algorithm/src/Logger.cpp.o
 
 __/common_algorithm/src/Logger.i: __/common_algorithm/src/Logger.cpp.i
@@ -407,7 +407,7 @@ __/common_algorithm/src/Logger.i: __/common_algorithm/src/Logger.cpp.i
 
 # target to preprocess a source file
 __/common_algorithm/src/Logger.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.i
 .PHONY : __/common_algorithm/src/Logger.cpp.i
 
 __/common_algorithm/src/Logger.s: __/common_algorithm/src/Logger.cpp.s
@@ -415,7 +415,7 @@ __/common_algorithm/src/Logger.s: __/common_algorithm/src/Logger.cpp.s
 
 # target to generate assembly for a file
 __/common_algorithm/src/Logger.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/Logger.cpp.s
 .PHONY : __/common_algorithm/src/Logger.cpp.s
 
 __/common_algorithm/src/OutputManager.o: __/common_algorithm/src/OutputManager.cpp.o
@@ -423,7 +423,7 @@ __/common_algorithm/src/OutputManager.o: __/common_algorithm/src/OutputManager.c
 
 # target to build an object file
 __/common_algorithm/src/OutputManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.o
 .PHONY : __/common_algorithm/src/OutputManager.cpp.o
 
 __/common_algorithm/src/OutputManager.i: __/common_algorithm/src/OutputManager.cpp.i
@@ -431,7 +431,7 @@ __/common_algorithm/src/OutputManager.i: __/common_algorithm/src/OutputManager.c
 
 # target to preprocess a source file
 __/common_algorithm/src/OutputManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.i
 .PHONY : __/common_algorithm/src/OutputManager.cpp.i
 
 __/common_algorithm/src/OutputManager.s: __/common_algorithm/src/OutputManager.cpp.s
@@ -439,7 +439,7 @@ __/common_algorithm/src/OutputManager.s: __/common_algorithm/src/OutputManager.c
 
 # target to generate assembly for a file
 __/common_algorithm/src/OutputManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/OutputManager.cpp.s
 .PHONY : __/common_algorithm/src/OutputManager.cpp.s
 
 __/common_algorithm/src/RobotBatteryMeter.o: __/common_algorithm/src/RobotBatteryMeter.cpp.o
@@ -447,7 +447,7 @@ __/common_algorithm/src/RobotBatteryMeter.o: __/common_algorithm/src/RobotBatter
 
 # target to build an object file
 __/common_algorithm/src/RobotBatteryMeter.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.o
 .PHONY : __/common_algorithm/src/RobotBatteryMeter.cpp.o
 
 __/common_algorithm/src/RobotBatteryMeter.i: __/common_algorithm/src/RobotBatteryMeter.cpp.i
@@ -455,7 +455,7 @@ __/common_algorithm/src/RobotBatteryMeter.i: __/common_algorithm/src/RobotBatter
 
 # target to preprocess a source file
 __/common_algorithm/src/RobotBatteryMeter.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.i
 .PHONY : __/common_algorithm/src/RobotBatteryMeter.cpp.i
 
 __/common_algorithm/src/RobotBatteryMeter.s: __/common_algorithm/src/RobotBatteryMeter.cpp.s
@@ -463,7 +463,7 @@ __/common_algorithm/src/RobotBatteryMeter.s: __/common_algorithm/src/RobotBatter
 
 # target to generate assembly for a file
 __/common_algorithm/src/RobotBatteryMeter.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotBatteryMeter.cpp.s
 .PHONY : __/common_algorithm/src/RobotBatteryMeter.cpp.s
 
 __/common_algorithm/src/RobotDirtSensor.o: __/common_algorithm/src/RobotDirtSensor.cpp.o
@@ -471,7 +471,7 @@ __/common_algorithm/src/RobotDirtSensor.o: __/common_algorithm/src/RobotDirtSens
 
 # target to build an object file
 __/common_algorithm/src/RobotDirtSensor.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.o
 .PHONY : __/common_algorithm/src/RobotDirtSensor.cpp.o
 
 __/common_algorithm/src/RobotDirtSensor.i: __/common_algorithm/src/RobotDirtSensor.cpp.i
@@ -479,7 +479,7 @@ __/common_algorithm/src/RobotDirtSensor.i: __/common_algorithm/src/RobotDirtSens
 
 # target to preprocess a source file
 __/common_algorithm/src/RobotDirtSensor.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.i
 .PHONY : __/common_algorithm/src/RobotDirtSensor.cpp.i
 
 __/common_algorithm/src/RobotDirtSensor.s: __/common_algorithm/src/RobotDirtSensor.cpp.s
@@ -487,7 +487,7 @@ __/common_algorithm/src/RobotDirtSensor.s: __/common_algorithm/src/RobotDirtSens
 
 # target to generate assembly for a file
 __/common_algorithm/src/RobotDirtSensor.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotDirtSensor.cpp.s
 .PHONY : __/common_algorithm/src/RobotDirtSensor.cpp.s
 
 __/common_algorithm/src/RobotSensor.o: __/common_algorithm/src/RobotSensor.cpp.o
@@ -495,7 +495,7 @@ __/common_algorithm/src/RobotSensor.o: __/common_algorithm/src/RobotSensor.cpp.o
 
 # target to build an object file
 __/common_algorithm/src/RobotSensor.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.o
 .PHONY : __/common_algorithm/src/RobotSensor.cpp.o
 
 __/common_algorithm/src/RobotSensor.i: __/common_algorithm/src/RobotSensor.cpp.i
@@ -503,7 +503,7 @@ __/common_algorithm/src/RobotSensor.i: __/common_algorithm/src/RobotSensor.cpp.i
 
 # target to preprocess a source file
 __/common_algorithm/src/RobotSensor.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.i
 .PHONY : __/common_algorithm/src/RobotSensor.cpp.i
 
 __/common_algorithm/src/RobotSensor.s: __/common_algorithm/src/RobotSensor.cpp.s
@@ -511,7 +511,7 @@ __/common_algorithm/src/RobotSensor.s: __/common_algorithm/src/RobotSensor.cpp.s
 
 # target to generate assembly for a file
 __/common_algorithm/src/RobotSensor.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotSensor.cpp.s
 .PHONY : __/common_algorithm/src/RobotSensor.cpp.s
 
 __/common_algorithm/src/RobotWallsSensor.o: __/common_algorithm/src/RobotWallsSensor.cpp.o
@@ -519,7 +519,7 @@ __/common_algorithm/src/RobotWallsSensor.o: __/common_algorithm/src/RobotWallsSe
 
 # target to build an object file
 __/common_algorithm/src/RobotWallsSensor.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.o
 .PHONY : __/common_algorithm/src/RobotWallsSensor.cpp.o
 
 __/common_algorithm/src/RobotWallsSensor.i: __/common_algorithm/src/RobotWallsSensor.cpp.i
@@ -527,7 +527,7 @@ __/common_algorithm/src/RobotWallsSensor.i: __/common_algorithm/src/RobotWallsSe
 
 # target to preprocess a source file
 __/common_algorithm/src/RobotWallsSensor.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.i
 .PHONY : __/common_algorithm/src/RobotWallsSensor.cpp.i
 
 __/common_algorithm/src/RobotWallsSensor.s: __/common_algorithm/src/RobotWallsSensor.cpp.s
@@ -535,7 +535,7 @@ __/common_algorithm/src/RobotWallsSensor.s: __/common_algorithm/src/RobotWallsSe
 
 # target to generate assembly for a file
 __/common_algorithm/src/RobotWallsSensor.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/RobotWallsSensor.cpp.s
 .PHONY : __/common_algorithm/src/RobotWallsSensor.cpp.s
 
 __/common_algorithm/src/VisualConfigManager.o: __/common_algorithm/src/VisualConfigManager.cpp.o
@@ -543,7 +543,7 @@ __/common_algorithm/src/VisualConfigManager.o: __/common_algorithm/src/VisualCon
 
 # target to build an object file
 __/common_algorithm/src/VisualConfigManager.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.o
 .PHONY : __/common_algorithm/src/VisualConfigManager.cpp.o
 
 __/common_algorithm/src/VisualConfigManager.i: __/common_algorithm/src/VisualConfigManager.cpp.i
@@ -551,7 +551,7 @@ __/common_algorithm/src/VisualConfigManager.i: __/common_algorithm/src/VisualCon
 
 # target to preprocess a source file
 __/common_algorithm/src/VisualConfigManager.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.i
 .PHONY : __/common_algorithm/src/VisualConfigManager.cpp.i
 
 __/common_algorithm/src/VisualConfigManager.s: __/common_algorithm/src/VisualConfigManager.cpp.s
@@ -559,7 +559,7 @@ __/common_algorithm/src/VisualConfigManager.s: __/common_algorithm/src/VisualCon
 
 # target to generate assembly for a file
 __/common_algorithm/src/VisualConfigManager.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualConfigManager.cpp.s
 .PHONY : __/common_algorithm/src/VisualConfigManager.cpp.s
 
 __/common_algorithm/src/VisualSimulation.o: __/common_algorithm/src/VisualSimulation.cpp.o
@@ -567,7 +567,7 @@ __/common_algorithm/src/VisualSimulation.o: __/common_algorithm/src/VisualSimula
 
 # target to build an object file
 __/common_algorithm/src/VisualSimulation.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.o
 .PHONY : __/common_algorithm/src/VisualSimulation.cpp.o
 
 __/common_algorithm/src/VisualSimulation.i: __/common_algorithm/src/VisualSimulation.cpp.i
@@ -575,7 +575,7 @@ __/common_algorithm/src/VisualSimulation.i: __/common_algorithm/src/VisualSimula
 
 # target to preprocess a source file
 __/common_algorithm/src/VisualSimulation.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.i
 .PHONY : __/common_algorithm/src/VisualSimulation.cpp.i
 
 __/common_algorithm/src/VisualSimulation.s: __/common_algorithm/src/VisualSimulation.cpp.s
@@ -583,7 +583,7 @@ __/common_algorithm/src/VisualSimulation.s: __/common_algorithm/src/VisualSimula
 
 # target to generate assembly for a file
 __/common_algorithm/src/VisualSimulation.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/__/common_algorithm/src/VisualSimulation.cpp.s
 .PHONY : __/common_algorithm/src/VisualSimulation.cpp.s
 
 main.o: main.cpp.o
@@ -591,7 +591,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.o
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -599,7 +599,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.i
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -607,7 +607,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.s
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(MAKE) $(MAKESILENT) -f simulator/CMakeFiles/myrobot.dir/build.make simulator/CMakeFiles/myrobot.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -690,6 +690,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -45,8 +45,7 @@ void Task::timerHandler(const boost::system::error_code& ec, Task& task, std::ch
 
 /*
     Run once after ending of each thread.
-    Logs the completion of a thread, updates the count of running threads, 
-    and notifies any waiting threads. Also decreases the countdown latch.
+    Logs the completion of a thread, realse mutex Also decreases the countdown latch.
 */
 void Task::threadComplete() {
     // Log the completion of the thread
@@ -54,13 +53,8 @@ void Task::threadComplete() {
       std::lock_guard<std::mutex> lock(cerrMutex);
       std::cerr << "Task::threadComplete for task " << algoIdx << ", " << houseIdx  << std::endl;
     }
-    // Decrease the count of running threads and notify any waiting threads
-    {
-        std::lock_guard<std::mutex> lockRunning(runningThreadsMutex);
-        (*runningThreads)--;
-    }
-    simulatiosCv->notify_all(); // Notify all waiting threads that a task has completed
-    workDone.count_down(); // Decrease the countdown latch
+    workDone.count_down(); // Signal the latch for task completion
+    semaphore.release();  // Release semaphore for a waiting thread
 }
 
 void Task::calcTimeout() {

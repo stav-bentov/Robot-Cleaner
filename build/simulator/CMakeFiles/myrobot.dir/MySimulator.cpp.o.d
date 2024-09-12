@@ -1,8 +1,8 @@
 simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/MySimulator.cpp \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/MySimulator.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/my_simulator.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/my_algorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/my_simulator.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/my_algorithm.h \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -211,17 +211,17 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/stack \
  /usr/include/c++/11/bits/stl_stack.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/AbstractAlgorithm.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/AbstractAlgorithm.h \
  /usr/include/c++/11/cstddef \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/BatteryMeter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/DirtSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/WallSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/DirtSensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/BatteryMeter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/house.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/BatteryMeter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/DirtSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/WallSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/DirtSensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../../common/BatteryMeter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/house.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
@@ -246,14 +246,14 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/common_enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/common_enums.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/iostream \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/logger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/logger.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/bits/unique_lock.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/error_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/input_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/error_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/input_manager.h \
  /usr/include/c++/11/thread /usr/include/c++/11/stop_token \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
@@ -261,9 +261,9 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: \
  /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/house.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/output_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/visual_simulation.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/house.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/output_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/visual_simulation.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -286,44 +286,44 @@ simulator/CMakeFiles/myrobot.dir/MySimulator.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/visualisation_configuration_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/configuration_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/document.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/reader.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/allocators.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/rapidjson.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/visualisation_configuration_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/configuration_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/document.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/reader.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/allocators.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/rapidjson.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/inttypes.h /usr/include/c++/11/cassert \
  /usr/include/assert.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/meta.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/stream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/encodings.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/encodedstream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/memorystream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/stack.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../allocators.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/swap.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/strtod.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/ieee754.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/biginteger.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/diyfp.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/pow10.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/error/error.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/error/../rapidjson.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/strfunc.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../stream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/filereadstream.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/common_enums.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_battery_meter.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_sensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_dirt_sensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/house_mapping_graph.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/meta.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/stream.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/encodings.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/encodedstream.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/memorystream.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/stack.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/swap.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/clzll.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/error/error.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/../../libs/rapidjson/include/rapidjson/filereadstream.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/../include/common_enums.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_battery_meter.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_sensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_dirt_sensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/house_mapping_graph.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_walls_sensor.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../include/sim_config_manager.h \
- /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/simulator/include/../include/../../common_algorithm/include/configuration_manager.h
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../../common_algorithm/include/robot_walls_sensor.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../include/sim_config_manager.h \
+ /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/simulator/include/../include/../../common_algorithm/include/configuration_manager.h

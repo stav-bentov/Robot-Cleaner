@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner
+# Install script for directory: /mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_A/cmake_install.cmake")
+  include("/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_A/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/Algo_209228600_B/cmake_install.cmake")
+  include("/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/Algo_209228600_B/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/simulator/cmake_install.cmake")
+  include("/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/simulator/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Stav/Projects/Advanced-topics-in-programming/final-project/Robot-Cleaner/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/stvbt/Fix-Mutex/Robot-Cleaner/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
