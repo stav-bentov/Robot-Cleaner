@@ -1,7 +1,0 @@
-NumSteps = 48
-DirtLeft = 1
-Status = FINISHED
-InDock = TRUE
-Score = 348
-Steps: 
-WSEENWsssssssssssssssNWEESWsssssssssssssssEEEWWWF

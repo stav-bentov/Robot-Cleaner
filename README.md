@@ -1,4 +1,3 @@
-Stav Ben-Tov
 # Robot-Cleaner
 
 ## Project Overview
