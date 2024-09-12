@@ -2,16 +2,16 @@ Stav Ben-Tov
 # Robot-Cleaner
 
 ## Project Overview
-This project is part of my Advanced Topics in Programming course and simulates a robot cleaner navigating a house. The robot receives a house layout and an algorithm (.so file) that dictates its cleaning strategy. The simulation allows multiple houses and algorithms to be run concurrently using multithreading, managed with semaphores to control resource access.
+This project is part of Advanced Topics in Programming course TAU and simulates a robot cleaner navigating a house. The robot receives a house layout and an algorithm (.so file) that dictates its cleaning strategy. The simulation allows multiple houses and algorithms to be run concurrently using multithreading, managed with semaphores to control resource access.
 
 ### Features
 - House Layout: The house contains walls, dirt (levels 0-9), and a docking station.
 - Algorithm: The cleaning algorithm handles navigation and cleaning, considering battery life and total steps. The robot maintains a memory map of the house, including dirt locations, to optimize its cleaning.
-- Battery Management: The robot must return to the docking station to recharge when needed, and it can "die" if it runs out of battery outside the docking station.
-- Multithreading: The simulation supports multiple threads to run various house-algorithm combinations simultaneously, using semaphores for thread synchronization.
+- Battery Management: The robot must return to the docking station to recharge when needed, and it can "die" if it runs out of battery outside the docking station. The robot must not die outside the docking station. 
+- Multithreading: The simulation supports multiple threads to run various house-algorithm combinations simultaneously, using semaphores for thread synchronization and limitation.
 
 ### Configuration Files
-- config/config.json: specifies the maximum time per step (timePerStep). For each thread a timeout is set according to maxSteps*timePerStep, if a thread exceeds this time, it will be stopped mid-process to ensure timely execution.
+- config/config.json: Specifies the maximum time per step (timePerStep). For each thread a timeout is set according to maxSteps*timePerStep, if a thread exceeds this time, it will be stopped mid-process to ensure timely execution.
 - config/visualisation_config.json: The simulation can visualize the cleaning process based on the configuration in visualisation_config.json. This file allows you to:
     - Enable or disable the visualization (displaySimulation).
     - Customize the representation of walls, docking stations, and the robot.
@@ -20,11 +20,7 @@ This project is part of my Advanced Topics in Programming course and simulates a
 ## Simulation Goals
 The robot's primary objective is to clean as much dirt as possible while ensuring it returns to the docking station before the battery runs out. The algorithm balances between cleaning efficiency and battery conservation, using the robot's internal map of the house to improve navigation and cleaning routes.
 
-## Simulation Goals
-The simulation is run by dynamically loading house files and algorithm .so files, and creating threads to run multiple simulations in parallel. Semaphores are used to ensure smooth operation when accessing shared resources across threads.
-
 ## Compilation and Building
-
 To compile and build the project, follow these steps:
 
 ```
@@ -36,7 +32,6 @@ make
 The algorithm shared object files (.so) will be created in the algorithms-so directory and mytobot exe in main directory (should cd .. from build directory)
 
 ## Compilation and Building
-
 To run the robot, use the following commands:
 ```
 ./myrobot -algo_path=______ -house_path=_____ -num_threads=_____....
